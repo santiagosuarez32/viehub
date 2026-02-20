@@ -13,7 +13,7 @@ const slides = [
   {
     image: "/2.webp",
     subtitle: "EXECUTIVE TRAVEL",
-    title1: "Travel Safe",
+    title1: "asd ",
     title2: "Travel Smart",
     desc: "Professional drivers available 24/7 across all major cities.",
   },
