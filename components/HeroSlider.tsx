@@ -6,14 +6,14 @@ const slides = [
   {
     image: "/1.webp",
     subtitle: "PRIVATE AIRPORT TRANSFERS",
-    title1: "Luxury Chauffeur",
+    title1: "hola Chauffeur",
     title2: "Service in Europe",
     desc: "Book your premium transfer in seconds with fixed pricing.",
   },
   {
     image: "/2.webp",
     subtitle: "EXECUTIVE TRAVEL",
-    title1: "Travel Safe",
+    title1: "asd ",
     title2: "Travel Smart",
     desc: "Professional drivers available 24/7 across all major cities.",
   },
