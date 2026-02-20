@@ -52,8 +52,8 @@ export default function Hero() {
             md:text-6xl
             lg:text-7xl"
           >
-            Premium Chauffeur
-            <span className="text-[#CD9A31]"> Service</span>
+            Airport Transfer
+            <span className="text-[#CD9A31]">&nbsp;Fix Price</span>
           </h1>
 
           <p
