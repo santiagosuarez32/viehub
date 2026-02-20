@@ -60,7 +60,7 @@ export default function Hero() {
             data-builder-text="hero_desc"
             className="text-gray-300 text-base sm:text-lg max-w-md mx-auto lg:mx-0"
           >
-            Book your executive airport transfer in seconds with real-time pricing.
+            Fix price
           </p>
         </motion.div>
 
