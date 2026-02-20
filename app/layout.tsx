@@ -1,30 +1,11 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Exo } from "next/font/google";
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const exo = Exo({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-exo",
-});
-
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "VieHub | Premium Airport Transfers",
+export const metadata = {
+  title: "VieHub | Luxury Airport Transfers",
   description:
-    "Luxury private airport transfers across Europe. Book your ride with VieHub today.",
+    "Premium private airport transfers across Europe. Book your ride with VieHub.",
 };
 
 export default function RootLayout({
@@ -35,11 +16,36 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* BUILDER SCRIPT */}
         <script async src="https://cdn.builder.io/js/webcomponents"></script>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${exo.variable} antialiased  text-white`}>
 
-        {children}
+      <body className="bg-black text-white">
+
+        {/* ✅ NAVBAR SIEMPRE ARRIBA */}
+        <Navbar/>
+
+        {/* ✅ ESTO ES CLAVE PORQUE EL NAVBAR ES STICKY */}
+        <main>
+          {children}
+          <Footer/>
+
+        </main>
+
+        {/* 🔥 BUILDER SCROLL FIX */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              setTimeout(()=>{
+                document.querySelectorAll('[data-builder-block]').forEach(el=>{
+                  el.style.opacity = 1;
+                  el.style.transform = 'none';
+                })
+              },600)
+            `,
+          }}
+        />
+
       </body>
     </html>
   );
