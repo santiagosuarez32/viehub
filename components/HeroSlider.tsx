@@ -6,7 +6,7 @@ const slides = [
   {
     image: "/1.webp",
     subtitle: "PRIVATE AIRPORT TRANSFERS",
-    title1: "Luxury Chauffeur",
+    title1: "Viehub ",
     title2: "Service in Europe",
     desc: "Book your premium transfer in seconds with fixed pricing.",
   },
