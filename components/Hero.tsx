@@ -53,7 +53,7 @@ export default function Hero() {
             lg:text-7xl"
           >
             Airport Transfer
-            <span className="text-[#CD9A31]"> Service</span>
+            <span className="text-[#CD9A31]"> Fix Price</span>
           </h1>
 
           <p
