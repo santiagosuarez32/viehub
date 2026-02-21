@@ -1,199 +1,154 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay } from "swiper/modules"
-import { Users, Briefcase } from "lucide-react"
-
-import "swiper/css"
-
-import { fleet as fleetData } from "@/data/fleet"
-
-// 🔥 FAKE LOOP
-const fleet = [...fleetData, ...fleetData, ...fleetData]
+import Image from "next/image";
+import { Users, Briefcase } from "lucide-react";
 
 export default function Fleet(){
 
+const cars = [
+{
+title:"Standard",
+subtitle:"Mercedes E-Class",
+pax:3,
+bags:2,
+price:42,
+img:"/sta.jpg",
+features:["Child seats available","WiFi","Air conditioning","Leather seats"]
+},
+{
+title:"Station Wagon",
+subtitle:"Mercedes E-Class T-Model",
+pax:4,
+bags:3,
+price:46,
+img:"/wa.jpg",
+popular:true,
+features:["Extra luggage space","Child seats available","Premium comfort","WiFi"]
+},
+{
+title:"V-Class",
+subtitle:"Mercedes V-Class",
+pax:7,
+bags:7,
+price:65,
+img:"/v.jpg",
+features:["Group travel","Business teams","Family trips","Maximum comfort"]
+}
+]
+
 return(
-<section
-data-builder-block
-className="w-full py-28 bg-black text-white overflow-hidden"
->
+
+<section className="w-full py-24 bg-black flex justify-center">
+
+<div className="max-w-7xl w-full px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+{cars.map((car,i)=>(
 
 <div
-data-builder-block
-className="max-w-7xl mx-auto text-center mb-20"
->
-<h2
-data-builder-block
-className="text-4xl md:text-5xl font-light"
->
-Our
-<span
-data-builder-block
-className="text-[#CD9A31]"
->
- Fleet
-</span>
-</h2>
-</div>
-
-<Swiper
-modules={[Autoplay]}
-centeredSlides={true}
-loop={true}
-slidesPerView={3}
-spaceBetween={40}
-speed={800}
-autoplay={{
-delay:2500,
-disableOnInteraction:false
-}}
-breakpoints={{
-320:{slidesPerView:1.2},
-640:{slidesPerView:1.6},
-768:{slidesPerView:2.2},
-1024:{slidesPerView:3}
-}}
-className="fleetSwiper px-6"
->
-
-{fleet.map((car,index)=>(
-
-<SwiperSlide key={index} data-builder-block>
-
-<div
-data-builder-block
+key={i}
 className="
 relative
 bg-[#0a0a0a]
-rounded-3xl
-border border-[#CD9A31]/30
-pt-12
-pb-10
-px-10
-flex flex-col items-center
-text-center
-transition-all duration-500
-hover:border-[#CD9A31]
+border border-[#CD9A31]/40
+rounded-2xl
+overflow-hidden
+transition
+hover:scale-[1.02]
+hover:shadow-[0_0_45px_rgba(205,154,49,0.35)]
 "
 >
 
-{/* 🔥 BADGE SOLO E-CLASS */}
-{car.name === "Mercedes E-Class" && (
-<span
-data-builder-block
-className="
-absolute
--translate-x-1/2
-left-1/2
--top-4
-text-[11px]
-tracking-widest
-px-5
-py-1.5
-bg-black
-text-[#CD9A31]
-rounded-full
-border border-[#CD9A31]
-shadow-[0_0_20px_#CD9A31]
-"
->
-PROFESSIONAL
+{/* BADGE */}
+{car.popular && (
+<div className="absolute z-20 top-3 right-3">
+<span className="text-[11px] px-3 py-1 bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] text-black rounded-md">
+MOST POPULAR
 </span>
+</div>
 )}
 
-{/* IMAGE */}
-<div
-data-builder-block
-className="w-full h-[170px] relative flex items-center justify-center mb-5"
->
+{/* IMAGE FULL */}
+<div className="relative w-full h-[220px] overflow-hidden">
+
 <Image
-src={car.image}
-alt={car.name}
+src={car.img}
+alt={car.title}
 fill
-className="
-object-contain
-scale-105
-transition
-duration-500
-hover:scale-110
-"
+sizes="(max-width:768px) 100vw, 33vw"
+className="object-cover scale-[1.05]"
 />
+
+{/* LUXURY OVERLAY */}
+<div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent"/>
+
 </div>
 
-{/* STARS */}
-<div
-data-builder-block
-className="flex mb-2 text-[#CD9A31] text-sm"
->
-★★★★★
-</div>
+{/* CONTENT */}
+<div className="px-6 py-5 space-y-3">
 
-<h3
-data-builder-block
-className="text-xl mb-3 font-medium"
->
-{car.name}
+<h3 className="text-xl text-white">
+{car.title}
 </h3>
 
-<div
-data-builder-block
-className="flex gap-8 text-sm text-gray-400 mb-4"
->
-
-<div
-data-builder-block
-className="flex items-center gap-2"
->
-<Users size={16}/>
-<span data-builder-block>{car.passengers}</span>
-</div>
-
-<div
-data-builder-block
-className="flex items-center gap-2"
->
-<Briefcase size={16}/>
-<span data-builder-block>{car.luggage}</span>
-</div>
-
-</div>
-
-<p
-data-builder-block
-className="text-[#CD9A31] text-lg mb-6"
->
-{car.price}
+<p className="text-gray-400 text-sm">
+{car.subtitle}
 </p>
 
-<button
-data-builder-block
-className="
-bg-gradient-to-r
-from-[#CD9A31]
-to-[#f1c55e]
-text-black
-px-8
-py-3
+<div className="flex gap-6 text-[#CD9A31] text-sm pt-1">
+
+<div className="flex items-center gap-1">
+<Users size={15}/>
+{car.pax} Pax
+</div>
+
+<div className="flex items-center gap-1">
+<Briefcase size={15}/>
+{car.bags} Bags
+</div>
+
+</div>
+
+<ul className="text-gray-400 text-sm space-y-1 pt-2">
+{car.features.map((f,idx)=>(
+<li key={idx}>
+• {f}
+</li>
+))}
+</ul>
+
+<div className="flex items-center justify-between pt-4">
+
+<p className="text-[#CD9A31] text-lg">
+from €{car.price}
+</p>
+
+<button className="
+px-5
+py-2
 rounded-lg
+text-black
 text-sm
-font-semibold
+bg-gradient-to-r
+from-[#fff2c9]
+via-[#CD9A31]
+to-[#8f640f]
 hover:scale-105
 transition
-"
->
-Book Now
+">
+BOOK
 </button>
 
 </div>
 
-</SwiperSlide>
+</div>
+
+</div>
 
 ))}
 
-</Swiper>
+</div>
 
 </section>
+
 )
 }

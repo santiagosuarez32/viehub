@@ -4,129 +4,168 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useRouter, usePathname } from "next/navigation"
 
-export default function Navbar(){
+const locales = ["de", "en", "fr", "it", "es"]
 
-const [scrolled,setScrolled] = useState(false)
-const [open,setOpen] = useState(false)
+export default function Navbar({ locale }: { locale: string }) {
 
-useEffect(()=>{
+  const router = useRouter()
+  const pathname = usePathname()
 
-const handleScroll = ()=>{
-setScrolled(window.scrollY > 40)
-}
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
 
-window.addEventListener("scroll",handleScroll)
-return()=>window.removeEventListener("scroll",handleScroll)
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
-},[])
+  function changeLang(newLocale: string) {
 
-return(
+    if (!pathname) return
 
-<motion.nav
-data-builder-block="navbar"
-initial={{y:-80}}
-animate={{y:0}}
-transition={{duration:0.6,ease:"easeOut"}}
-className={`
-fixed top-0 left-0 w-full z-50
-transition-all duration-500
-${scrolled
-?`backdrop-blur-xl bg-black/60 border-b border-[#CD9A31]/20 shadow-[0_8px_40px_rgba(0,0,0,0.6)]`
-:`bg-transparent`
-}
-`}
->
+    const segments = pathname.split("/")
 
-<motion.div
-data-builder-block="navbar_container"
-animate={{
-y: scrolled ? 0 : 5,
-scale: scrolled ? 0.98 : 1
-}}
-transition={{
-duration:0.6,
-ease:[0.22,1,0.36,1]
-}}
-className="
-max-w-7xl
-mx-auto
-flex
-justify-between
-items-center
-px-6
-py-4
-"
->
+    if (!locales.includes(segments[1])) {
+      router.push(`/${newLocale}${pathname}`)
+      return
+    }
 
-{/* LOGO */}
-<h1
-data-builder-text="navbar_logo"
-className="text-white text-xl tracking-wide"
->
-Vie<span className="text-[#CD9A31]">Hub</span>
-</h1>
+    segments[1] = newLocale
 
-{/* DESKTOP MENU */}
-<div
-data-builder-block="navbar_links"
-className="hidden md:flex gap-10 text-sm"
->
+    router.push(segments.join("/") || `/${newLocale}`)
+  }
 
-<Link data-builder-text="nav_home" href="/">Home</Link>
-<Link data-builder-text="nav_services" href="/services">Services</Link>
-<Link data-builder-text="nav_fleet" href="/fleet">Fleet</Link>
-<Link data-builder-text="nav_contact" href="/contact">Contact</Link>
+  function handleClose() {
+    setOpen(false)
+  }
 
-</div>
+  return (
 
-{/* MOBILE BTN */}
-<button
-data-builder-block="navbar_mobile_btn"
-onClick={()=>setOpen(!open)}
-className="md:hidden text-white"
->
-{open?<X/>:<Menu/>}
-</button>
+    <motion.nav
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
+      className={`
+        w-full z-50 transition-all duration-500
+        
+        sticky top-0
+        md:fixed md:top-0 md:left-0
+        
+        ${scrolled
+          ? "backdrop-blur-xl bg-black/70 border-b border-[#CD9A31]/20"
+          : "bg-transparent"
+        }
+      `}
+    >
 
-</motion.div>
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-{/* MOBILE MENU */}
-<AnimatePresence>
+        <Link href={`/${locale}`}>
+          <h1 className="text-white text-xl cursor-pointer">
+            Vie<span className="text-[#CD9A31]">Hub</span>
+          </h1>
+        </Link>
 
-{open &&(
+        {/* DESKTOP */}
+        <div className="hidden md:flex gap-8 items-center text-sm text-white">
 
-<motion.div
-data-builder-block="navbar_mobile_menu"
-initial={{opacity:0,y:-20}}
-animate={{opacity:1,y:0}}
-exit={{opacity:0,y:-20}}
-transition={{duration:0.3}}
-className="
-md:hidden
-bg-black/80
-backdrop-blur-xl
-px-6
-py-6
-flex
-flex-col
-gap-4
-text-sm
-"
->
+          <Link href={`/${locale}`}>Home</Link>
+          <Link href={`/${locale}/services`}>Services</Link>
+          <Link href={`/${locale}/fleet`}>Fleet</Link>
+          <Link href={`/${locale}/contact`}>Contact</Link>
 
-<Link data-builder-text="nav_home_mobile" href="/">Home</Link>
-<Link data-builder-text="nav_services_mobile" href="/services">Services</Link>
-<Link data-builder-text="nav_fleet_mobile" href="/fleet">Fleet</Link>
-<Link data-builder-text="nav_contact_mobile" href="/contact">Contact</Link>
+          {/* LANG */}
+          <div className="flex gap-2 text-[#CD9A31] ml-4">
+            {locales.map((lang) => (
+              <button
+                key={lang}
+                onClick={() => changeLang(lang)}
+                className={locale === lang ? "font-bold underline" : ""}
+              >
+                {lang.toUpperCase()}
+              </button>
+            ))}
+          </div>
 
-</motion.div>
+        </div>
 
-)}
+        {/* MOBILE BTN */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-white"
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
 
-</AnimatePresence>
+      </div>
 
-</motion.nav>
+      {/* MOBILE MENU */}
+      <AnimatePresence>
+        {open && (
 
-)
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="
+              md:hidden
+              absolute
+              top-full
+              left-0
+              w-full
+              bg-black/90
+              backdrop-blur-xl
+              px-6
+              py-6
+              flex
+              flex-col
+              gap-4
+              text-sm
+              text-white
+              border-b border-[#CD9A31]/20
+            "
+          >
+
+            <Link onClick={handleClose} href={`/${locale}`}>
+              Home
+            </Link>
+
+            <Link onClick={handleClose} href={`/${locale}/services`}>
+              Services
+            </Link>
+
+            <Link onClick={handleClose} href={`/${locale}/fleet`}>
+              Fleet
+            </Link>
+
+            <Link onClick={handleClose} href={`/${locale}/contact`}>
+              Contact
+            </Link>
+
+            <div className="flex gap-3 text-[#CD9A31] pt-4">
+              {locales.map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => {
+                    changeLang(lang)
+                    handleClose()
+                  }}
+                  className={locale === lang ? "font-bold underline" : ""}
+                >
+                  {lang.toUpperCase()}
+                </button>
+              ))}
+            </div>
+
+          </motion.div>
+
+        )}
+      </AnimatePresence>
+
+    </motion.nav>
+  )
 }

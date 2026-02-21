@@ -4,162 +4,123 @@ import { services } from "@/data/services"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { useParams } from "next/navigation"
 
-export default function Services(){
+export default function Services() {
 
-return(
+  const params = useParams()
+  const locale = params?.locale as string
 
-<section
-data-builder-block="services_section"
-className="w-full py-32 bg-[#0a0a0a] text-white"
->
+  return (
 
-<div
-data-builder-block="services_container"
-className="max-w-7xl mx-auto px-6"
->
+    <section className="w-full py-32 bg-[#0a0a0a] text-white">
 
-{/* HEADER */}
-<div
-data-builder-block="services_header"
-className="mb-16 max-w-2xl"
->
+      <div className="max-w-7xl mx-auto px-6">
 
-<p
-data-builder-text="services_subtitle"
-className="text-[#CD9A31] text-sm tracking-widest mb-3"
->
-OUR SERVICES
-</p>
+        {/* HEADER */}
+        <div className="mb-16 max-w-2xl">
 
-<h2
-data-builder-text="services_title"
-className="text-4xl leading-tight mb-4"
->
-Premium Transfer
-<span className="text-[#CD9A31]"> Solutions</span>
-</h2>
+          <p className="text-[#CD9A31] text-sm tracking-widest mb-3">
+            OUR SERVICES
+          </p>
 
-<p
-data-builder-text="services_desc"
-className="text-gray-400"
->
-Explore our wide range of chauffeur and airport transfer services.
-</p>
+          <h2 className="text-4xl leading-tight mb-4">
+            Premium Transfer
+            <span className="text-[#CD9A31]"> Solutions</span>
+          </h2>
 
-</div>
+          <p className="text-gray-400">
+            Explore our wide range of chauffeur and airport transfer services.
+          </p>
 
-{/* GRID */}
-<div
-data-builder-block="services_grid"
-className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
->
+        </div>
 
-{services.map((service,i)=>(
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<motion.div
-key={i}
-initial={{opacity:0,y:40}}
-whileInView={{opacity:1,y:0}}
-viewport={{once:true}}
-transition={{delay:i*0.1}}
->
+  {services.map((service, i) => (
 
-<div
-data-builder-block={`service_card_${i}`}
-className="
-group
-relative
-bg-black
-border border-[#CD9A31]/20
-rounded-2xl
-overflow-hidden
-hover:border-[#CD9A31]
-transition
-"
->
+    <motion.div
+      key={service.slug}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: i * 0.1 }}
+      className="h-full"
+    >
 
-<Link href={`/services/${service.slug}`}>
+      <div className="
+        group
+        bg-black
+        border border-[#CD9A31]/20
+        rounded-2xl
+        overflow-hidden
+        hover:border-[#CD9A31]
+        transition
+        flex flex-col
+        h-full
+      ">
 
-{/* IMAGE */}
-<div
-data-builder-image={`service_image_${i}`}
-className="relative h-[220px] overflow-hidden"
->
+        <Link
+          href={`/${locale}/services/${service.slug}`}
+          className="flex flex-col h-full"
+        >
 
-<Image
-src={service.image}
-alt={service.title}
-fill
-className="
-object-cover
-group-hover:scale-110
-transition duration-700
-"
-/>
+          {/* IMAGE */}
+          <div className="relative h-[220px] overflow-hidden flex-shrink-0">
 
-<div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"/>
+            <Image
+              src={service.image}
+              alt={service.title}
+              fill
+              sizes="(max-width:768px) 100vw, 33vw"
+              className="object-cover group-hover:scale-110 transition duration-700"
+            />
 
-</div>
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition" />
 
-{/* CONTENT */}
-<div
-data-builder-block={`service_content_${i}`}
-className="p-6"
->
+          </div>
 
-<h3
-data-builder-text={`service_title_${i}`}
-className="text-lg mb-2"
->
-{service.title}
-</h3>
+          {/* CONTENT */}
+          <div className="p-6 flex flex-col flex-1">
 
-<p
-data-builder-text={`service_desc_${i}`}
-className="text-sm text-gray-400 mb-5"
->
-{service.desc}
-</p>
+            <h3 className="text-lg mb-2 min-h-[56px]">
+              {service.title}
+            </h3>
 
-<div
-data-builder-block={`service_button_wrapper_${i}`}
->
+            <p className="text-sm text-gray-400 mb-6 flex-1">
+              {service.desc}
+            </p>
 
-<div
-data-builder-text={`service_btn_${i}`}
-className="
-w-full
-py-2.5
-bg-[#CD9A31]
-text-black
-rounded-lg
-text-sm
-text-center
-hover:scale-105
-transition
-"
->
-See More
-</div>
+            <div className="
+              w-full
+              py-2.5
+              bg-[#CD9A31]
+              text-black
+              rounded-lg
+              text-sm
+              text-center
+              hover:scale-105
+              transition
+              mt-auto
+            ">
+              See More
+            </div>
+
+          </div>
+
+        </Link>
+
+      </div>
+
+    </motion.div>
+
+  ))}
 
 </div>
 
-</div>
+      </div>
 
-</Link>
+    </section>
 
-</div>
-
-</motion.div>
-
-))}
-
-</div>
-
-</div>
-
-</section>
-
-)
+  )
 }

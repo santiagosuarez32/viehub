@@ -15,7 +15,7 @@ export const fleet = [
   },
   {
     name: "Mercedes V-Class",
-    image: "/s.png",
+    image: "/v.jpg",
     passengers: 6,
     luggage: 5,
     price: "7.50 CHF / Km"

@@ -1,24 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
+/* ===== ROOT COLORS ===== */
 
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --font-exo: var(--font-exo);
 }
+
+/* ===== BASE ===== */
 
 body {
   font-family: "Exo", sans-serif;
-}
-
-body {
   background: var(--background);
   color: var(--foreground);
-}
-
-/* EXO font hook */
-:root {
-  --font-exo: var(--font-exo);
 }
 
 /* ===== HERO LUXURY ANIMATIONS ===== */
@@ -38,31 +34,37 @@ body {
   100% {transform:scale(1.05);}
 }
 
+/* 🔥 GRADIENT ANIMATION */
 @keyframes shine {
   0% {background-position:-200px;}
   100% {background-position:200px;}
 }
+
+/* ===== INPUT DARK MODE ===== */
 
 input[type="date"],
 input[type="time"]{
   color-scheme: dark;
 }
 
+/* ===== SWIPER ===== */
+
 .fleetSwiper .swiper-slide{
-opacity:.35;
-transform:scale(.82);
-transition:all .5s ease;
+  opacity:.35;
+  transform:scale(.82);
+  transition:all .5s ease;
 }
 
 .fleetSwiper .swiper-slide-active{
-opacity:1;
-transform:scale(1);
+  opacity:1;
+  transform:scale(1);
 }
 
 .fleetSwiper .swiper-slide-active .swiper-slide-inner{
-border:1px solid #CD9A31;
-box-shadow:0 0 35px rgba(205,154,49,.35);
+  border:1px solid #CD9A31;
+  box-shadow:0 0 35px rgba(205,154,49,.35);
 }
+
 /* 🔥 SWIPER BADGE FIX */
 .fleetSwiper .swiper-slide{
   overflow: visible !important;
@@ -72,6 +74,34 @@ box-shadow:0 0 35px rgba(205,154,49,.35);
   padding-top: 40px !important;
 }
 
+/* ===== STROKE TEXT ===== */
+
 .stroke-text{
--webkit-text-stroke:1px #CD9A31;
+  -webkit-text-stroke:1px #CD9A31;
+}
+
+/* ===== GOLD GRADIENT TEXT ===== */
+
+.gradient-text{
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #fff2c9 25%,
+    #e6c678 50%,
+    #CD9A31 75%,
+    #a87412 100%
+  );
+  background-size:300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  color:transparent;
+  animation: shine 6s linear infinite;
+}
+
+/* ===== PROSE LINKS GOLD ===== */
+
+.prose a{
+  color:#CD9A31;
+  text-decoration:underline;
 }

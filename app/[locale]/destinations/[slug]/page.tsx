@@ -1,0 +1,161 @@
+import { destinations } from "@/data/destinations"
+import { notFound } from "next/navigation"
+import Image from "next/image"
+import Link from "next/link"
+import DOMPurify from "isomorphic-dompurify"
+import DestinationCarousel from "@/components/DestinationCarousel"
+
+type Props = {
+  params: Promise<{
+    locale: string
+    slug: string
+  }>
+}
+
+export default async function DestinationPage({ params }: Props) {
+
+  const { slug, locale } = await params
+
+  const destination = destinations.find(d => d.slug === slug)
+
+  if (!destination) return notFound()
+
+  const otherDestinations = destinations
+    .filter(d => d.slug !== slug)
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3)
+
+  return (
+    <main className="w-full bg-black text-white">
+
+      <section className="w-full py-24">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
+
+          {/* LEFT CONTENT */}
+          <div className="lg:col-span-2">
+
+            {/* CAROUSEL */}
+            <div className="w-full mb-10">
+              <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden isolate">
+                <DestinationCarousel images={destination.gallery || [destination.image]} />
+              </div>
+            </div>
+
+            <h1 className="text-4xl mb-6">
+              {destination.title}
+            </h1>
+
+            {/* 🔥 MOBILE BOOKING BOX */}
+            <div className="lg:hidden mb-10">
+              <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-4">
+
+                <h4 className="text-lg">
+                  Book Your Transfer
+                </h4>
+
+                <button className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition">
+                  Reserve Now
+                </button>
+
+                <a
+                  href="https://wa.me/436602202238"
+                  target="_blank"
+                  className="block w-full text-center py-3 border border-[#25D366] text-[#25D366] rounded-lg hover:bg-[#25D366] hover:text-black transition"
+                >
+                  WhatsApp Booking
+                </a>
+
+                <a
+                  href="tel:+436602202238"
+                  className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition"
+                >
+                  Call +43 660 2202238
+                </a>
+
+              </div>
+            </div>
+
+            {/* TEXT */}
+            <div
+              className="text-gray-400 prose prose-invert max-w-none"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(destination.longDesc)
+              }}
+            />
+
+          </div>
+
+          {/* DESKTOP SIDEBAR */}
+          <div className="hidden lg:block space-y-6">
+
+            <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-5">
+
+              <h4 className="text-lg">
+                Book Your Transfer
+              </h4>
+
+              <button className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition">
+                Reserve Now
+              </button>
+
+              <a
+                href="https://wa.me/436602202238"
+                target="_blank"
+                className="block w-full text-center py-3 border border-[#25D366] text-[#25D366] rounded-lg hover:bg-[#25D366] hover:text-black transition"
+              >
+                WhatsApp Booking
+              </a>
+
+              <a
+                href="tel:+436602202238"
+                className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition"
+              >
+                Call +43 660 2202238
+              </a>
+
+            </div>
+
+            <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-4">
+
+              <h4 className="mb-3">
+                Other Destinations
+              </h4>
+
+              {otherDestinations.map((d) => (
+
+                <Link
+                  key={d.slug}
+                  href={`/${locale}/destinations/${d.slug}`}
+                >
+                  <div className="flex gap-4 mb-4 items-center cursor-pointer group">
+
+                    <div className="relative w-20 h-16 rounded-lg overflow-hidden">
+                      <Image
+                        src={d.image}
+                        alt={d.title}
+                        fill
+                        sizes="80px"
+                        className="object-cover group-hover:scale-110 transition"
+                      />
+                    </div>
+
+                    <span className="text-sm text-gray-300 group-hover:text-[#CD9A31] transition">
+                      {d.title}
+                    </span>
+
+                  </div>
+
+                </Link>
+
+              ))}
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  )
+}
