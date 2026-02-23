@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Menu, X, MessageCircle, ChevronDown } from "lucide-react"
+import { Menu, X, MessageCircle } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useRouter, usePathname } from "next/navigation"
 import { useI18n } from "@/lib/i18n/i18n"
@@ -18,8 +18,6 @@ const langNames = {
   de: "Deutsch"
 }
 
-const localePattern = /^[A-Za-z]{2}(-[A-Za-z]{2})?$/
-
 export default function Navbar({ locale }: { locale: string }) {
 
   const router = useRouter()
@@ -27,7 +25,6 @@ export default function Navbar({ locale }: { locale: string }) {
 
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
-  const [langOpen, setLangOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -53,7 +50,7 @@ export default function Navbar({ locale }: { locale: string }) {
       // Si el segundo segmento parece otro locale (p.ej. 'de'), lo eliminamos
       if (parts.length > 1) {
         const second = parts[1]
-        const secondLooksLikeLocale = localePattern.test(second)
+        const secondLooksLikeLocale = /^[A-Za-z]{2}(-[A-Za-z]{2})?$/.test(second)
         if (secondLooksLikeLocale) {
           parts.splice(1, 1)
         }
@@ -65,7 +62,7 @@ export default function Navbar({ locale }: { locale: string }) {
 
     // Si el primer segmento parece un locale (ej: 'de'), descartarlo
     const first = parts[0]
-    const looksLikeLocale = localePattern.test(first)
+    const looksLikeLocale = /^[A-Za-z]{2}(-[A-Za-z]{2})?$/.test(first)
     if (looksLikeLocale) {
       const rest = parts.slice(1)
       router.push(rest.length ? "/" + newLocale + "/" + rest.join("/") : "/" + newLocale)
@@ -112,46 +109,10 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* DESKTOP */}
         <div className="hidden md:flex gap-8 items-center text-sm text-white">
 
-          <Link href="/" className="mr-auto">{t("common","home")}</Link>
+          <Link href={"/" + locale}>{t("common","home")}</Link>
           <Link href={"/" + locale + "/services"}>{t("common","services")}</Link>
           <Link href={"/" + locale + "/fleet"}>{t("common","fleet")}</Link>
           <Link href={"/" + locale + "/contact"}>{t("common","contact")}</Link>
-
-          {/* Language Dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setLangOpen(!langOpen)}
-              className="p-1.5 rounded transition-opacity hover:opacity-100 flex items-center gap-1"
-              aria-label="Select language"
-            >
-              <FlagIcon locale={locale as any} className="block shrink-0 rounded-sm overflow-hidden" />
-              <ChevronDown size={16} className="text-white" />
-            </button>
-
-            {langOpen && (
-              <div className="absolute top-full right-0 mt-2 py-2 px-1 rounded-lg shadow-lg min-w-32"
-                style={{ backgroundColor: 'rgba(0, 0, 0, 0.9)' }}
-              >
-                {locales.map((lang) => {
-                  const isActive = locale === lang
-                  return (
-                    <button
-                      key={lang}
-                      onClick={() => {
-                        changeLang(lang)
-                        setLangOpen(false)
-                      }}
-                      className="w-full flex items-center gap-2 px-3 py-2 rounded transition-all hover:bg-white/10"
-                      style={isActive ? { backgroundColor: 'rgba(205, 154, 49, 0.2)' } : undefined}
-                    >
-                      <FlagIcon locale={lang} className="block shrink-0 rounded-sm overflow-hidden" />
-                      <span className="text-sm text-white">{langNames[lang]}</span>
-                    </button>
-                  )
-                })}
-              </div>
-            )}
-          </div>
 
           {/* Book Now Button */}
           <a
@@ -166,6 +127,34 @@ export default function Navbar({ locale }: { locale: string }) {
             <MessageCircle size={16} />
             {t("common","book_now")}
           </a>
+
+          {/* LANG - solo banderas */
+          <div className="flex gap-1.5 ml-4 items-center">
+            {locales.map((lang) => {
+              const langNames: Record<string, string> = {
+                es: "Espanol",
+                en: "English",
+                fr: "Francais",
+                it: "Italiano",
+                de: "Deutsch"
+              }
+              return (
+                <button
+                  key={lang}
+                  onClick={() => changeLang(lang)}
+                  className={locale === lang 
+                    ? "p-1 rounded transition-opacity hover:opacity-100 opacity-100 ring-1 ring-offset-1 ring-offset-transparent" 
+                    : "p-1 rounded transition-opacity hover:opacity-100 opacity-70 hover:opacity-90"
+                  }
+                  style={locale === lang ? { borderColor: '#CD9A31' } : undefined}
+                  title={langNames[lang]}
+                  aria-label={langNames[lang]}
+                >
+                  <FlagIcon locale={lang} className="block shrink-0 rounded-sm overflow-hidden" />
+                </button>
+              )
+            })}
+          </div>
 
         </div>
 
@@ -225,11 +214,13 @@ export default function Navbar({ locale }: { locale: string }) {
 
             <div className="flex gap-2 pt-4 items-center flex-wrap">
               {locales.map((lang) => {
-                const isActive = locale === lang
-                const buttonClass = isActive
-                  ? "p-1.5 rounded transition-opacity hover:opacity-100 opacity-100 ring-1 ring-offset-1 ring-offset-black/90" 
-                  : "p-1.5 rounded transition-opacity hover:opacity-100 opacity-70 hover:opacity-90"
-                
+                const langNames: Record<string, string> = {
+                  es: "Espanol",
+                  en: "English",
+                  fr: "Francais",
+                  it: "Italiano",
+                  de: "Deutsch"
+                }
                 return (
                   <button
                     key={lang}
@@ -237,8 +228,11 @@ export default function Navbar({ locale }: { locale: string }) {
                       changeLang(lang)
                       handleClose()
                     }}
-                    className={buttonClass}
-                    style={isActive ? { borderColor: '#CD9A31' } : undefined}
+                    className={locale === lang 
+                      ? "p-1.5 rounded transition-opacity hover:opacity-100 opacity-100 ring-1 ring-offset-1 ring-offset-black/90" 
+                      : "p-1.5 rounded transition-opacity hover:opacity-100 opacity-70 hover:opacity-90"
+                    }
+                    style={locale === lang ? { borderColor: '#CD9A31' } : undefined}
                     title={langNames[lang]}
                     aria-label={langNames[lang]}
                   >

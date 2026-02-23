@@ -24,15 +24,27 @@ export default function Hero() {
       
       {/* BG */}
       <div className="absolute inset-0">
+        {/* Desktop image */}
         <Image
           src="/hero.webp"
           alt="Airport transfer"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover hidden md:block"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+        {/* Mobile image */}
+        <Image
+          src="/hero-mobile.png"
+          alt="Airport transfer"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-top md:hidden"
+          style={{ objectPosition: 'center -20%' }}
+        />
+        {/* Gradiente más claro en mobile */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70 md:bg-gradient-to-r md:from-black/90 md:via-black/70 md:to-black/40" />
       </div>
 
       {/* CONTENT */}

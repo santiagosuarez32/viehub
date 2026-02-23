@@ -3,6 +3,7 @@ import "../globals.css"
 import Navbar from "@/components/Navbar"
 import { I18nProvider } from "@/lib/i18n/i18n"
 import LenisProvider from "@/components/LenisProvider"
+import FloatingContactButton from "@/components/FloatingContactButton"
 import { Exo } from "next/font/google"
 
 const exo = Exo({
@@ -30,6 +31,7 @@ export default async function LocaleLayout({
             <Navbar locale={locale} />
             {children}
             <Footer locale={locale} />
+            <FloatingContactButton />
           </LenisProvider>
         </I18nProvider>
       </body>
