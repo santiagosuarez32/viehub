@@ -34,8 +34,16 @@ export default function DestinationPageClient({
   dict,
 }: DestinationPageClientProps) {
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
   }, [slug])
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+    }, 0)
+  }, [])
 
   return (
     <main className="w-full bg-black text-white">
