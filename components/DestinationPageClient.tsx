@@ -3,6 +3,7 @@
 import { useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { Phone } from "lucide-react"
 import DestinationCarousel from "@/components/DestinationCarousel"
 import { sanitizeHtml } from "@/lib/sanitize-html"
 import { getDictionarySync } from "@/lib/i18n/dictionaries"
@@ -72,18 +73,18 @@ export default function DestinationPageClient({
                 </button>
 
                 <a
-                  href="https://wa.me/436602202238"
-                  target="_blank"
-                  className="block w-full text-center py-3 border border-[#25D366] text-[#25D366] rounded-lg hover:bg-[#25D366] hover:text-black transition"
+                  href="tel:+436602202238"
+                  className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition flex items-center justify-center gap-2"
                 >
-                  {dict.common.whatsapp_booking}
+                  <Phone size={18} />
+                  {dict.common.call_number}
                 </a>
 
                 <a
                   href="tel:+436602202238"
                   className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition"
                 >
-                  {dict.common.call_number}
+                  {dict.common.whatsapp_booking}
                 </a>
               </div>
             </div>
@@ -107,18 +108,18 @@ export default function DestinationPageClient({
               </button>
 
               <a
-                href="https://wa.me/436602202238"
-                target="_blank"
-                className="block w-full text-center py-3 border border-[#25D366] text-[#25D366] rounded-lg hover:bg-[#25D366] hover:text-black transition"
+                href="tel:+436602202238"
+                className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition flex items-center justify-center gap-2"
               >
-                {dict.common.whatsapp_booking}
+                <Phone size={18} />
+                {dict.common.call_number}
               </a>
 
               <a
                 href="tel:+436602202238"
                 className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition"
               >
-                {dict.common.call_number}
+                {dict.common.whatsapp_booking}
               </a>
             </div>
 
