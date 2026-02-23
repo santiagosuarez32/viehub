@@ -72,11 +72,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-lg p-6 sm:p-8 rounded-2xl shadow-2xl border border-[#CD9A31]/30 bg-black/20 backdrop-blur-xl md:bg-[#111] md:backdrop-blur-none"
+          className="w-full max-w-lg p-6 sm:p-8 rounded-2xl shadow-2xl border border-[#CD9A31]/30 bg-black/20 md:bg-[#111] md:backdrop-blur-none"
         >
           
           {/* CHILD SEATS */}
-          <div className="mb-6 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-4 text-sm">
+          <div className="mb-6 bg-white/10 border border-white/20 rounded-xl p-4 text-sm">
             
             <div className="flex items-center gap-2 mb-3 text-white tracking-widest text-[11px] uppercase">
               <Baby size={16} className="text-[#CD9A31]" />

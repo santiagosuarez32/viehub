@@ -82,7 +82,7 @@ export default function ServicePageClient({
               </button>
 
               <a
-                href="https://wa.me/436602202238"
+                href="https://wa.me/43 660 8537912"
                 target="_blank"
                 className="w-full block text-center py-3 border border-[#25D366] text-[#25D366] rounded-lg hover:bg-[#25D366] hover:text-black transition"
               >

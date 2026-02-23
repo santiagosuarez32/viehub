@@ -73,7 +73,7 @@ export default function DestinationPageClient({
                 </button>
 
                 <a
-                  href="tel:+436602202238"
+                  href="tel:+43 660 8537912"
                   className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition flex items-center justify-center gap-2"
                 >
                   <Phone size={18} />
@@ -81,7 +81,7 @@ export default function DestinationPageClient({
                 </a>
 
                 <a
-                  href="tel:+436602202238"
+                  href="tel:+43 660 8537912"
                   className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition"
                 >
                   {dict.common.whatsapp_booking}
@@ -108,7 +108,7 @@ export default function DestinationPageClient({
               </button>
 
               <a
-                href="tel:+436602202238"
+                href="tel:+43 660 8537912"
                 className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition flex items-center justify-center gap-2"
               >
                 <Phone size={18} />
@@ -116,7 +116,7 @@ export default function DestinationPageClient({
               </a>
 
               <a
-                href="tel:+436602202238"
+                href="tel:+43 660 8537912"
                 className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition"
               >
                 {dict.common.whatsapp_booking}

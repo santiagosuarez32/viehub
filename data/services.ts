@@ -88,7 +88,7 @@ Book online or contact us directly – we are available 24/7.
 </p>
 
 <p>
-<strong>Call us:</strong> +436602202238<br/>
+<strong>Call us:</strong> +43 660 8537912<br/>
 <strong>Send a message via WhatsApp</strong>
 </p>
 
@@ -191,7 +191,7 @@ Book online or contact us directly – we are available 24/7.
 </p>
 
 <p>
-<strong>Call us:</strong> +436602202238<br/>
+<strong>Call us:</strong> +43 660 8537912<br/>
 <strong>Send a message via WhatsApp</strong>
 </p>
 
@@ -288,7 +288,7 @@ Book online or contact us directly – we are available 24/7.
 </p>
 
 <p>
-<strong>Call us:</strong> +436602202238<br/>
+<strong>Call us:</strong> +43 660 8537912<br/>
 <strong>Send a message via WhatsApp</strong>
 </p>
 
@@ -377,7 +377,7 @@ Book online or contact us directly – we are available 24/7.
 </p>
 
 <p>
-<strong>Call us:</strong> +436602202238<br/>
+<strong>Call us:</strong> +43 660 8537912<br/>
 <strong>Send a message via WhatsApp</strong>
 </p>
 
@@ -451,7 +451,7 @@ Book online or contact us directly – we are available 24/7.
 </p>
 
 <p>
-<strong>Call us:</strong> +436602202238<br/>
+<strong>Call us:</strong> +43 660 8537912<br/>
 <strong>Send a message via WhatsApp</strong>
 </p>
 
@@ -550,7 +550,7 @@ Book online or contact us directly – we are available 24/7.
 </p>
 
 <p>
-<strong>Call us:</strong> +436602202238<br/>
+<strong>Call us:</strong> +43 660 8537912<br/>
 <strong>Send a message via WhatsApp</strong>
 </p>
 
@@ -652,7 +652,7 @@ Book online or contact us directly – we are available 24/7.
 </p>
 
 <p>
-<strong>Call us:</strong> +436602202238<br/>
+<strong>Call us:</strong> +43 660 8537912<br/>
 <strong>Send a message via WhatsApp</strong>
 </p>
 
@@ -740,7 +740,7 @@ Book online or contact us directly – we are available 24/7.
 </p>
 
 <p>
-<strong>Call us:</strong> +436602202238<br/>
+<strong>Call us:</strong> +43 660 8537912<br/>
 <strong>Send a message via WhatsApp</strong>
 </p>
 
