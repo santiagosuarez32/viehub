@@ -36,7 +36,7 @@ export default function Footer({ locale }: { locale: string }) {
             {t("footer","tagline")}
           </p>
           <div className="flex flex-col gap-2">
-            <p>📞 +43 660 2202238</p>
+            <p>📞 +43 660 8537912</p>
             <p>📧 info@viehub.com</p>
             <p>📍 {t("footer","vienna")}</p>
           </div>

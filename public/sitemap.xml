@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home pages for all locales -->
+  <url>
+    <loc>https://viehub.at/de</loc>
+    <lastmod>2024-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://viehub.at/en" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viehub.at/es" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viehub.at/fr" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://viehub.at/it" />
+  </url>
+
+  <url>
+    <loc>https://viehub.at/en</loc>
+    <lastmod>2024-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://viehub.at/es</loc>
+    <lastmod>2024-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://viehub.at/fr</loc>
+    <lastmod>2024-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://viehub.at/it</loc>
+    <lastmod>2024-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services pages -->
+  <url>
+    <loc>https://viehub.at/de/services</loc>
+    <lastmod>2024-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Destinations pages -->
+  <url>
+    <loc>https://viehub.at/de/destinations</loc>
+    <lastmod>2024-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

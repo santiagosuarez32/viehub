@@ -100,11 +100,19 @@ export default function Navbar({ locale }: { locale: string }) {
 
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-        <Link href={"/" + locale} className="flex items-center gap-2">
+        <Link 
+          href={"/" + locale} 
+          className="flex items-center gap-2"
+          onClick={() => {
+            if (pathname === "/" + locale) {
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            }
+          }}
+        >
           <img 
             src="/logo.png" 
             alt="VieHub Logo" 
-            className="h-14 w-14 md:h-12 md:w-12 object-contain"
+            className="h-20 w-20 md:h-16 md:w-16 object-contain"
           />
         
         </Link>
@@ -112,7 +120,7 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* DESKTOP */}
         <div className="hidden md:flex gap-8 items-center text-sm text-white">
 
-          <Link href="/" className="mr-auto">{t("common","home")}</Link>
+          <Link href={"/" + locale} className="mr-auto">{t("common","home")}</Link>
           <Link href={"/" + locale + "/services"}>{t("common","services")}</Link>
           <Link href={"/" + locale + "/fleet"}>{t("common","fleet")}</Link>
           <Link href={"/" + locale + "/contact"}>{t("common","contact")}</Link>

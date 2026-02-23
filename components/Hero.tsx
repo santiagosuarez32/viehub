@@ -41,14 +41,14 @@ export default function Hero() {
           priority
           sizes="100vw"
           className="object-cover object-top md:hidden"
-          style={{ objectPosition: 'center -20%' }}
+          style={{ objectPosition: 'center -40%' }}
         />
         {/* Gradiente más claro en mobile */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70 md:bg-gradient-to-r md:from-black/90 md:via-black/70 md:to-black/40" />
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 py-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 py-12 md:py-24">
         
         {/* TEXT (SIN ANIMACIÓN) */}
         <div className="text-center lg:text-left w-full lg:w-1/2">
