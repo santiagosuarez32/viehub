@@ -2,29 +2,28 @@
 
 import { ShieldCheck, Clock, UserCheck, Sparkles } from "lucide-react"
 import { motion } from "framer-motion"
+import { useI18n } from "@/lib/i18n/i18n"
 
 export default function Highlights(){
+
+const { t } = useI18n()
 
 const items = [
 {
 icon:<ShieldCheck size={34}/>,
-title:"Maximum Safety",
-desc:"All our executive vehicles are regularly inspected and maintained to ensure the highest safety standards on every journey."
+key:"item1"
 },
 {
 icon:<UserCheck size={34}/>,
-title:"Experienced Chauffeurs",
-desc:"Our professional drivers provide a smooth, discreet and reliable transfer experience with deep local knowledge."
+key:"item2"
 },
 {
 icon:<Clock size={34}/>,
-title:"Always On Time",
-desc:"We track your flight in real time to guarantee punctual airport pickups and stress-free drop-offs."
+key:"item3"
 },
 {
 icon:<Sparkles size={34}/>,
-title:"Premium Comfort",
-desc:"Travel in luxurious interiors with spacious seating, climate control and complimentary amenities."
+key:"item4"
 }
 ]
 
@@ -49,15 +48,14 @@ className="text-center mb-16 max-w-2xl mx-auto"
 data-builder-text="highlights_title"
 className="text-4xl font-light mb-4"
 >
-Why Travel <span className="text-[#CD9A31]">With Us</span>
+{t("why", "title")} <span className="text-[#CD9A31]">{t("why", "subtitle")}</span>
 </h2>
 
 <p
 data-builder-text="highlights_desc"
 className="text-gray-400"
 >
-Experience executive airport transfers designed for comfort,
-punctuality and professionalism — every ride, every time.
+{t("why", "description")}
 </p>
 
 </div>
@@ -114,7 +112,7 @@ transition
 data-builder-text={`highlight_title_${i}`}
 className="text-lg mb-2"
 >
-{item.title}
+{t("highlights", `${item.key}_title`)}
 </h4>
 
 {/* DESC */}
@@ -122,7 +120,7 @@ className="text-lg mb-2"
 data-builder-text={`highlight_desc_${i}`}
 className="text-sm text-gray-400 leading-relaxed"
 >
-{item.desc}
+{t("highlights", `${item.key}_desc`)}
 </p>
 
 </motion.div>

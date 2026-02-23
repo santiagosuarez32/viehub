@@ -3,7 +3,7 @@ export const services = [
 {
 slug:"private-day-tours",
 title:"Private day tours",
-image:"/services/priv.jpg",
+image:"/services/priv.webp",
 desc:"Private day tours from Vienna to Austria and neighboring countries.",
 
 longDesc:`
@@ -58,7 +58,7 @@ steps:[
 {
 slug:"hotel-transfers-vienna",
 title:"Hotel Transfers Vienna",
-image:"/services/HOTEL.jpg",
+image:"/services/HOTEL.webp",
 desc:"Comfortable and reliable hotel transfers in Vienna and across Austria.",
 
 longDesc:`
@@ -162,7 +162,7 @@ steps:[
 {
 slug:"long-distance-transfers",
 title:"Long-Distance Transfers",
-image:"/services/long.jpg",
+image:"/services/long.webp",
 desc:"Comfortable long-distance private transfers across Austria and Europe.",
 
 longDesc:`
@@ -424,7 +424,7 @@ steps:[
 {
 slug:"vienna-airport-transfer",
 title:"Airport Transfers Vienna (VIE)",
-image:"/services/airport.jpg",
+image:"/services/airport.webp",
 desc:"Reliable and stress-free airport transfers between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
 
 longDesc:`
@@ -523,7 +523,7 @@ steps:[
 },  {
 slug:"vienna-city-transfers",
 title:"Vienna City Transfers",
-image:"/services/city.jpg",
+image:"/services/city.webp",
 desc:"Comfortable and reliable city transfers within Vienna with professional drivers and fixed pricing.",
 
 longDesc:`
@@ -625,7 +625,7 @@ steps:[
 }, {
 slug:"taxi-vienna-airport",
 title:"Taxi Vienna Airport",
-image:"/services/airport-taxi.jpg",
+image:"/services/airport-taxi.webp",
 desc:"Fast, safe and reliable taxi service between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
 
 longDesc:`
@@ -716,7 +716,7 @@ steps:[
 }, {
 slug:"private-chauffeur-vienna",
 title:"Private Chauffeur in Vienna",
-image:"/services/private-chofer.jpg",
+image:"/services/private-chofer.webp",
 desc:"Luxury private chauffeur service in Vienna with personalized, discreet and flexible transportation solutions.",
 
 longDesc:`

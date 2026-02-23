@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 /* ===== ROOT COLORS ===== */
@@ -12,7 +11,7 @@
 /* ===== BASE ===== */
 
 body {
-  font-family: "Exo", sans-serif;
+  font-family: var(--font-exo, "Exo", sans-serif);
   background: var(--background);
   color: var(--foreground);
 }

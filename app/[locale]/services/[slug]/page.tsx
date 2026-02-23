@@ -4,6 +4,8 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import DOMPurify from "isomorphic-dompurify"
 import Steps from "@/components/Steps"
+import { servicesTranslations } from "@/lib/i18n/services-translations"
+import { SupportedLocale, getDictionarySync } from "@/lib/i18n/dictionaries"
 
 type Props = {
   params: Promise<{
@@ -15,10 +17,18 @@ type Props = {
 export default async function ServicePage({ params }: Props) {
 
   const { slug, locale } = await params
+  const dict = getDictionarySync(locale as SupportedLocale)
 
   const service = services.find(s => s.slug === slug)
 
   if (!service) return notFound()
+
+  // Get translated content
+  const translations = servicesTranslations[locale as SupportedLocale] || servicesTranslations.en
+  const translatedService = translations[slug as keyof typeof translations] || null
+  
+  const title = translatedService?.title || service.title
+  const longDesc = translatedService?.longDesc || service.longDesc
 
   const otherServices = services
     .filter(s => s.slug !== slug)
@@ -44,13 +54,13 @@ export default async function ServicePage({ params }: Props) {
             </div>
 
             <h1 className="text-4xl mb-6">
-              {service.title}
+              {title}
             </h1>
 
             <div
               className="text-gray-400 prose prose-invert max-w-none"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(service.longDesc)
+                __html: DOMPurify.sanitize(longDesc)
               }}
             />
           </div>
@@ -61,11 +71,11 @@ export default async function ServicePage({ params }: Props) {
   <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-5">
 
     <h4 className="text-lg font-medium">
-      Book Your Transfer
+      {dict.common.book_now}
     </h4>
 
     <button className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition">
-      Reserve Now
+      {dict.common.reserve_now}
     </button>
 
     <a
@@ -73,7 +83,7 @@ export default async function ServicePage({ params }: Props) {
       target="_blank"
       className="w-full block text-center py-3 border border-[#25D366] text-[#25D366] rounded-lg hover:bg-[#25D366] hover:text-black transition"
     >
-      Reserve via WhatsApp
+      {dict.common.whatsapp_booking}
     </a>
 
   </div>
@@ -83,7 +93,7 @@ export default async function ServicePage({ params }: Props) {
   <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-6">
 
     <h4 className="text-lg font-medium mb-2">
-      Other Services
+      {dict.common.other_services}
     </h4>
 
     <div className="space-y-5">

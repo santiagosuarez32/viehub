@@ -5,11 +5,16 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
+import { useI18n } from "@/lib/i18n/i18n"
+import { servicesTranslations } from "@/lib/i18n/services-translations"
+import { SupportedLocale } from "@/lib/i18n/dictionaries"
 
 export default function Services() {
 
   const params = useParams()
   const locale = params?.locale as string
+  const { t } = useI18n()
+  const translations = servicesTranslations[locale as SupportedLocale] || servicesTranslations.en
 
   return (
 
@@ -21,23 +26,28 @@ export default function Services() {
         <div className="mb-16 max-w-2xl">
 
           <p className="text-[#CD9A31] text-sm tracking-widest mb-3">
-            OUR SERVICES
+            {t("common", "services").toUpperCase()}
           </p>
 
           <h2 className="text-4xl leading-tight mb-4">
-            Premium Transfer
-            <span className="text-[#CD9A31]"> Solutions</span>
+            {t("common", "services")}
+            <span className="text-[#CD9A31]"> {t("common", "solutions")}</span>
           </h2>
 
           <p className="text-gray-400">
-            Explore our wide range of chauffeur and airport transfer services.
+            {t("common", "explore")} {t("common", "services_description")}
           </p>
 
         </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  {services.map((service, i) => (
+  {services.map((service, i) => {
+    const translatedService = translations[service.slug as keyof typeof translations]
+    const title = translatedService?.title || service.title
+    const desc = translatedService?.desc || service.desc
+
+    return (
 
     <motion.div
       key={service.slug}
@@ -70,7 +80,7 @@ export default function Services() {
 
             <Image
               src={service.image}
-              alt={service.title}
+              alt={title}
               fill
               sizes="(max-width:768px) 100vw, 33vw"
               className="object-cover group-hover:scale-110 transition duration-700"
@@ -84,11 +94,11 @@ export default function Services() {
           <div className="p-6 flex flex-col flex-1">
 
             <h3 className="text-lg mb-2 min-h-[56px]">
-              {service.title}
+              {title}
             </h3>
 
             <p className="text-sm text-gray-400 mb-6 flex-1">
-              {service.desc}
+              {desc}
             </p>
 
             <div className="
@@ -103,7 +113,7 @@ export default function Services() {
               transition
               mt-auto
             ">
-              See More
+              {t("common", "see_more")}
             </div>
 
           </div>
@@ -114,7 +124,8 @@ export default function Services() {
 
     </motion.div>
 
-  ))}
+    )
+  })}
 
 </div>
 

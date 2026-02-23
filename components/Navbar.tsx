@@ -5,8 +5,10 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useRouter, usePathname } from "next/navigation"
+import { useI18n } from "@/lib/i18n/i18n"
+import { FlagIcon } from "@/components/FlagIcon"
 
-const locales = ["de", "en", "fr", "it", "es"]
+const locales = ["es", "en", "fr", "it", "de"] as const
 
 export default function Navbar({ locale }: { locale: string }) {
 
@@ -23,24 +25,51 @@ export default function Navbar({ locale }: { locale: string }) {
   }, [])
 
   function changeLang(newLocale: string) {
-
     if (!pathname) return
 
-    const segments = pathname.split("/")
+    const parts = pathname.split("/").filter(Boolean)
 
-    if (!locales.includes(segments[1])) {
-      router.push(`/${newLocale}${pathname}`)
+    // Si no hay segmentos, ir directo a /{locale}
+    if (parts.length === 0) {
+      router.push(`/${newLocale}`)
       return
     }
 
-    segments[1] = newLocale
+    // Si el primer segmento es un locale soportado, reemplazarlo y limpiar posibles restos tipo '/xx'
+    if ((locales as readonly string[]).includes(parts[0])) {
+      parts[0] = newLocale
 
-    router.push(segments.join("/") || `/${newLocale}`)
+      // Si el segundo segmento parece otro locale (p.ej. 'de'), lo eliminamos
+      if (parts.length > 1) {
+        const second = parts[1]
+        const secondLooksLikeLocale = /^[A-Za-z]{2}(-[A-Za-z]{2})?$/.test(second)
+        if (secondLooksLikeLocale) {
+          parts.splice(1, 1)
+        }
+      }
+
+      router.push("/" + parts.join("/"))
+      return
+    }
+
+    // Si el primer segmento parece un locale (ej: 'de'), descartarlo
+    const first = parts[0]
+    const looksLikeLocale = /^[A-Za-z]{2}(-[A-Za-z]{2})?$/.test(first)
+    if (looksLikeLocale) {
+      const rest = parts.slice(1)
+      router.push(rest.length ? `/${newLocale}/` + rest.join("/") : `/${newLocale}`)
+      return
+    }
+
+    // En cualquier otro caso, anteponer el nuevo locale conservando el resto
+    router.push(`/${newLocale}/` + parts.join("/"))
   }
 
   function handleClose() {
     setOpen(false)
   }
+
+  const { t } = useI18n()
 
   return (
 
@@ -55,7 +84,7 @@ export default function Navbar({ locale }: { locale: string }) {
         md:fixed md:top-0 md:left-0
         
         ${scrolled
-          ? "backdrop-blur-xl bg-black/70 border-b border-[#CD9A31]/20"
+          ? "backdrop-blur-xl bg-black/70  border-[#CD9A31]/20"
           : "bg-transparent"
         }
       `}
@@ -72,20 +101,22 @@ export default function Navbar({ locale }: { locale: string }) {
         {/* DESKTOP */}
         <div className="hidden md:flex gap-8 items-center text-sm text-white">
 
-          <Link href={`/${locale}`}>Home</Link>
-          <Link href={`/${locale}/services`}>Services</Link>
-          <Link href={`/${locale}/fleet`}>Fleet</Link>
-          <Link href={`/${locale}/contact`}>Contact</Link>
+          <Link href={`/${locale}`}>{t("common","home")}</Link>
+          <Link href={`/${locale}/services`}>{t("common","services")}</Link>
+          <Link href={`/${locale}/fleet`}>{t("common","fleet")}</Link>
+          <Link href={`/${locale}/contact`}>{t("common","contact")}</Link>
 
-          {/* LANG */}
-          <div className="flex gap-2 text-[#CD9A31] ml-4">
+          {/* LANG - solo banderas */}
+          <div className="flex gap-1.5 ml-4 items-center">
             {locales.map((lang) => (
               <button
                 key={lang}
                 onClick={() => changeLang(lang)}
-                className={locale === lang ? "font-bold underline" : ""}
+                className={`p-1 rounded transition-opacity hover:opacity-100 ${locale === lang ? "opacity-100 ring-1 ring-[#CD9A31] ring-offset-1 ring-offset-transparent" : "opacity-70 hover:opacity-90"}`}
+                title={lang === "es" ? "Español" : lang === "en" ? "English" : lang === "fr" ? "Français" : lang === "it" ? "Italiano" : "Deutsch"}
+                aria-label={lang === "es" ? "Español" : lang === "en" ? "English" : lang === "fr" ? "Français" : lang === "it" ? "Italiano" : "Deutsch"}
               >
-                {lang.toUpperCase()}
+                <FlagIcon locale={lang} className="block shrink-0 rounded-sm overflow-hidden" />
               </button>
             ))}
           </div>
@@ -126,27 +157,27 @@ export default function Navbar({ locale }: { locale: string }) {
               gap-4
               text-sm
               text-white
-              border-b border-[#CD9A31]/20
+             border-[#CD9A31]/20
             "
           >
 
             <Link onClick={handleClose} href={`/${locale}`}>
-              Home
+              {t("common","home")}
             </Link>
 
             <Link onClick={handleClose} href={`/${locale}/services`}>
-              Services
+              {t("common","services")}
             </Link>
 
             <Link onClick={handleClose} href={`/${locale}/fleet`}>
-              Fleet
+              {t("common","fleet")}
             </Link>
 
             <Link onClick={handleClose} href={`/${locale}/contact`}>
-              Contact
+              {t("common","contact")}
             </Link>
 
-            <div className="flex gap-3 text-[#CD9A31] pt-4">
+            <div className="flex gap-2 pt-4 items-center flex-wrap">
               {locales.map((lang) => (
                 <button
                   key={lang}
@@ -154,9 +185,11 @@ export default function Navbar({ locale }: { locale: string }) {
                     changeLang(lang)
                     handleClose()
                   }}
-                  className={locale === lang ? "font-bold underline" : ""}
+                  className={`p-1.5 rounded transition-opacity hover:opacity-100 ${locale === lang ? "opacity-100 ring-1 ring-[#CD9A31] ring-offset-1 ring-offset-black/90" : "opacity-70 hover:opacity-90"}`}
+                  title={lang === "es" ? "Español" : lang === "en" ? "English" : lang === "fr" ? "Français" : lang === "it" ? "Italiano" : "Deutsch"}
+                  aria-label={lang === "es" ? "Español" : lang === "en" ? "English" : lang === "fr" ? "Français" : lang === "it" ? "Italiano" : "Deutsch"}
                 >
-                  {lang.toUpperCase()}
+                  <FlagIcon locale={lang} className="block shrink-0 rounded-sm overflow-hidden" />
                 </button>
               ))}
             </div>

@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import DOMPurify from "isomorphic-dompurify"
 import DestinationCarousel from "@/components/DestinationCarousel"
+import { destinationsTranslations } from "@/lib/i18n/destinations-translations"
+import { SupportedLocale, getDictionarySync } from "@/lib/i18n/dictionaries"
 
 type Props = {
   params: Promise<{
@@ -15,10 +17,21 @@ type Props = {
 export default async function DestinationPage({ params }: Props) {
 
   const { slug, locale } = await params
+  const dict = getDictionarySync(locale as SupportedLocale)
 
   const destination = destinations.find(d => d.slug === slug)
 
   if (!destination) return notFound()
+
+  // Get translated content
+  const translations = destinationsTranslations[locale as SupportedLocale] || destinationsTranslations.en
+  const translatedDest = translations[slug as keyof typeof translations] || null
+  
+  const title = translatedDest?.title || destination.title
+  const longDesc = translatedDest?.longDesc || destination.longDesc
+  const steps =
+    (translatedDest && "steps" in translatedDest ? translatedDest.steps : undefined) ??
+    destination.steps
 
   const otherDestinations = destinations
     .filter(d => d.slug !== slug)
@@ -42,7 +55,7 @@ export default async function DestinationPage({ params }: Props) {
             </div>
 
             <h1 className="text-4xl mb-6">
-              {destination.title}
+              {title}
             </h1>
 
             {/* 🔥 MOBILE BOOKING BOX */}
@@ -50,11 +63,11 @@ export default async function DestinationPage({ params }: Props) {
               <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-4">
 
                 <h4 className="text-lg">
-                  Book Your Transfer
+                  {dict.common.book_now}
                 </h4>
 
                 <button className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition">
-                  Reserve Now
+                  {dict.common.reserve_now}
                 </button>
 
                 <a
@@ -62,14 +75,14 @@ export default async function DestinationPage({ params }: Props) {
                   target="_blank"
                   className="block w-full text-center py-3 border border-[#25D366] text-[#25D366] rounded-lg hover:bg-[#25D366] hover:text-black transition"
                 >
-                  WhatsApp Booking
+                  {dict.common.whatsapp_booking}
                 </a>
 
                 <a
                   href="tel:+436602202238"
                   className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition"
                 >
-                  Call +43 660 2202238
+                  {dict.common.call_number}
                 </a>
 
               </div>
@@ -79,7 +92,7 @@ export default async function DestinationPage({ params }: Props) {
             <div
               className="text-gray-400 prose prose-invert max-w-none"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(destination.longDesc)
+                __html: DOMPurify.sanitize(longDesc)
               }}
             />
 
@@ -91,11 +104,11 @@ export default async function DestinationPage({ params }: Props) {
             <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-5">
 
               <h4 className="text-lg">
-                Book Your Transfer
+                {dict.common.book_now}
               </h4>
 
               <button className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition">
-                Reserve Now
+                {dict.common.reserve_now}
               </button>
 
               <a
@@ -103,14 +116,14 @@ export default async function DestinationPage({ params }: Props) {
                 target="_blank"
                 className="block w-full text-center py-3 border border-[#25D366] text-[#25D366] rounded-lg hover:bg-[#25D366] hover:text-black transition"
               >
-                WhatsApp Booking
+                {dict.common.whatsapp_booking}
               </a>
 
               <a
                 href="tel:+436602202238"
                 className="block w-full text-center py-3 border border-white/30 text-white rounded-lg hover:bg-white hover:text-black transition"
               >
-                Call +43 660 2202238
+                {dict.common.call_number}
               </a>
 
             </div>
@@ -118,7 +131,7 @@ export default async function DestinationPage({ params }: Props) {
             <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-4">
 
               <h4 className="mb-3">
-                Other Destinations
+                {dict.common.other_destinations}
               </h4>
 
               {otherDestinations.map((d) => (

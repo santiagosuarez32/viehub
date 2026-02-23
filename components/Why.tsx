@@ -2,29 +2,28 @@
 
 import { ShieldCheck, Clock, Star, BadgeDollarSign } from "lucide-react"
 import { motion } from "framer-motion"
+import { useI18n } from "@/lib/i18n/i18n"
 
 export default function Why(){
+
+const { t } = useI18n()
 
 const items = [
 {
 icon:<ShieldCheck size={26}/>,
-title:"Prestigious Vehicles",
-desc:"Our fleet includes top-tier executive vehicles offering maximum comfort and performance."
+key:"item1"
 },
 {
 icon:<Star size={26}/>,
-title:"Elite Chauffeurs",
-desc:"Professional drivers with local expertise ensuring a seamless luxury journey."
+key:"item2"
 },
 {
 icon:<Clock size={26}/>,
-title:"24/7 Availability",
-desc:"Available anytime for airport transfers, business travel or private events."
+key:"item3"
 },
 {
 icon:<BadgeDollarSign size={26}/>,
-title:"Transparent Pricing",
-desc:"No hidden fees. Fixed rates with full clarity before you book."
+key:"item4"
 }
 ]
 
@@ -46,16 +45,14 @@ className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center"
 data-builder-text="why_title"
 className="text-4xl mb-6"
 >
-Why <span className="text-[#CD9A31]">Choose Us</span>
+{t("why", "title")} <span className="text-[#CD9A31]">{t("why", "subtitle")}</span>
 </h2>
 
 <p
 data-builder-text="why_desc"
 className="text-gray-400 mb-12 max-w-md"
 >
-Experience a new standard in private transportation.
-We deliver discretion, comfort and dependability
-on every journey.
+{t("why", "description")}
 </p>
 
 <div
@@ -95,14 +92,14 @@ text-[#CD9A31]
 data-builder-text={`why_item_title_${i}`}
 className="mb-1 text-white"
 >
-{item.title}
+{t("why", `${item.key}_title`)}
 </h4>
 
 <p
 data-builder-text={`why_item_desc_${i}`}
 className="text-sm text-gray-400"
 >
-{item.desc}
+{t("why", `${item.key}_desc`)}
 </p>
 
 </div>

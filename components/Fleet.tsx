@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { Users, Briefcase } from "lucide-react";
+import { useI18n } from "@/lib/i18n/i18n";
 
 export default function Fleet(){
+
+const { t } = useI18n();
 
 const cars = [
 {
@@ -12,8 +15,8 @@ subtitle:"Mercedes E-Class",
 pax:3,
 bags:2,
 price:42,
-img:"/sta.jpg",
-features:["Child seats available","WiFi","Air conditioning","Leather seats"]
+img:"/sta.webp",
+features:["child_seats","wifi","air_conditioning","leather_seats"]
 },
 {
 title:"Station Wagon",
@@ -21,9 +24,9 @@ subtitle:"Mercedes E-Class T-Model",
 pax:4,
 bags:3,
 price:46,
-img:"/wa.jpg",
+img:"/wa.webp",
 popular:true,
-features:["Extra luggage space","Child seats available","Premium comfort","WiFi"]
+features:["extra_luggage","child_seats","premium_comfort","wifi"]
 },
 {
 title:"V-Class",
@@ -31,8 +34,8 @@ subtitle:"Mercedes V-Class",
 pax:7,
 bags:7,
 price:65,
-img:"/v.jpg",
-features:["Group travel","Business teams","Family trips","Maximum comfort"]
+img:"/v.webp",
+features:["group_travel","business_teams","family_trips","maximum_comfort"]
 }
 ]
 
@@ -62,7 +65,7 @@ hover:shadow-[0_0_45px_rgba(205,154,49,0.35)]
 {car.popular && (
 <div className="absolute z-20 top-3 right-3">
 <span className="text-[11px] px-3 py-1 bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] text-black rounded-md">
-MOST POPULAR
+{t("common", "most_popular").toUpperCase()}
 </span>
 </div>
 )}
@@ -98,12 +101,12 @@ className="object-cover scale-[1.05]"
 
 <div className="flex items-center gap-1">
 <Users size={15}/>
-{car.pax} Pax
+{car.pax} {t("common", "pax")}
 </div>
 
 <div className="flex items-center gap-1">
 <Briefcase size={15}/>
-{car.bags} Bags
+{car.bags} {t("common", "bags")}
 </div>
 
 </div>
@@ -111,7 +114,7 @@ className="object-cover scale-[1.05]"
 <ul className="text-gray-400 text-sm space-y-1 pt-2">
 {car.features.map((f,idx)=>(
 <li key={idx}>
-• {f}
+• {t("common", f as any)}
 </li>
 ))}
 </ul>
@@ -119,7 +122,7 @@ className="object-cover scale-[1.05]"
 <div className="flex items-center justify-between pt-4">
 
 <p className="text-[#CD9A31] text-lg">
-from €{car.price}
+{t("common", "from_price")} €{car.price}
 </p>
 
 <button className="
@@ -135,7 +138,7 @@ to-[#8f640f]
 hover:scale-105
 transition
 ">
-BOOK
+{t("common", "book")}
 </button>
 
 </div>

@@ -2,12 +2,12 @@ export const destinations = [
 {
 slug:"transfer-vienna-airport-to-prague",
 title:"Transfer from Vienna Airport to Prague",
-image:"/destinations/praga-1.jpg",
+image:"/destinations/praga-1.webp",
 
 // 🔥 IMÁGENES PARA EL CAROUSEL
 gallery:[
-  "/destinations/praga-1.jpg",
-  "/destinations/praga-2.jpg",
+  "/destinations/praga-1.webp",
+  "/destinations/praga-2.webp",
   "/destinations/praga-3.webp",
 ],
 
@@ -89,13 +89,13 @@ steps:[
 {
 slug:"transfer-vienna-airport-to-linz",
 title:"Transfer from Vienna Airport to Linz",
-image:"/destinations/linz-1.jpg",
+image:"/destinations/linz-1.webp",
 
 // 🔥 IMÁGENES PARA EL CAROUSEL
 gallery:[
-  "/destinations/linz-1.jpg",
+  "/destinations/linz-1.webp",
   "/destinations/linz-2.webp",
-  "/destinations/linz-4.jpg",
+  "/destinations/linz-4.webp",
 ],
 
 desc:"Reliable and comfortable private transfer from Vienna Airport to Linz with fixed pricing.",
@@ -179,12 +179,12 @@ steps:[
 }, {
 slug:"transfer-vienna-airport-to-bratislava",
 title:"Transfer from Vienna Airport to Bratislava",
-image:"/destinations/bra-1.jpg",
+image:"/destinations/bra-1.webp",
 
 // 🔥 IMÁGENES PARA EL CAROUSEL
 gallery:[
-  "/destinations/bra-1.jpg",
-  "/destinations/bra-2.jpg",
+  "/destinations/bra-1.webp",
+  "/destinations/bra-2.webp",
   "/destinations/bra-3.webp",
 ],
 
@@ -269,13 +269,13 @@ steps:[
 }, {
 slug:"taxi-from-vienna-airport-to-budapest",
 title:"Taxi from Vienna Airport to Budapest",
-image:"/destinations/bu-1.jpg",
+image:"/destinations/bu-1.webp",
 
 // 🔥 IMÁGENES PARA EL CAROUSEL
 gallery:[
-  "/destinations/bu-2.jpg",
-  "/destinations/bu-1.jpg",
-  "/destinations/bu-4.jpg",
+  "/destinations/bu-2.webp",
+  "/destinations/bu-1.webp",
+  "/destinations/bu-4.webp",
 ],
 
 desc:"Comfortable and reliable private transfer from Vienna Airport to Budapest with fixed pricing.",
@@ -359,13 +359,13 @@ steps:[
 }, {
 slug:"transfer-from-vienna-airport-to-parndorf",
 title:"Transfer from Vienna Airport to Parndorf",
-image:"/destinations/par-3.jpg",
+image:"/destinations/par-3.webp",
 
 // 🔥 IMÁGENES PARA EL CAROUSEL
 gallery:[
-  "/destinations/par-3.jpg",
-  "/destinations/par-2.jpg",
-  "/destinations/par-1.jpg",
+  "/destinations/par-3.webp",
+  "/destinations/par-2.webp",
+  "/destinations/par-1.webp",
 ],
 
 desc:"Comfortable and reliable private transfer from Vienna Airport to Parndorf Designer Outlet.",
@@ -441,12 +441,12 @@ steps:[
 }, {
 slug:"taxi-from-vienna-airport-to-salzburg",
 title:"Taxi from Vienna Airport to Salzburg",
-image: "/destinations/sal-1.jpg",
+image: "/destinations/sal-1.webp",
 
 // 🔥 IMÁGENES PARA EL CAROUSEL
 gallery:[
-  "/destinations/sal-1.jpg",
-  "/destinations/sal-2.jpg",
+  "/destinations/sal-1.webp",
+  "/destinations/sal-2.webp",
   "/destinations/sal-4.webp",
 ],
 

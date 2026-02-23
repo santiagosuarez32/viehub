@@ -12,7 +12,7 @@ export default function DestinationCarousel({ images }: { images: string[] }) {
 
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length)
-    }, 4000)
+    }, 1900)
 
     return () => clearInterval(interval)
   }, [images.length])

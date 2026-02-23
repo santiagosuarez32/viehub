@@ -13,17 +13,24 @@ import {
 } from "lucide-react";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useI18n } from "@/lib/i18n/i18n";
 
 export default function Hero() {
+  const { t } = useI18n();
+
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       
       {/* BG */}
       <div className="absolute inset-0">
-        <img
-          src="/hero.jpg"
-          className="w-full h-full object-cover"
+        <Image
+          src="/hero.webp"
           alt="Airport transfer"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
       </div>
@@ -34,17 +41,17 @@ export default function Hero() {
         {/* TEXT (SIN ANIMACIÓN) */}
         <div className="text-center lg:text-left w-full lg:w-1/2">
           <p className="text-[#CD9A31] tracking-[3px] text-xs sm:text-sm mb-4">
-            PRIVATE AIRPORT TRANSFERS
+            {t("hero", "tagline")}
           </p>
 
          <h1 className="font-bold leading-tight mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] bg-clip-text text-transparent">
-  Airport Transfer
+  {t("hero", "title")}
   <br />
-  Fix Price
+  {t("hero", "title_price")}
 </h1>
 
           <p className="text-gray-300 text-base sm:text-lg max-w-md mx-auto lg:mx-0">
-            Professional • Punctual • Discreet
+            {t("hero", "subtitle")}
           </p>
         </div>
 
@@ -61,45 +68,45 @@ export default function Hero() {
             
             <div className="flex items-center gap-2 mb-3 text-white tracking-widest text-[11px] uppercase">
               <Baby size={16} className="text-[#CD9A31]" />
-              Child Seats Available
+              {t("hero", "child_seats_title")}
             </div>
 
             <div className="space-y-1 text-gray-200 text-xs">
               <div className="flex items-center gap-2">
                 <CheckCircle size={14} className="text-green-400" />
-                Infant Seats (0–13kg)
+                {t("hero", "infant_seats")}
               </div>
 
               <div className="flex items-center gap-2">
                 <CheckCircle size={14} className="text-green-400" />
-                Toddler Seats (9–18kg)
+                {t("hero", "toddler_seats")}
               </div>
 
               <div className="flex items-center gap-2">
                 <CheckCircle size={14} className="text-green-400" />
-                Booster Seats (15–36kg)
+                {t("hero", "booster_seats")}
               </div>
             </div>
 
             <div className="flex items-center gap-2 mt-3 text-[#CD9A31] text-xs">
               <Star size={14} />
-              Free Professional Installation
+              {t("hero", "free_installation")}
             </div>
           </div>
 
           <h3 className="text-white text-xl mb-2 text-center">
-            Book Your Transfer
+            {t("hero", "book_transfer")}
           </h3>
 
           <p className="text-gray-400 text-sm text-center mb-6">
-            Instant confirmation • Free cancellation
+            {t("hero", "instant_confirmation")}
           </p>
 
           <div className="space-y-4">
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input icon={<MapPin size={18} />} placeholder="Pickup Location" />
-              <Input icon={<MapPin size={18} />} placeholder="Dropoff Location" />
+              <Input icon={<MapPin size={18} />} placeholder={t("hero", "pickup_location")} />
+              <Input icon={<MapPin size={18} />} placeholder={t("hero", "dropoff_location")} />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -108,26 +115,26 @@ export default function Hero() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <SelectPassengers />
-              <SelectVehicle />
+              <SelectPassengers t={t} />
+              <SelectVehicle t={t} />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input icon={<Users size={18} />} placeholder="Full Name" />
-              <Input icon={<Phone size={18} />} placeholder="Phone Number" />
+              <Input icon={<Users size={18} />} placeholder={t("hero", "full_name")} />
+              <Input icon={<Phone size={18} />} placeholder={t("hero", "phone_number")} />
             </div>
 
-            <Input icon={<Mail size={18} />} placeholder="Email Address" />
+            <Input icon={<Mail size={18} />} placeholder={t("hero", "email_address")} />
 
             <textarea
-              placeholder="Special Requests (optional)"
+              placeholder={t("hero", "special_requests")}
               className="w-full bg-black/20 backdrop-blur-lg md:bg-black/50 border border-[#CD9A31]/20 px-4 py-3 rounded-xl text-white outline-none"
             />
 
             <button
               className="w-full mt-4 py-3.5 rounded-xl text-black font-semibold text-base bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] hover:scale-[1.02] transition"
             >
-              BOOK NOW
+              {t("hero", "book_now")}
             </button>
 
           </div>
@@ -155,18 +162,18 @@ function Input({ icon, ...props }: any) {
 
 /* ================= PASSENGERS ================= */
 
-function SelectPassengers() {
+function SelectPassengers({ t }: any) {
   return (
     <div className="flex items-center gap-3 bg-black/20 backdrop-blur-lg md:bg-black/50 border border-[#CD9A31]/20 px-4 py-3 rounded-xl">
       <Users size={18} />
       <select className="bg-transparent outline-none text-white w-full text-base">
-        <option className="bg-black">1 Passenger</option>
-        <option className="bg-black">2 Passengers</option>
-        <option className="bg-black">3 Passengers</option>
-        <option className="bg-black">4 Passengers</option>
-        <option className="bg-black">5 Passengers</option>
-        <option className="bg-black">6 Passengers</option>
-        <option className="bg-black">7 Passengers</option>
+        <option className="bg-black">{t("hero", "passenger_one")}</option>
+        <option className="bg-black">{t("hero", "passenger_two")}</option>
+        <option className="bg-black">{t("hero", "passenger_three")}</option>
+        <option className="bg-black">{t("hero", "passenger_four")}</option>
+        <option className="bg-black">{t("hero", "passenger_five")}</option>
+        <option className="bg-black">{t("hero", "passenger_six")}</option>
+        <option className="bg-black">{t("hero", "passenger_seven")}</option>
       </select>
     </div>
   );
@@ -175,13 +182,13 @@ function SelectPassengers() {
 
 /* ================= VEHICLE ================= */
 
-function SelectVehicle() {
+function SelectVehicle({ t }: any) {
   return (
     <div className="flex items-center gap-3 bg-black/20 backdrop-blur-lg md:bg-black/50 border border-[#CD9A31]/20 px-4 py-3 rounded-xl">
       <select className="bg-transparent outline-none text-white w-full text-base">
-        <option className="bg-black">Standard (E-Class)</option>
-        <option className="bg-black">Business</option>
-        <option className="bg-black">Van</option>
+        <option className="bg-black">{t("hero", "vehicle_standard")}</option>
+        <option className="bg-black">{t("hero", "vehicle_business")}</option>
+        <option className="bg-black">{t("hero", "vehicle_van")}</option>
       </select>
     </div>
   );
