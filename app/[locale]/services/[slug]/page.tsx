@@ -2,10 +2,18 @@ import { services } from "@/data/services"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import DOMPurify from "isomorphic-dompurify"
 import Steps from "@/components/Steps"
 import { servicesTranslations } from "@/lib/i18n/services-translations"
 import { SupportedLocale, getDictionarySync } from "@/lib/i18n/dictionaries"
+import { sanitizeHtml } from "@/lib/sanitize-html"
+
+const LOCALES = ["es", "en", "fr", "it", "de"] as const
+
+export async function generateStaticParams() {
+  return LOCALES.flatMap((locale) =>
+    services.map((s) => ({ locale, slug: s.slug }))
+  )
+}
 
 type Props = {
   params: Promise<{
@@ -15,9 +23,12 @@ type Props = {
 }
 
 export default async function ServicePage({ params }: Props) {
+  const resolved = await params
+  const slug = resolved?.slug
+  const locale = resolved?.locale ?? "en"
+  if (!slug) return notFound()
 
-  const { slug, locale } = await params
-  const dict = getDictionarySync(locale as SupportedLocale)
+  const dict = getDictionarySync((LOCALES as readonly string[]).includes(locale) ? (locale as SupportedLocale) : "en")
 
   const service = services.find(s => s.slug === slug)
 
@@ -60,7 +71,7 @@ export default async function ServicePage({ params }: Props) {
             <div
               className="text-gray-400 prose prose-invert max-w-none"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(longDesc)
+                __html: sanitizeHtml(longDesc)
               }}
             />
           </div>

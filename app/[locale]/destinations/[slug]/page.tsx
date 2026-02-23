@@ -2,10 +2,18 @@ import { destinations } from "@/data/destinations"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import DOMPurify from "isomorphic-dompurify"
 import DestinationCarousel from "@/components/DestinationCarousel"
 import { destinationsTranslations } from "@/lib/i18n/destinations-translations"
 import { SupportedLocale, getDictionarySync } from "@/lib/i18n/dictionaries"
+import { sanitizeHtml } from "@/lib/sanitize-html"
+
+const LOCALES = ["es", "en", "fr", "it", "de"] as const
+
+export async function generateStaticParams() {
+  return LOCALES.flatMap((locale) =>
+    destinations.map((d) => ({ locale, slug: d.slug }))
+  )
+}
 
 type Props = {
   params: Promise<{
@@ -15,9 +23,12 @@ type Props = {
 }
 
 export default async function DestinationPage({ params }: Props) {
+  const resolved = await params
+  const slug = resolved?.slug
+  const locale = resolved?.locale ?? "en"
+  if (!slug) return notFound()
 
-  const { slug, locale } = await params
-  const dict = getDictionarySync(locale as SupportedLocale)
+  const dict = getDictionarySync((LOCALES as readonly string[]).includes(locale) ? (locale as SupportedLocale) : "en")
 
   const destination = destinations.find(d => d.slug === slug)
 
@@ -92,7 +103,7 @@ export default async function DestinationPage({ params }: Props) {
             <div
               className="text-gray-400 prose prose-invert max-w-none"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(longDesc)
+                __html: sanitizeHtml(longDesc)
               }}
             />
 
