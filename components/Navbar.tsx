@@ -83,10 +83,8 @@ export default function Navbar({ locale }: { locale: string }) {
   const { t } = useI18n()
 
   const navClasses = scrolled
-    ? "w-full z-50 transition-all duration-500 sticky top-0 md:fixed md:top-0 md:left-0 backdrop-blur-xl bg-black/70"
+    ? "w-full z-50 transition-all duration-500 sticky top-0 md:fixed md:top-0 md:left-0 backdrop-blur-xl bg-black/70 border-b border-[#CD9A31]/20"
     : "w-full z-50 transition-all duration-500 sticky top-0 md:fixed md:top-0 md:left-0 bg-transparent"
-  
-  const navStyle = scrolled ? { borderColor: 'rgba(205, 154, 49, 0.2)' } : undefined
 
   return (
 
@@ -95,14 +93,13 @@ export default function Navbar({ locale }: { locale: string }) {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={navClasses}
-      style={navStyle}
     >
 
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-2 md:py-3">
 
         <Link 
           href={"/" + locale} 
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-300"
           onClick={() => {
             if (pathname === "/" + locale) {
               window.scrollTo({ top: 0, behavior: "smooth" })
@@ -112,24 +109,24 @@ export default function Navbar({ locale }: { locale: string }) {
           <img 
             src="/logo.png" 
             alt="VieHub Logo" 
-            className="h-32 w-32 md:h-40 md:w-40 object-contain"
+            className="h-20 w-20 md:h-32 md:w-32 object-contain"
           />
         
         </Link>
 
         {/* DESKTOP */}
-        <div className="hidden md:flex gap-8 items-center text-sm text-white">
+        <div className="hidden md:flex gap-8 items-center text-sm text-white ml-8">
 
-          <Link href={"/" + locale} className="mr-auto">{t("common","home")}</Link>
-          <Link href={"/" + locale + "/services"}>{t("common","services")}</Link>
-          <Link href={"/" + locale + "/fleet"}>{t("common","fleet")}</Link>
-          <Link href={"/" + locale + "/contact"}>{t("common","contact")}</Link>
+          <Link href={"/" + locale} className="hover:text-[#CD9A31] transition-colors duration-300">{t("common","home")}</Link>
+          <Link href={"/" + locale + "/services"} className="hover:text-[#CD9A31] transition-colors duration-300">{t("common","services")}</Link>
+          <Link href={"/" + locale + "/fleet"} className="hover:text-[#CD9A31] transition-colors duration-300">{t("common","fleet")}</Link>
+          <Link href={"/" + locale + "/contact"} className="hover:text-[#CD9A31] transition-colors duration-300">{t("common","contact")}</Link>
 
           {/* Language Dropdown */}
-          <div className="relative">
+          <div className="relative ml-4">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="p-1.5 rounded transition-opacity hover:opacity-100 flex items-center gap-1"
+              className="p-2 rounded transition-all hover:opacity-100 flex items-center gap-1 hover:bg-white/10"
               aria-label="Select language"
             >
               <FlagIcon locale={locale as any} className="block shrink-0 rounded-sm overflow-hidden" />
@@ -164,10 +161,10 @@ export default function Navbar({ locale }: { locale: string }) {
           {/* Book Now Button */}
           <Link
             href={`/${locale}#booking-form`}
-            className="text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2"
-            style={{ background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)', border: '1px solid #CD9A31' }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%)'; e.currentTarget.style.borderColor = '#E6B84D' }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)'; e.currentTarget.style.borderColor = '#CD9A31' }}
+            className="text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 ml-2 whitespace-nowrap"
+            style={{ background: 'linear-gradient(135deg, #CD9A31 0%, #E6B84D 100%)', border: '1px solid #CD9A31' }}
+            onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 0 20px rgba(205, 154, 49, 0.4)'; e.currentTarget.style.transform = 'translateY(-2px)' }}
+            onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)' }}
           >
             <MessageCircle size={16} />
             {t("common","book_now")}
