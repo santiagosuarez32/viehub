@@ -58,7 +58,7 @@ steps:[
 {
 slug:"hotel-transfers-vienna",
 title:"Hotel Transfers Vienna",
-image:"/services/HOTEL.webp",
+image:"/services/hotel.avif",
 desc:"Comfortable and reliable hotel transfers in Vienna and across Austria.",
 
 longDesc:`
@@ -259,7 +259,7 @@ steps:[
 {
 slug:"vienna-airport-taxi-fixed-price",
 title:"Vienna Airport Taxi at Fixed Price",
-image:"/services/taxi.webp",
+image:"/services/viena-airport.webp",
 desc:"Reliable Vienna Airport taxi service at a guaranteed fixed price with no hidden fees.",
 
 longDesc:`
@@ -355,7 +355,7 @@ steps:[
 {
 slug:"vienna-airport-to-city-taxi",
 title:"Taxi Service from Vienna Airport to the City Center",
-image:"/services/center.webp",
+image:"/services/city-vienna.webp",
 desc:"Reliable taxi service from Vienna Airport (VIE) to the city center with transparent pricing and professional drivers.",
 
 longDesc:`
@@ -424,7 +424,7 @@ steps:[
 {
 slug:"vienna-airport-transfer",
 title:"Airport Transfers Vienna (VIE)",
-image:"/services/airport.webp",
+image:"/services/airport-transfer.webp",
 desc:"Reliable and stress-free airport transfers between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
 
 longDesc:`
@@ -523,7 +523,7 @@ steps:[
 },  {
 slug:"vienna-city-transfers",
 title:"Vienna City Transfers",
-image:"/services/city.webp",
+image:"/services/city-transfer.webp",
 desc:"Comfortable and reliable city transfers within Vienna with professional drivers and fixed pricing.",
 
 longDesc:`
@@ -625,7 +625,7 @@ steps:[
 }, {
 slug:"taxi-vienna-airport",
 title:"Taxi Vienna Airport",
-image:"/services/airport-taxi.webp",
+image:"/services/vienna-airport.webp",
 desc:"Fast, safe and reliable taxi service between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
 
 longDesc:`
@@ -716,7 +716,7 @@ steps:[
 }, {
 slug:"private-chauffeur-vienna",
 title:"Private Chauffeur in Vienna",
-image:"/services/private-chofer.webp",
+image:"/services/private.webp",
 desc:"Luxury private chauffeur service in Vienna with personalized, discreet and flexible transportation solutions.",
 
 longDesc:`

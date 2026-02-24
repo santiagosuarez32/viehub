@@ -412,7 +412,7 @@ function AddressAutocomplete({ icon, placeholder, value, onChange, required }: a
 
       try {
         const response = await fetch(
-          `https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=5&q=${encodeURIComponent(query)}`,
+          `https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=5&countrycodes=at,de,it,ch,fr,es,pt,nl,be,lu,dk,se,no,fi,pl,cz,sk,hu,ro,bg,gr,hr,si,ee,lv,lt,ie,mt&q=${encodeURIComponent(query)}`,
           {
             signal: controller.signal,
             headers: {

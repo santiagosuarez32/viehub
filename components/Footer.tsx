@@ -28,9 +28,6 @@ export default function Footer({ locale }: { locale: string }) {
               alt="VieHub Logo" 
               className="h-10 w-10 object-contain"
             />
-            <h3 className="text-white text-lg">
-              Vie<span className="text-[#CD9A31]">Hub</span>
-            </h3>
           </div>
           <p className="mb-4">
             {t("footer","tagline")}
@@ -74,12 +71,18 @@ export default function Footer({ locale }: { locale: string }) {
           <Link href={`/${locale}/services`} className="hover:text-[#CD9A31] transition-colors">{t("common","services")}</Link>
           <Link href={`/${locale}/fleet`} className="hover:text-[#CD9A31] transition-colors">{t("common","fleet")}</Link>
           <Link href={`/${locale}/contact`} className="hover:text-[#CD9A31] transition-colors">{t("common","contact")}</Link>
+          <Link href={`/${locale}/impressum`} className="hover:text-[#CD9A31] transition-colors">Impressum</Link>
         </div>
 
       </div>
 
       <div className="border-t border-[#CD9A31]/10 py-6 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} VieHub. {t("footer","rights")}
+        <p>
+          © {new Date().getFullYear()} VieHub. {t("footer","rights")} | <Link href={`/${locale}/impressum`} className="hover:text-[#CD9A31] transition-colors">Impressum</Link>
+        </p>
+        <p className="mt-2">
+          Developed by <a href="https://www.codew.com.ar" target="_blank" rel="noopener noreferrer" className="text-[#CD9A31] hover:underline">Codew</a>
+        </p>
       </div>
 
     </footer>
