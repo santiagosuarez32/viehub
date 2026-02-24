@@ -133,6 +133,7 @@ py-2
 rounded-lg
 text-black
 text-sm
+font-bold
 bg-gradient-to-r
 from-[#fff2c9]
 via-[#CD9A31]
