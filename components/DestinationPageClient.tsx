@@ -68,9 +68,12 @@ export default function DestinationPageClient({
               <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-4">
                 <h4 className="text-lg">{dict.common.book_now}</h4>
 
-                <button className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition">
+                <Link
+                  href={`/${locale}#booking-form`}
+                  className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition text-center inline-flex items-center justify-center"
+                >
                   {dict.common.reserve_now}
-                </button>
+                </Link>
 
                 <a
                   href="tel:+43 660 8537912"
@@ -103,9 +106,12 @@ export default function DestinationPageClient({
             <div className="bg-[#0a0a0a] p-6 rounded-2xl border border-[#CD9A31]/30 space-y-5">
               <h4 className="text-lg">{dict.common.book_now}</h4>
 
-              <button className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition">
+              <Link
+                href={`/${locale}#booking-form`}
+                className="w-full py-3 bg-[#CD9A31] text-black rounded-lg hover:scale-105 transition text-center inline-flex items-center justify-center"
+              >
                 {dict.common.reserve_now}
-              </button>
+              </Link>
 
               <a
                 href="tel:+43 660 8537912"

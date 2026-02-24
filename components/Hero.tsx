@@ -177,11 +177,12 @@ export default function Hero() {
 
         {/* FORM (con animación suave) */}
         <motion.form
+          id="booking-form"
           onSubmit={handleSubmit}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-lg p-6 sm:p-8 rounded-2xl shadow-2xl border border-[#CD9A31]/30 bg-black/20 md:bg-[#111] md:backdrop-blur-none"
+          className="w-full max-w-lg p-6 sm:p-8 rounded-2xl shadow-2xl border border-[#CD9A31]/30 bg-black/20 md:bg-[#111] md:backdrop-blur-none scroll-mt-28"
         >
 
           {/* CHILD SEATS */}

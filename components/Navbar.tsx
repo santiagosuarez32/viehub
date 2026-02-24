@@ -112,7 +112,7 @@ export default function Navbar({ locale }: { locale: string }) {
           <img 
             src="/logo.png" 
             alt="VieHub Logo" 
-            className="h-20 w-20 md:h-16 md:w-16 object-contain"
+            className="h-24 w-24 md:h-16 md:w-16 object-contain"
           />
         
         </Link>
@@ -162,10 +162,8 @@ export default function Navbar({ locale }: { locale: string }) {
           </div>
 
           {/* Book Now Button */}
-          <a
-            href="https://wa.me/436608537912"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/${locale}#booking-form`}
             className="text-black font-semibold px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2"
             style={{ backgroundColor: '#CD9A31' }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#B8862B'}
@@ -173,7 +171,7 @@ export default function Navbar({ locale }: { locale: string }) {
           >
             <MessageCircle size={16} />
             {t("common","book_now")}
-          </a>
+          </Link>
 
         </div>
 

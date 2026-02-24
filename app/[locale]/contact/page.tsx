@@ -48,25 +48,29 @@ export default function ContactPage() {
       icon: Phone,
       title: "Phone",
       content: "+43 660 8537912",
-      link: "tel:+436608537912"
+      link: "tel:+436608537912",
+      target: undefined
     },
     {
       icon: Mail,
       title: "Email",
       content: "info@viehub.com",
-      link: "mailto:info@viehub.com"
+      link: "mailto:info@viehub.com",
+      target: undefined
     },
     {
       icon: MapPin,
       title: "Location",
       content: "Vienna, Austria",
-      link: null
+      link: "https://maps.google.com/?q=Vienna%2C%20Austria",
+      target: "_blank"
     },
     {
       icon: Clock,
       title: "Availability",
       content: "24/7 Service",
-      link: null
+      link: null,
+      target: undefined
     }
   ]
 
@@ -102,40 +106,39 @@ export default function ContactPage() {
       <section className="w-full py-16 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactInfo.map((item, i) => (
-              <div
-                key={i}
-                className="
-                  bg-black
-                  border border-[#CD9A31]/30
-                  rounded-2xl
-                  p-6
-                  text-center
-                  hover:border-[#CD9A31]
-                  transition
-                  hover:shadow-[0_0_25px_rgba(205,154,49,0.2)]
-                "
-              >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#CD9A31]/10 border border-[#CD9A31]/30 mb-4">
-                  <item.icon className="text-[#CD9A31]" size={24} />
-                </div>
-                <h3 className="text-white text-sm font-semibold mb-2 tracking-wide uppercase">
-                  {item.title}
-                </h3>
-                {item.link ? (
-                  <a
-                    href={item.link}
-                    className="text-gray-300 hover:text-[#CD9A31] transition text-base"
-                  >
-                    {item.content}
-                  </a>
-                ) : (
-                  <p className="text-gray-300 text-base">
+            {contactInfo.map((item, i) => {
+              const CardWrapper: any = item.link ? "a" : "div"
+
+              return (
+                <CardWrapper
+                  key={i}
+                  href={item.link || undefined}
+                  target={item.target}
+                  rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
+                  className="
+                    bg-black
+                    border border-[#CD9A31]/30
+                    rounded-2xl
+                    p-6
+                    text-center
+                    hover:border-[#CD9A31]
+                    transition
+                    hover:shadow-[0_0_25px_rgba(205,154,49,0.2)]
+                    block
+                  "
+                >
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#CD9A31]/10 border border-[#CD9A31]/30 mb-4">
+                    <item.icon className="text-[#CD9A31]" size={24} />
+                  </div>
+                  <h3 className="text-white text-sm font-semibold mb-2 tracking-wide uppercase">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-300 hover:text-[#CD9A31] transition text-base">
                     {item.content}
                   </p>
-                )}
-              </div>
-            ))}
+                </CardWrapper>
+              )
+            })}
           </div>
         </div>
       </section>

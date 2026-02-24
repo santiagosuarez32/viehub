@@ -125,7 +125,9 @@ className="object-cover scale-[1.05]"
 {t("common", "from_price")} €{car.price}
 </p>
 
-<button className="
+<a
+href="#booking-form"
+className="
 px-5
 py-2
 rounded-lg
@@ -139,7 +141,7 @@ hover:scale-105
 transition
 ">
 {t("common", "book")}
-</button>
+</a>
 
 </div>
 

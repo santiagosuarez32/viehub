@@ -33,9 +33,26 @@ export default function Footer({ locale }: { locale: string }) {
             {t("footer","tagline")}
           </p>
           <div className="flex flex-col gap-2">
-            <p>📞 +43 660 8537912</p>
-            <p>📧 info@viehub.com</p>
-            <p>📍 {t("footer","vienna")}</p>
+            <a
+              href="tel:+436608537912"
+              className="hover:text-[#CD9A31] transition-colors"
+            >
+              📞 +43 660 8537912
+            </a>
+            <a
+              href="mailto:info@viehub.com"
+              className="hover:text-[#CD9A31] transition-colors"
+            >
+              📧 info@viehub.com
+            </a>
+            <a
+              href="https://maps.google.com/?q=Vienna%2C%20Austria"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#CD9A31] transition-colors"
+            >
+              📍 {t("footer","vienna")}
+            </a>
           </div>
         </div>
 

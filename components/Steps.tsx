@@ -3,12 +3,16 @@
 import { CalendarCheck, CarFront, CheckCircle } from "lucide-react"
 import { motion } from "framer-motion"
 import { useI18n } from "@/lib/i18n/i18n"
+import Link from "next/link"
+import { useParams } from "next/navigation"
 
 const icons = [<CalendarCheck key="1" size={20}/>, <CarFront key="2" size={20}/>, <CheckCircle key="3" size={20}/>]
 
 export default function Steps({ steps: stepsProp }: { steps?: string[] }){
 
 const { t } = useI18n()
+const params = useParams()
+const locale = params?.locale as string | undefined
 
 const defaultSteps = [
 { icon: icons[0], number: "01", title: t("steps", "step1_title"), desc: t("steps", "step1_desc") },
@@ -170,10 +174,14 @@ className="text-sm text-gray-400 max-w-[220px]">
 <div
 data-builder-block="steps_cta_wrapper"
 >
-<button
+<Link
+href={`/${locale || ""}#booking-form`}
 data-builder-text="steps_cta"
 className="
 mt-16
+inline-flex
+items-center
+justify-center
 px-8
 py-3
 bg-[#CD9A31]
@@ -182,9 +190,10 @@ rounded-xl
 text-sm
 hover:scale-105
 transition
-">
-Reserve Now
-</button>
+"
+>
+{t("common", "reserve_now")}
+</Link>
 </div>
 
 </div>

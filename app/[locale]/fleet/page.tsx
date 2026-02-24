@@ -1,11 +1,15 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { Users, Briefcase, Shield, Star, Award, Clock } from "lucide-react"
 import { useI18n } from "@/lib/i18n/i18n"
+import { useParams } from "next/navigation"
 
 export default function FleetPage() {
   const { t } = useI18n()
+  const params = useParams()
+  const locale = params?.locale as string | undefined
 
   const cars = [
     {
@@ -179,7 +183,9 @@ export default function FleetPage() {
                         €{car.price}
                       </p>
                     </div>
-                    <button className="
+                    <Link
+                      href={`/${locale || ""}#booking-form`}
+                      className="
                       px-6
                       py-3
                       rounded-lg
@@ -192,9 +198,10 @@ export default function FleetPage() {
                       to-[#8f640f]
                       hover:scale-105
                       transition
-                    ">
+                    "
+                    >
                       {t("common", "book")}
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
