@@ -112,7 +112,7 @@ export default function Navbar({ locale }: { locale: string }) {
           <img 
             src="/logo.png" 
             alt="VieHub Logo" 
-            className="h-24 w-24 md:h-16 md:w-16 object-contain"
+            className="h-32 w-32 md:h-24 md:w-24 object-contain"
           />
         
         </Link>
@@ -164,10 +164,10 @@ export default function Navbar({ locale }: { locale: string }) {
           {/* Book Now Button */}
           <Link
             href={`/${locale}#booking-form`}
-            className="text-black font-semibold px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2"
-            style={{ backgroundColor: '#CD9A31' }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#B8862B'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#CD9A31'}
+            className="text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2"
+            style={{ background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)', border: '1px solid #CD9A31' }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%)'; e.currentTarget.style.borderColor = '#E6B84D' }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)'; e.currentTarget.style.borderColor = '#CD9A31' }}
           >
             <MessageCircle size={16} />
             {t("common","book_now")}

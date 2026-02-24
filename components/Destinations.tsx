@@ -103,15 +103,20 @@ export default function Destinations() {
                       <div className="
                         w-full
                         py-2.5
-                        bg-[#CD9A31]
-                        text-black
+                        text-white
+                        border border-[#CD9A31]
                         rounded-lg
                         text-sm
                         text-center
-                        hover:scale-105
+                        hover:border-[#E6B84D]
                         transition
                         mt-auto
-                      ">
+                        cursor-pointer
+                      "
+                        style={{
+                          background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)'
+                        }}
+                      >
                         {t("common", "explore")}
                       </div>
 
