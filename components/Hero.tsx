@@ -152,7 +152,7 @@ export default function Hero() {
           style={{ objectPosition: "center -40%" }}
         />
         {/* Gradiente más claro en mobile */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/10 to-black/15 md:bg-gradient-to-r md:from-black/10 md:via-black/5 md:to-black/0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/15 to-black/30 md:bg-gradient-to-r md:from-black/25 md:via-black/15 md:to-black/10" />
       </div>
 
       {/* CONTENT */}

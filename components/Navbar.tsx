@@ -112,7 +112,7 @@ export default function Navbar({ locale }: { locale: string }) {
           <img 
             src="/logo.png" 
             alt="VieHub Logo" 
-            className="h-32 w-32 md:h-24 md:w-24 object-contain"
+            className="h-32 w-32 md:h-40 md:w-40 object-contain"
           />
         
         </Link>
