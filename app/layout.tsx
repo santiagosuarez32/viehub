@@ -11,6 +11,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://viehub.at"),
+  verification: {
+    google: "79EV-Qgq9XsQhD-q5b5kw3_8nmxxCv_JnPpdnX766VA",
+  },
   alternates: {
     languages: {
       de: "https://viehub.at/de",
