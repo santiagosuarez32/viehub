@@ -91,7 +91,7 @@ export default function Hero() {
       };
 
       const response = await fetch(
-        "https://codewweb.app.n8n.cloud/webhook/reserva",
+        "https://viehub.app.n8n.cloud/webhook/reserva",
         {
           method: "POST",
           headers: {
