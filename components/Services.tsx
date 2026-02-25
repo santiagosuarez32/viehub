@@ -18,7 +18,7 @@ export default function Services() {
 
   return (
 
-    <section className="w-full py-32 bg-[#0a0a0a] text-white">
+    <section className="w-full py-32 bg-[#0a0a0a] text-white mt-32 md:mt-40">
 
       <div className="max-w-7xl mx-auto px-6">
 

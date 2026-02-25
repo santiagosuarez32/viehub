@@ -83,7 +83,7 @@ export default function Navbar({ locale }: { locale: string }) {
   const { t } = useI18n()
 
   const navClasses = scrolled
-    ? "w-full z-50 transition-all duration-500 sticky top-0 md:fixed md:top-0 md:left-0 backdrop-blur-xl bg-black/70 border-b border-[#CD9A31]/20"
+    ? "w-full z-50 transition-all duration-500 sticky top-0 md:fixed md:top-0 md:left-0 backdrop-blur-xl bg-black/70  border-[#CD9A31]/20"
     : "w-full z-50 transition-all duration-500 sticky top-0 md:fixed md:top-0 md:left-0 bg-transparent"
 
   return (

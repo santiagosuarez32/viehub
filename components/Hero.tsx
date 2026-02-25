@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden md:pt-32">
 
       {/* BG */}
       <div className="absolute inset-0">
@@ -149,7 +149,7 @@ export default function Hero() {
           priority
           sizes="100vw"
           className="object-cover object-top md:hidden"
-          style={{ objectPosition: "center -40%" }}
+          style={{ objectPosition: "center top" }}
         />
         {/* Gradiente más claro en mobile */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/15 to-black/30 md:bg-gradient-to-r md:from-black/25 md:via-black/15 md:to-black/10" />
