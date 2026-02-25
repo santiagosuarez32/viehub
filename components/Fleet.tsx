@@ -41,7 +41,7 @@ features:["group_travel","business_teams","family_trips","maximum_comfort"]
 
 return(
 
-<section className="w-full py-24 bg-black flex justify-center">
+<section className="w-full py-24 bg-black flex justify-center builder-">
 
 <div className="max-w-7xl w-full px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -64,7 +64,7 @@ hover:shadow-[0_0_45px_rgba(205,154,49,0.35)]
 {/* BADGE */}
 {car.popular && (
 <div className="absolute z-20 top-3 right-3">
-<span className="text-[11px] px-3 py-1 bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] text-black rounded-md">
+<span className="text-[11px] px-3 py-1 bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] text-black rounded-md builder-">
 {t("common", "most_popular").toUpperCase()}
 </span>
 </div>
@@ -89,15 +89,15 @@ className="object-cover scale-[1.05]"
 {/* CONTENT */}
 <div className="px-6 py-5 space-y-3">
 
-<h3 className="text-xl text-white">
+<h3 className="text-xl text-white builder-">
 {car.title}
 </h3>
 
-<p className="text-gray-400 text-sm">
+<p className="text-gray-400 text-sm builder-">
 {car.subtitle}
 </p>
 
-<div className="flex gap-6 text-[#CD9A31] text-sm pt-1">
+<div className="flex gap-6 text-[#CD9A31] text-sm pt-1 builder-">
 
 <div className="flex items-center gap-1">
 <Users size={15}/>
@@ -111,7 +111,7 @@ className="object-cover scale-[1.05]"
 
 </div>
 
-<ul className="text-gray-400 text-sm space-y-1 pt-2">
+<ul className="text-gray-400 text-sm space-y-1 pt-2 builder-">
 {car.features.map((f,idx)=>(
 <li key={idx}>
 • {t("common", f as any)}
@@ -121,7 +121,7 @@ className="object-cover scale-[1.05]"
 
 <div className="flex items-center justify-between pt-4">
 
-<p className="text-[#CD9A31] text-lg">
+<p className="text-[#CD9A31] text-lg builder-">
 {t("common", "from_price")} €{car.price}
 </p>
 
@@ -140,6 +140,7 @@ via-[#CD9A31]
 to-[#8f640f]
 hover:scale-105
 transition
+ builder-
 ">
 {t("common", "book")}
 </a>

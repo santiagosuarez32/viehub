@@ -48,7 +48,7 @@ export default function DestinationPageClient({
 
   return (
     <main className="w-full bg-black text-white">
-      <section className="w-full py-24 mt-32 md:mt-40">
+      <section className="w-full py-24 mt-32 md:mt-40 builder-">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
           {/* LEFT CONTENT */}
           <div className="lg:col-span-2">
@@ -61,7 +61,7 @@ export default function DestinationPageClient({
               </div>
             </div>
 
-            <h1 className="text-4xl mb-6">{title}</h1>
+            <h1 className="text-4xl mb-6 builder-">{title}</h1>
 
             {/* 🔥 MOBILE BOOKING BOX */}
             <div className="lg:hidden mb-10">

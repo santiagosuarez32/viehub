@@ -33,7 +33,7 @@ return(
 
 <section
 data-builder-block="steps_section"
-className="w-full py-32 bg-black text-white relative overflow-hidden"
+className="w-full py-32 bg-black text-white relative overflow-hidden builder-"
 >
 
 <div

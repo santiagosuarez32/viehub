@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden md:pt-32">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden md:pt-32 builder-">
 
       {/* BG */}
       <div className="absolute inset-0">
@@ -160,17 +160,17 @@ export default function Hero() {
 
         {/* TEXT (SIN ANIMACIÓN) */}
         <div className="text-center lg:text-left w-full lg:w-1/2">
-          <p className="text-[#CD9A31] tracking-[3px] text-xs sm:text-sm mb-4">
+          <p className="text-[#CD9A31] tracking-[3px] text-xs sm:text-sm mb-4 builder-">
             {t("hero", "tagline")}
           </p>
 
-          <h1 className="font-bold leading-tight mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] bg-clip-text text-transparent">
+          <h1 className="font-bold leading-tight mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] bg-clip-text text-transparent builder-">
             {t("hero", "title")}
             <br />
             {t("hero", "title_price")}
           </h1>
 
-          <p className="text-gray-300 text-base sm:text-lg max-w-md mx-auto lg:mx-0">
+          <p className="text-gray-300 text-base sm:text-lg max-w-md mx-auto lg:mx-0 builder-">
             {t("hero", "subtitle")}
           </p>
         </div>
@@ -216,7 +216,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <h3 className="text-white text-xl mb-2 text-center">
+          <h3 className="text-white text-xl mb-2 text-center builder-">
             {t("hero", "book_transfer")}
           </h3>
 

@@ -48,7 +48,7 @@ export default function ServicePageClient({
 
   return (
     <main className="w-full bg-black text-white">
-      <section className="w-full py-24 mt-32 md:mt-40">
+      <section className="w-full py-24 mt-32 md:mt-40 builder-">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-16">
           <div className="lg:col-span-2">
             <div className="relative w-full h-[420px] rounded-2xl overflow-hidden mb-10">
@@ -62,7 +62,7 @@ export default function ServicePageClient({
               />
             </div>
 
-            <h1 className="text-4xl mb-6">{title}</h1>
+            <h1 className="text-4xl mb-6 builder-">{title}</h1>
 
             <div
               className="text-gray-400 prose prose-invert max-w-none"

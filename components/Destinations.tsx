@@ -17,23 +17,23 @@ export default function Destinations() {
   const translations = destinationsTranslations[locale as SupportedLocale] || destinationsTranslations.en
 
   return (
-    <section className="w-full py-32 bg-[#0a0a0a] text-white">
+    <section className="w-full py-32 bg-[#0a0a0a] text-white builder-">
 
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
         <div className="mb-16 max-w-2xl">
 
-          <p className="text-[#CD9A31] text-sm tracking-widest mb-3">
+          <p className="text-[#CD9A31] text-sm tracking-widest mb-3 builder-">
             {t("common", "other_destinations").toUpperCase()}
           </p>
 
-          <h2 className="text-4xl leading-tight mb-4">
+          <h2 className="text-4xl leading-tight mb-4 builder-">
             {t("common", "other_destinations")}
             <span className="text-[#CD9A31]"> {t("common", "top_locations")}</span>
           </h2>
 
-          <p className="text-gray-400">
+          <p className="text-gray-400 builder-">
             {t("common", "explore")} {t("common", "destinations_description")}
           </p>
 
@@ -92,11 +92,11 @@ export default function Destinations() {
                     {/* CONTENT */}
                     <div className="p-6 flex flex-col flex-1">
 
-                      <h3 className="text-lg mb-2 min-h-[56px]">
+                      <h3 className="text-lg mb-2 min-h-[56px] builder-">
                         {title}
                       </h3>
 
-                      <p className="text-sm text-gray-400 mb-6 flex-1">
+                      <p className="text-sm text-gray-400 mb-6 flex-1 builder-">
                         {desc}
                       </p>
 
@@ -112,6 +112,7 @@ export default function Destinations() {
                         transition
                         mt-auto
                         cursor-pointer
+                        builder-
                       "
                         style={{
                           background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)'

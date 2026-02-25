@@ -30,7 +30,7 @@ key:"item4"
 return(
 <section
 data-builder-block="highlights_section"
-className="w-full py-28 bg-[#0a0a0a] text-white"
+className="w-full py-28 bg-[#0a0a0a] text-white builder-"
 >
 
 <div

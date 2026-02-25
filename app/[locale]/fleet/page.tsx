@@ -72,7 +72,7 @@ export default function FleetPage() {
     <main className="w-full overflow-hidden bg-black">
       
       {/* HERO SECTION */}
-      <section className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden builder-">
         <div className="absolute inset-0">
           <Image
             src="/hero.webp"
@@ -87,7 +87,7 @@ export default function FleetPage() {
           <p className="text-[#CD9A31] tracking-[3px] text-sm mb-4">
             {t("common", "fleet").toUpperCase()}
           </p>
-          <h1 className="font-bold leading-tight mb-6 text-5xl md:text-7xl bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] bg-clip-text text-transparent">
+          <h1 className="font-bold leading-tight mb-6 text-5xl md:text-7xl bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] bg-clip-text text-transparent builder-">
             Our Premium Fleet
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -98,7 +98,7 @@ export default function FleetPage() {
       </section>
 
       {/* VEHICLES GRID */}
-      <section className="w-full py-24 bg-black">
+      <section className="w-full py-24 bg-black builder-">
         <div className="max-w-7xl mx-auto px-6">
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -211,7 +211,7 @@ export default function FleetPage() {
       </section>
 
       {/* GUARANTEES SECTION */}
-      <section className="w-full py-24 bg-[#0a0a0a]">
+      <section className="w-full py-24 bg-[#0a0a0a] builder-">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[#CD9A31] tracking-[3px] text-sm mb-4">
@@ -256,7 +256,7 @@ export default function FleetPage() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="w-full py-24 bg-black">
+      <section className="w-full py-24 bg-black builder-">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl text-white font-bold mb-6">
             Ready to Book Your <span className="text-[#CD9A31]">Premium Transfer?</span>

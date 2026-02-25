@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Menu, X, MessageCircle, ChevronDown } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useScroll, useSpring, useTransform } from "framer-motion"
 import { useRouter, usePathname } from "next/navigation"
 import { useI18n } from "@/lib/i18n/i18n"
 import { FlagIcon } from "@/components/FlagIcon"
@@ -29,11 +29,20 @@ export default function Navbar({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
 
+  const { scrollY } = useScroll()
+  const parallaxY = useTransform(scrollY, [0, 300], [0, -12])
+  const parallaxYSpring = useSpring(parallaxY, { stiffness: 120, damping: 20, mass: 0.2 })
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  useEffect(() => {
+    if (!pathname) return
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+  }, [pathname])
 
   function changeLang(newLocale: string) {
     if (!pathname) return
@@ -89,10 +98,8 @@ export default function Navbar({ locale }: { locale: string }) {
   return (
 
     <motion.nav
-      initial={{ y: -80 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
       className={navClasses}
+      style={{ y: parallaxYSpring }}
     >
 
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 md:py-5">
@@ -161,9 +168,9 @@ export default function Navbar({ locale }: { locale: string }) {
           {/* Book Now Button */}
           <Link
             href={`/${locale}#booking-form`}
-            className="text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 ml-2 whitespace-nowrap"
-            style={{ background: 'linear-gradient(135deg, #CD9A31 0%, #E6B84D 100%)', border: '1px solid #CD9A31' }}
-            onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 0 20px rgba(205, 154, 49, 0.4)'; e.currentTarget.style.transform = 'translateY(-2px)' }}
+            className="text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 ml-2 whitespace-nowrap border border-[#CD9A31]"
+            style={{ background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)' }}
+            onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 0 20px rgba(205, 154, 49, 0.25)'; e.currentTarget.style.transform = 'translateY(-2px)' }}
             onMouseLeave={(e) => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)' }}
           >
             <MessageCircle size={16} />
