@@ -3,16 +3,19 @@
 import { CalendarCheck, CarFront, CheckCircle } from "lucide-react"
 import { motion } from "framer-motion"
 import { useI18n } from "@/lib/i18n/i18n"
+import { getDictionarySync } from "@/lib/i18n/dictionaries"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 
 const icons = [<CalendarCheck key="1" size={20}/>, <CarFront key="2" size={20}/>, <CheckCircle key="3" size={20}/>]
 
-export default function Steps({ steps: stepsProp }: { steps?: string[] }){
+export default function Steps({ steps: stepsProp, slug }: { steps?: { step1: string; step2: string; step3: string } | string[], slug?: string }){
 
 const { t } = useI18n()
 const params = useParams()
 const locale = params?.locale as string | undefined
+
+const dict = getDictionarySync(locale as any || "en")
 
 const defaultSteps = [
 { icon: icons[0], number: "01", title: t("steps", "step1_title"), desc: t("steps", "step1_desc") },
@@ -20,14 +23,44 @@ const defaultSteps = [
 { icon: icons[2], number: "03", title: t("steps", "step3_title"), desc: t("steps", "step3_desc") }
 ]
 
-const steps = stepsProp?.length
-  ? stepsProp.map((title, i) => ({
-      icon: icons[i % 3],
-      number: String(i + 1).padStart(2, "0"),
-      title,
-      desc: ""
-    }))
-  : defaultSteps
+// Get service-specific steps from dictionary if slug is provided
+let stepsFormatted
+if (slug && dict.service_steps && typeof dict.service_steps === 'object') {
+  const serviceSteps = (dict.service_steps as any)[slug]
+  if (serviceSteps && typeof serviceSteps === 'object' && serviceSteps.step1) {
+    stepsFormatted = [
+      { icon: icons[0], number: "01", title: serviceSteps.step1, desc: "" },
+      { icon: icons[1], number: "02", title: serviceSteps.step2, desc: "" },
+      { icon: icons[2], number: "03", title: serviceSteps.step3, desc: "" }
+    ]
+  } else if (dict.destination_steps && typeof dict.destination_steps === 'object') {
+    const destSteps = (dict.destination_steps as any)[slug]
+    if (destSteps && typeof destSteps === 'object' && destSteps.step1) {
+      stepsFormatted = [
+        { icon: icons[0], number: "01", title: destSteps.step1, desc: "" },
+        { icon: icons[1], number: "02", title: destSteps.step2, desc: "" },
+        { icon: icons[2], number: "03", title: destSteps.step3, desc: "" }
+      ]
+    } else {
+      stepsFormatted = defaultSteps
+    }
+  } else {
+    stepsFormatted = defaultSteps
+  }
+} else if (slug && dict.destination_steps && typeof dict.destination_steps === 'object') {
+  const destSteps = (dict.destination_steps as any)[slug]
+  if (destSteps && typeof destSteps === 'object' && destSteps.step1) {
+    stepsFormatted = [
+      { icon: icons[0], number: "01", title: destSteps.step1, desc: "" },
+      { icon: icons[1], number: "02", title: destSteps.step2, desc: "" },
+      { icon: icons[2], number: "03", title: destSteps.step3, desc: "" }
+    ]
+  } else {
+    stepsFormatted = defaultSteps
+  }
+} else {
+  stepsFormatted = defaultSteps
+}
 
 return(
 
@@ -105,7 +138,7 @@ gap-16
 "
 >
 
-{steps.map((step,i)=>(
+{stepsFormatted.map((step,i)=>(
 
 <motion.div
 key={i}

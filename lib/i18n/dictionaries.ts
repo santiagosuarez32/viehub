@@ -3,7 +3,7 @@
 
 export type SupportedLocale = "es" | "en" | "fr" | "it" | "de";
 
-export const dictionaries: Record<SupportedLocale, Record<string, Record<string, string>>> = {
+export const dictionaries: Record<SupportedLocale, Record<string, any>> = {
   es: {
     common: {
       home: "Inicio",
@@ -127,6 +127,85 @@ export const dictionaries: Record<SupportedLocale, Record<string, Record<string,
       step3_desc: "Nuestro chofer estará esperando con su nombre",
       booking_is: "Su reserva es",
       easy: "Fácil",
+    },
+    service_steps: {
+      "private-day-tours": {
+        step1: "Reserva tu tour en línea",
+        step2: "Asignamos tu chófer",
+        step3: "Disfruta el viaje",
+      },
+      "hotel-transfers-vienna": {
+        step1: "Reserva tu traslado de hotel",
+        step2: "Confirmamos tu recogida",
+        step3: "Disfruta un viaje suave",
+      },
+      "long-distance-transfers": {
+        step1: "Reserva tu traslado de larga distancia",
+        step2: "Confirmamos tu ruta",
+        step3: "Disfruta un viaje relajado",
+      },
+      "vienna-airport-taxi-fixed-price": {
+        step1: "Reserva tu taxi del aeropuerto",
+        step2: "Confirmamos la hora de recogida",
+        step3: "Disfruta un viaje sin estrés",
+      },
+      "vienna-airport-to-city-taxi": {
+        step1: "Reserva tu recogida en el aeropuerto",
+        step2: "Monitoreamos tu vuelo",
+        step3: "Disfruta un viaje suave al centro de la ciudad",
+      },
+      "vienna-airport-transfer": {
+        step1: "Reserva tu traslado del aeropuerto",
+        step2: "Monitoreamos tu vuelo",
+        step3: "Disfruta un viaje suave y puntual",
+      },
+      "vienna-city-transfers": {
+        step1: "Reserva tu traslado por la ciudad",
+        step2: "Asignamos tu chófer",
+        step3: "Disfruta un viaje suave por Viena",
+      },
+      "taxi-vienna-airport": {
+        step1: "Reserva tu taxi del aeropuerto",
+        step2: "Monitoreamos tu vuelo",
+        step3: "Disfruta un viaje seguro y puntual",
+      },
+      "private-chauffeur-vienna": {
+        step1: "Reserva tu servicio de chófer",
+        step2: "Asignamos tu chófer profesional",
+        step3: "Disfruta una experiencia de viaje premium",
+      },
+    },
+    destination_steps: {
+      prague: {
+        step1: "Reserva tu traslado a Praga",
+        step2: "Confirmamos la hora de recogida",
+        step3: "Disfruta un viaje suave a Praga",
+      },
+      linz: {
+        step1: "Reserva tu traslado a Linz",
+        step2: "Confirmamos la hora de recogida",
+        step3: "Disfruta un viaje cómodo a Linz",
+      },
+      bratislava: {
+        step1: "Reserva tu traslado a Bratislava",
+        step2: "Confirmamos la hora de recogida",
+        step3: "Disfruta un viaje suave a Bratislava",
+      },
+      budapest: {
+        step1: "Reserva tu traslado a Budapest",
+        step2: "Confirmamos la hora de recogida",
+        step3: "Disfruta un viaje suave a Budapest",
+      },
+      parndorf: {
+        step1: "Reserva tu traslado a Parndorf",
+        step2: "Confirmamos la hora de recogida",
+        step3: "Disfruta un viaje cómodo a Parndorf",
+      },
+      salzburg: {
+        step1: "Reserva tu traslado a Salzburgo",
+        step2: "Confirmamos la hora de recogida",
+        step3: "Disfruta un viaje suave a Salzburgo",
+      },
     },
     footer: {
       tagline: "Servicios premium de traslados privados y al aeropuerto en Viena y Europa.",
@@ -258,6 +337,85 @@ export const dictionaries: Record<SupportedLocale, Record<string, Record<string,
       booking_is: "Booking Your Transfer Is",
       easy: "Easy",
     },
+    service_steps: {
+      "private-day-tours": {
+        step1: "Book your tour online",
+        step2: "We assign your driver",
+        step3: "Enjoy the ride",
+      },
+      "hotel-transfers-vienna": {
+        step1: "Book your hotel transfer",
+        step2: "We confirm your pickup",
+        step3: "Enjoy a smooth ride",
+      },
+      "long-distance-transfers": {
+        step1: "Book your long-distance transfer",
+        step2: "We confirm your route",
+        step3: "Enjoy a relaxed journey",
+      },
+      "vienna-airport-taxi-fixed-price": {
+        step1: "Book your airport taxi",
+        step2: "We confirm your pickup time",
+        step3: "Enjoy a stress-free ride",
+      },
+      "vienna-airport-to-city-taxi": {
+        step1: "Book your airport pickup",
+        step2: "We monitor your flight",
+        step3: "Enjoy a smooth ride to the city center",
+      },
+      "vienna-airport-transfer": {
+        step1: "Book your airport transfer",
+        step2: "We monitor your flight",
+        step3: "Enjoy a smooth and punctual ride",
+      },
+      "vienna-city-transfers": {
+        step1: "Book your city transfer",
+        step2: "We assign your driver",
+        step3: "Enjoy a smooth ride through Vienna",
+      },
+      "taxi-vienna-airport": {
+        step1: "Book your airport taxi",
+        step2: "We monitor your flight",
+        step3: "Enjoy a safe and punctual ride",
+      },
+      "private-chauffeur-vienna": {
+        step1: "Book your chauffeur service",
+        step2: "We assign your professional driver",
+        step3: "Enjoy a premium travel experience",
+      },
+    },
+    destination_steps: {
+      prague: {
+        step1: "Book your transfer to Prague",
+        step2: "We confirm your pickup time",
+        step3: "Enjoy a smooth journey to Prague",
+      },
+      linz: {
+        step1: "Book your transfer to Linz",
+        step2: "We confirm your pickup time",
+        step3: "Enjoy a comfortable journey to Linz",
+      },
+      bratislava: {
+        step1: "Book your transfer to Bratislava",
+        step2: "We confirm your pickup time",
+        step3: "Enjoy a smooth journey to Bratislava",
+      },
+      budapest: {
+        step1: "Book your transfer to Budapest",
+        step2: "We confirm your pickup time",
+        step3: "Enjoy a smooth journey to Budapest",
+      },
+      parndorf: {
+        step1: "Book your transfer to Parndorf",
+        step2: "We confirm your pickup time",
+        step3: "Enjoy a comfortable ride to Parndorf",
+      },
+      salzburg: {
+        step1: "Book your transfer to Salzburg",
+        step2: "We confirm your pickup time",
+        step3: "Enjoy a smooth journey to Salzburg",
+      },
+    },
     footer: {
       tagline: "Premium airport and private transfer services across Vienna and Europe.",
       rights: "All rights reserved.",
@@ -387,6 +545,85 @@ export const dictionaries: Record<SupportedLocale, Record<string, Record<string,
       step3_desc: "Notre chauffeur vous attendra avec votre nom",
       booking_is: "Votre réservation est",
       easy: "Facile",
+    },
+    service_steps: {
+      "private-day-tours": {
+        step1: "Réservez votre excursion en ligne",
+        step2: "Nous assignons votre chauffeur",
+        step3: "Profitez du voyage",
+      },
+      "hotel-transfers-vienna": {
+        step1: "Réservez votre transfert hôtel",
+        step2: "Nous confirmez votre prise en charge",
+        step3: "Profitez d'une balade en douceur",
+      },
+      "long-distance-transfers": {
+        step1: "Réservez votre transfert longue distance",
+        step2: "Nous confirmez votre itinéraire",
+        step3: "Profitez d'un voyage détendu",
+      },
+      "vienna-airport-taxi-fixed-price": {
+        step1: "Réservez votre taxi aéroportuaire",
+        step2: "Nous confirmez l'heure de prise en charge",
+        step3: "Profitez d'une balade sans stress",
+      },
+      "vienna-airport-to-city-taxi": {
+        step1: "Réservez votre prise en charge à l'aéroport",
+        step2: "Nous suivons votre vol",
+        step3: "Profitez d'une balade en douceur jusqu'au centre-ville",
+      },
+      "vienna-airport-transfer": {
+        step1: "Réservez votre transfert aéroportuaire",
+        step2: "Nous suivons votre vol",
+        step3: "Profitez d'une balade en douceur et ponctuelle",
+      },
+      "vienna-city-transfers": {
+        step1: "Réservez votre transfert en ville",
+        step2: "Nous assignons votre chauffeur",
+        step3: "Profitez d'une balade en douceur à travers Vienne",
+      },
+      "taxi-vienna-airport": {
+        step1: "Réservez votre taxi aéroportuaire",
+        step2: "Nous suivons votre vol",
+        step3: "Profitez d'une balade sécuritaire et ponctuelle",
+      },
+      "private-chauffeur-vienna": {
+        step1: "Réservez votre service de chauffeur",
+        step2: "Nous assignons votre chauffeur professionnel",
+        step3: "Profitez d'une expérience de voyage premium",
+      },
+    },
+    destination_steps: {
+      prague: {
+        step1: "Réservez votre transfert vers Prague",
+        step2: "Nous confirmez l'heure de prise en charge",
+        step3: "Profitez d'un voyage en douceur vers Prague",
+      },
+      linz: {
+        step1: "Réservez votre transfert vers Linz",
+        step2: "Nous confirmez l'heure de prise en charge",
+        step3: "Profitez d'un voyage confortable vers Linz",
+      },
+      bratislava: {
+        step1: "Réservez votre transfert vers Bratislava",
+        step2: "Nous confirmez l'heure de prise en charge",
+        step3: "Profitez d'un voyage en douceur vers Bratislava",
+      },
+      budapest: {
+        step1: "Réservez votre transfert vers Budapest",
+        step2: "Nous confirmez l'heure de prise en charge",
+        step3: "Profitez d'un voyage en douceur vers Budapest",
+      },
+      parndorf: {
+        step1: "Réservez votre transfert vers Parndorf",
+        step2: "Nous confirmez l'heure de prise en charge",
+        step3: "Profitez d'une balade confortable vers Parndorf",
+      },
+      salzburg: {
+        step1: "Réservez votre transfert vers Salzbourg",
+        step2: "Nous confirmez l'heure de prise en charge",
+        step3: "Profitez d'un voyage en douceur vers Salzbourg",
+      },
     },
     footer: {
       tagline: "Services premium de transferts privés et aéroportuaires à Vienne et en Europe.",
@@ -518,6 +755,85 @@ export const dictionaries: Record<SupportedLocale, Record<string, Record<string,
       booking_is: "La tua prenotazione è",
       easy: "Facile",
     },
+    service_steps: {
+      "private-day-tours": {
+        step1: "Prenota il tuo tour online",
+        step2: "Assegniamo il tuo autista",
+        step3: "Goditi il viaggio",
+      },
+      "hotel-transfers-vienna": {
+        step1: "Prenota il tuo trasferimento hotel",
+        step2: "Confermiamo il tuo ritiro",
+        step3: "Goditi una corsa fluida",
+      },
+      "long-distance-transfers": {
+        step1: "Prenota il tuo trasferimento a lunga distanza",
+        step2: "Confermiamo il tuo percorso",
+        step3: "Goditi un viaggio rilassante",
+      },
+      "vienna-airport-taxi-fixed-price": {
+        step1: "Prenota il tuo taxi aeroportuale",
+        step2: "Confermiamo l'ora del ritiro",
+        step3: "Goditi una corsa senza stress",
+      },
+      "vienna-airport-to-city-taxi": {
+        step1: "Prenota il tuo ritiro in aeroporto",
+        step2: "Monitoriamo il tuo volo",
+        step3: "Goditi una corsa fluida al centro città",
+      },
+      "vienna-airport-transfer": {
+        step1: "Prenota il tuo trasferimento in aeroporto",
+        step2: "Monitoriamo il tuo volo",
+        step3: "Goditi una corsa fluida e puntuale",
+      },
+      "vienna-city-transfers": {
+        step1: "Prenota il tuo trasferimento in città",
+        step2: "Assegniamo il tuo autista",
+        step3: "Goditi una corsa fluida attraverso Vienna",
+      },
+      "taxi-vienna-airport": {
+        step1: "Prenota il tuo taxi aeroportuale",
+        step2: "Monitoriamo il tuo volo",
+        step3: "Goditi una corsa sicura e puntuale",
+      },
+      "private-chauffeur-vienna": {
+        step1: "Prenota il tuo servizio di autista",
+        step2: "Assegniamo il tuo autista professionale",
+        step3: "Goditi un'esperienza di viaggio premium",
+      },
+    },
+    destination_steps: {
+      prague: {
+        step1: "Prenota il tuo trasferimento a Praga",
+        step2: "Confermiamo l'ora del ritiro",
+        step3: "Goditi un viaggio fluido a Praga",
+      },
+      linz: {
+        step1: "Prenota il tuo trasferimento a Linz",
+        step2: "Confermiamo l'ora del ritiro",
+        step3: "Goditi un viaggio confortevole a Linz",
+      },
+      bratislava: {
+        step1: "Prenota il tuo trasferimento a Bratislava",
+        step2: "Confermiamo l'ora del ritiro",
+        step3: "Goditi un viaggio fluido a Bratislava",
+      },
+      budapest: {
+        step1: "Prenota il tuo trasferimento a Budapest",
+        step2: "Confermiamo l'ora del ritiro",
+        step3: "Goditi un viaggio fluido a Budapest",
+      },
+      parndorf: {
+        step1: "Prenota il tuo trasferimento a Parndorf",
+        step2: "Confermiamo l'ora del ritiro",
+        step3: "Goditi una corsa confortevole a Parndorf",
+      },
+      salzburg: {
+        step1: "Prenota il tuo trasferimento a Salisburgo",
+        step2: "Confermiamo l'ora del ritiro",
+        step3: "Goditi un viaggio fluido a Salisburgo",
+      },
+    },
     footer: {
       tagline: "Servizi premium di trasferimenti privati e aeroportuali in Vienna e Europa.",
       rights: "Tutti i diritti riservati.",
@@ -647,6 +963,85 @@ export const dictionaries: Record<SupportedLocale, Record<string, Record<string,
       step3_desc: "Unser Fahrer wartet mit Ihrem Namen auf Sie",
       booking_is: "Ihre Buchung ist",
       easy: "Einfach",
+    },
+    service_steps: {
+      "private-day-tours": {
+        step1: "Buchen Sie Ihre Tour online",
+        step2: "Wir weisen Ihren Fahrer zu",
+        step3: "Genießen Sie die Fahrt",
+      },
+      "hotel-transfers-vienna": {
+        step1: "Buchen Sie Ihren Hoteltransfer",
+        step2: "Wir bestätigen Ihre Abholung",
+        step3: "Genießen Sie eine sanfte Fahrt",
+      },
+      "long-distance-transfers": {
+        step1: "Buchen Sie Ihren Fernverkehrstransfer",
+        step2: "Wir bestätigen Ihre Route",
+        step3: "Genießen Sie eine entspannte Reise",
+      },
+      "vienna-airport-taxi-fixed-price": {
+        step1: "Buchen Sie Ihr Flughafentaxi",
+        step2: "Wir bestätigen Ihre Abholzeit",
+        step3: "Genießen Sie eine stressfreie Fahrt",
+      },
+      "vienna-airport-to-city-taxi": {
+        step1: "Buchen Sie Ihre Flughafenabholung",
+        step2: "Wir überwachen Ihren Flug",
+        step3: "Genießen Sie eine sanfte Fahrt ins Stadtzentrum",
+      },
+      "vienna-airport-transfer": {
+        step1: "Buchen Sie Ihren Flughafentransfer",
+        step2: "Wir überwachen Ihren Flug",
+        step3: "Genießen Sie eine sanfte und pünktliche Fahrt",
+      },
+      "vienna-city-transfers": {
+        step1: "Buchen Sie Ihren Stadttransfer",
+        step2: "Wir weisen Ihren Fahrer zu",
+        step3: "Genießen Sie eine sanfte Fahrt durch Wien",
+      },
+      "taxi-vienna-airport": {
+        step1: "Buchen Sie Ihr Flughafentaxi",
+        step2: "Wir überwachen Ihren Flug",
+        step3: "Genießen Sie eine sichere und pünktliche Fahrt",
+      },
+      "private-chauffeur-vienna": {
+        step1: "Buchen Sie Ihren Chauffeurdienst",
+        step2: "Wir weisen Ihren professionellen Fahrer zu",
+        step3: "Genießen Sie eine Premium-Reiseerfahrung",
+      },
+    },
+    destination_steps: {
+      prague: {
+        step1: "Buchen Sie Ihren Transfer nach Prag",
+        step2: "Wir bestätigen Ihre Abholzeit",
+        step3: "Genießen Sie eine sanfte Fahrt nach Prag",
+      },
+      linz: {
+        step1: "Buchen Sie Ihren Transfer nach Linz",
+        step2: "Wir bestätigen Ihre Abholzeit",
+        step3: "Genießen Sie eine komfortable Fahrt nach Linz",
+      },
+      bratislava: {
+        step1: "Buchen Sie Ihren Transfer nach Bratislava",
+        step2: "Wir bestätigen Ihre Abholzeit",
+        step3: "Genießen Sie eine sanfte Fahrt nach Bratislava",
+      },
+      budapest: {
+        step1: "Buchen Sie Ihren Transfer nach Budapest",
+        step2: "Wir bestätigen Ihre Abholzeit",
+        step3: "Genießen Sie eine sanfte Fahrt nach Budapest",
+      },
+      parndorf: {
+        step1: "Buchen Sie Ihren Transfer nach Parndorf",
+        step2: "Wir bestätigen Ihre Abholzeit",
+        step3: "Genießen Sie eine komfortable Fahrt nach Parndorf",
+      },
+      salzburg: {
+        step1: "Buchen Sie Ihren Transfer nach Salzburg",
+        step2: "Wir bestätigen Ihre Abholzeit",
+        step3: "Genießen Sie eine sanfte Fahrt nach Salzburg",
+      },
     },
     footer: {
       tagline: "Premium-Flughafentransfers und private Transferdienste in Wien und Europa.",

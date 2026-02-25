@@ -45,6 +45,14 @@ export default async function DestinationPage({ params }: Props) {
     .filter(d => d.slug !== slug)
     .sort(() => 0.5 - Math.random())
     .slice(0, 3)
+    .map(d => {
+      const translatedOther = translations[d.slug as keyof typeof translations] || null
+      return {
+        slug: d.slug,
+        title: translatedOther?.title || d.title,
+        image: d.image
+      }
+    })
 
   return (
     <DestinationPageClient

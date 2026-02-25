@@ -80,11 +80,7 @@ Book your transfer from Vienna Airport to Prague today and enjoy a comfortable, 
 
 `,
 
-steps:[
-"Book your Prague transfer",
-"We confirm your pickup time",
-"Enjoy a smooth journey to Prague"
-]
+steps: { step1: "Book your Prague transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Prague" }
 }, 
 {
 slug:"transfer-vienna-airport-to-linz",
@@ -171,11 +167,7 @@ Book your transfer from Vienna Airport to Linz today and enjoy a comfortable, re
 
 `,
 
-steps:[
-"Book your Linz transfer",
-"We confirm your pickup time",
-"Enjoy a comfortable journey to Linz"
-]
+steps: { step1: "Book your Linz transfer", step2: "We confirm your pickup time", step3: "Enjoy a comfortable journey to Linz" }
 }, {
 slug:"transfer-vienna-airport-to-bratislava",
 title:"Transfer from Vienna Airport to Bratislava",
@@ -261,11 +253,7 @@ Book your transfer from Vienna Airport to Bratislava today and enjoy a comfortab
 
 `,
 
-steps:[
-"Book your Bratislava transfer",
-"We confirm your pickup time",
-"Enjoy a smooth journey to Bratislava"
-]
+steps: { step1: "Book your Bratislava transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Bratislava" }
 }, {
 slug:"taxi-from-vienna-airport-to-budapest",
 title:"Taxi from Vienna Airport to Budapest",
@@ -351,11 +339,7 @@ Book your transfer from Vienna Airport to Budapest today and enjoy a comfortable
 
 `,
 
-steps:[
-"Book your Budapest transfer",
-"We confirm your pickup time",
-"Enjoy a smooth journey to Budapest"
-]
+steps: { step1: "Book your Budapest transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Budapest" }
 }, {
 slug:"transfer-from-vienna-airport-to-parndorf",
 title:"Transfer from Vienna Airport to Parndorf",
@@ -433,11 +417,7 @@ Book your transfer from Vienna Airport to Parndorf today and enjoy a comfortable
 
 `,
 
-steps:[
-"Book your Parndorf transfer",
-"We confirm your pickup time",
-"Enjoy a comfortable ride to Parndorf"
-]
+steps: { step1: "Book your Parndorf transfer", step2: "We confirm your pickup time", step3: "Enjoy a comfortable ride to Parndorf" }
 }, {
 slug:"taxi-from-vienna-airport-to-salzburg",
 title:"Taxi from Vienna Airport to Salzburg",
@@ -523,10 +503,6 @@ Book your transfer from Vienna Airport to Salzburg today and enjoy a comfortable
 
 `,
 
-steps:[
-"Book your Salzburg transfer",
-"We confirm your pickup time",
-"Enjoy a smooth journey to Salzburg"
-]
+steps: { step1: "Book your Salzburg transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Salzburg" }
 }
 ]

@@ -47,11 +47,7 @@ All prices for private day tours are displayed transparently in advance – no s
 </p>
 `,
 
-steps:[
-"Book your transfer online",
-"We assign your driver",
-"Enjoy the ride"
-]
+steps: { step1: "Book your transfer online", step2: "We assign your driver", step3: "Enjoy the ride" }
 
 },
 
@@ -152,11 +148,7 @@ You always know exactly what you're paying for – transparent, simple, and worr
 
 `,
 
-steps:[
-"Book your hotel transfer",
-"We confirm your pickup",
-"Enjoy a smooth ride"
-]
+steps: { step1: "Book your hotel transfer", step2: "We confirm your pickup", step3: "Enjoy a smooth ride" }
 },
 
 {
@@ -249,11 +241,7 @@ Safety, comfort, and punctuality are always our top priorities. Your driver will
 
 `,
 
-steps:[
-"Book your long-distance transfer",
-"We confirm your route",
-"Enjoy a relaxed journey"
-]
+steps: { step1: "Book your long-distance transfer", step2: "We confirm your route", step3: "Enjoy a relaxed journey" }
 },
 
 {
@@ -346,11 +334,7 @@ Safety, comfort, and punctuality are always our top priorities. Your driver will
 
 `,
 
-steps:[
-"Book your airport taxi",
-"We confirm your pickup time",
-"Enjoy a stress-free ride"
-]
+steps: { step1: "Book your airport taxi", step2: "We confirm your pickup time", step3: "Enjoy a stress-free ride" }
 },
 {
 slug:"vienna-airport-to-city-taxi",
@@ -415,11 +399,7 @@ for seamless travel throughout Austria.
 
 `,
 
-steps:[
-"Book your airport pickup",
-"We monitor your flight",
-"Enjoy a smooth ride to the city center"
-]
+steps: { step1: "Book your airport pickup", step2: "We monitor your flight", step3: "Enjoy a smooth ride to the city center" }
 }, 
 {
 slug:"vienna-airport-transfer",
@@ -515,11 +495,7 @@ For maximum flexibility during your stay, you can also book a
 
 `,
 
-steps:[
-"Book your airport transfer",
-"We monitor your flight",
-"Enjoy a smooth and punctual ride"
-]
+steps: { step1: "Book your airport transfer", step2: "We monitor your flight", step3: "Enjoy a smooth and punctual ride" }
 },  {
 slug:"vienna-city-transfers",
 title:"Vienna City Transfers",
@@ -617,11 +593,7 @@ or
 
 `,
 
-steps:[
-"Book your city transfer",
-"We assign your driver",
-"Enjoy a smooth ride through Vienna"
-]
+steps: { step1: "Book your city transfer", step2: "We assign your driver", step3: "Enjoy a smooth ride through Vienna" }
 }, {
 slug:"taxi-vienna-airport",
 title:"Taxi Vienna Airport",
@@ -708,11 +680,7 @@ Whether day or night, weekday or weekend – the price remains the same, ensurin
 
 `,
 
-steps:[
-"Book your airport taxi",
-"We monitor your flight",
-"Enjoy a safe and punctual ride"
-]
+steps: { step1: "Book your airport taxi", step2: "We monitor your flight", step3: "Enjoy a safe and punctual ride" }
 }, {
 slug:"private-chauffeur-vienna",
 title:"Private Chauffeur in Vienna",
@@ -805,11 +773,7 @@ Enjoy a first-class, comfortable, and fully personalized travel experience. Clic
 
 `,
 
-steps:[
-"Book your chauffeur service",
-"We assign your professional driver",
-"Enjoy a premium travel experience"
-]
+steps: { step1: "Book your chauffeur service", step2: "We assign your professional driver", step3: "Enjoy a premium travel experience" }
 }
 
 

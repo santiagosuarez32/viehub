@@ -41,6 +41,14 @@ export default async function ServicePage({ params }: Props) {
   const otherServices = services
     .filter(s => s.slug !== slug)
     .slice(0, 3)
+    .map(s => {
+      const translatedOther = translations[s.slug as keyof typeof translations] || null
+      return {
+        slug: s.slug,
+        title: translatedOther?.title || s.title,
+        image: s.image
+      }
+    })
 
   return (
     <ServicePageClient

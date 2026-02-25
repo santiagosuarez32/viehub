@@ -14,7 +14,7 @@ type ServicePageClientProps = {
   serviceTitle: string
   slug: string
   locale: string
-  steps: any[]
+  steps: { step1: string; step2: string; step3: string } | string[]
   otherServices: Array<{
     slug: string
     title: string
@@ -129,7 +129,7 @@ export default function ServicePageClient({
         </div>
       </section>
 
-      <Steps steps={steps} />
+      <Steps steps={steps} slug={slug} />
     </main>
   )
 }

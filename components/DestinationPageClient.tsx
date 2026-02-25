@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Phone } from "lucide-react"
 import DestinationCarousel from "@/components/DestinationCarousel"
+import Steps from "@/components/Steps"
 import { sanitizeHtml } from "@/lib/sanitize-html"
 import { getDictionarySync } from "@/lib/i18n/dictionaries"
 
@@ -155,6 +156,8 @@ export default function DestinationPageClient({
           </div>
         </div>
       </section>
+
+      <Steps slug={slug} />
     </main>
   )
 }
