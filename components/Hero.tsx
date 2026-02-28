@@ -135,7 +135,7 @@ export default function Hero() {
         {/* Desktop image */}
         <Image
           src="/hero.webp"
-          alt="Airport transfer"
+          alt="Luxury airport transfer service - Premium ground transportation"
           fill
           priority
           sizes="100vw"
@@ -144,7 +144,7 @@ export default function Hero() {
         {/* Mobile image */}
         <Image
           src="/hero-mobile.png"
-          alt="Airport transfer"
+          alt="Luxury airport transfer service - Premium ground transportation"
           fill
           priority
           sizes="100vw"
@@ -170,7 +170,7 @@ export default function Hero() {
             {t("hero", "title_price")}
           </h1>
 
-          <p className="text-gray-300 text-base sm:text-lg max-w-md mx-auto lg:mx-0 builder-">
+          <p className="text-gray-200 text-base sm:text-lg max-w-md mx-auto lg:mx-0 builder-">
             {t("hero", "subtitle")}
           </p>
         </div>
@@ -193,7 +193,7 @@ export default function Hero() {
               {t("hero", "child_seats_title")}
             </div>
 
-            <div className="space-y-1 text-gray-200 text-xs">
+            <div className="space-y-1 text-gray-100 text-xs">
               <div className="flex items-center gap-2">
                 <CheckCircle size={14} className="text-green-400" />
                 {t("hero", "infant_seats")}
@@ -216,48 +216,64 @@ export default function Hero() {
             </div>
           </div>
 
-          <h3 className="text-white text-xl mb-2 text-center builder-">
+          <h2 className="text-white text-xl mb-2 text-center builder-">
             {t("hero", "book_transfer")}
-          </h3>
+          </h2>
 
-          <p className="text-gray-400 text-sm text-center mb-6">
+          <p className="text-gray-300 text-sm text-center mb-6">
             {t("hero", "instant_confirmation")}
           </p>
 
           <div className="space-y-4">
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <AddressAutocomplete
-                icon={<MapPin size={18} />}
-                placeholder={t("hero", "pickup_location")}
-                value={form.pickup}
-                onChange={(value: string) => handleChange("pickup", value)}
-                required
-              />
-              <AddressAutocomplete
-                icon={<MapPin size={18} />}
-                placeholder={t("hero", "dropoff_location")}
-                value={form.dropoff}
-                onChange={(value: string) => handleChange("dropoff", value)}
-                required
-              />
+              <div className="flex flex-col gap-1">
+                <label htmlFor="pickup-input" className="sr-only">Pickup Location</label>
+                <AddressAutocomplete
+                  icon={<MapPin size={18} />}
+                  placeholder={t("hero", "pickup_location")}
+                  value={form.pickup}
+                  onChange={(value: string) => handleChange("pickup", value)}
+                  required
+                  id="pickup-input"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="dropoff-input" className="sr-only">Dropoff Location</label>
+                <AddressAutocomplete
+                  icon={<MapPin size={18} />}
+                  placeholder={t("hero", "dropoff_location")}
+                  value={form.dropoff}
+                  onChange={(value: string) => handleChange("dropoff", value)}
+                  required
+                  id="dropoff-input"
+                />
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input
-                icon={<Calendar size={18} />}
-                type="date"
-                value={form.date}
-                onChange={(e: any) => handleChange("date", e.target.value)}
-                required
-              />
-              <Input
-                icon={<Clock size={18} />}
-                type="time"
-                value={form.time}
-                onChange={(e: any) => handleChange("time", e.target.value)}
-                required
-              />
+              <div className="flex flex-col gap-1">
+                <label htmlFor="date-input" className="sr-only">Travel Date</label>
+                <Input
+                  icon={<Calendar size={18} />}
+                  type="date"
+                  id="date-input"
+                  value={form.date}
+                  onChange={(e: any) => handleChange("date", e.target.value)}
+                  required
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label htmlFor="time-input" className="sr-only">Travel Time</label>
+                <Input
+                  icon={<Clock size={18} />}
+                  type="time"
+                  id="time-input"
+                  value={form.time}
+                  onChange={(e: any) => handleChange("time", e.target.value)}
+                  required
+                />
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -306,12 +322,14 @@ export default function Hero() {
               value={form.notes}
               onChange={(e) => handleChange("notes", e.target.value)}
               placeholder={t("hero", "special_requests")}
+              aria-label={t("hero", "special_requests")}
               className="w-full bg-black/20 backdrop-blur-lg md:bg-black/50 border border-[#CD9A31]/20 px-4 py-3 rounded-xl text-white outline-none"
             />
 
             <button
               type="submit"
               disabled={loading}
+              aria-busy={loading}
               className="w-full mt-4 py-3.5 rounded-xl text-black font-semibold text-base bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] hover:scale-[1.02] transition disabled:opacity-50"
             >
               {loading ? "Sending..." : t("hero", "book_now")}
@@ -332,6 +350,7 @@ export default function Hero() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4"
           role="dialog"
           aria-modal="true"
+          aria-labelledby="success-title"
           onClick={handleCloseSuccess}
         >
           <div
@@ -341,7 +360,7 @@ export default function Hero() {
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-500/20 text-green-400">
               ✓
             </div>
-            <h4 className="text-white text-xl mb-2">
+            <h4 id="success-title" className="text-white text-xl mb-2">
               {t("hero", "reservation_success_title")}
             </h4>
             <p className="text-gray-300 text-sm mb-6">
@@ -350,6 +369,7 @@ export default function Hero() {
             <button
               type="button"
               onClick={handleCloseSuccess}
+              aria-label="Close success message"
               className="w-full py-3 rounded-xl text-black font-semibold bg-gradient-to-r from-[#fff2c9] via-[#CD9A31] to-[#8f640f] hover:scale-[1.02] transition"
             >
               {t("hero", "reservation_success_button")}
@@ -361,19 +381,22 @@ export default function Hero() {
   );
 }
 
-function Input({ icon, ...props }: any) {
+function Input({ icon, placeholder, id, ...props }: any) {
   return (
     <div className="flex items-center gap-3 bg-black/20 backdrop-blur-lg md:bg-black/50 border border-[#CD9A31]/20 px-4 py-3 rounded-xl">
       {icon}
       <input
         {...props}
+        id={id}
+        placeholder={placeholder}
+        aria-label={placeholder}
         className="bg-transparent outline-none text-white w-full text-base"
       />
     </div>
   );
 }
 
-function AddressAutocomplete({ icon, placeholder, value, onChange, required }: any) {
+function AddressAutocomplete({ icon, placeholder, value, onChange, required, id }: any) {
   const [query, setQuery] = useState(value || "");
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [open, setOpen] = useState(false);
@@ -457,9 +480,14 @@ function AddressAutocomplete({ icon, placeholder, value, onChange, required }: a
       <div className="flex items-center gap-3 bg-black/20 backdrop-blur-lg md:bg-black/50 border border-[#CD9A31]/20 px-4 py-3 rounded-xl">
         {icon}
         <input
+          id={id}
           value={query}
           onChange={handleInputChange}
           placeholder={placeholder}
+          aria-label={placeholder}
+          aria-autocomplete="list"
+          aria-expanded={open && suggestions.length > 0}
+          aria-controls={open ? "suggestions-list" : undefined}
           className="bg-transparent outline-none text-white w-full text-base"
           autoComplete="off"
           onFocus={() => query.length >= 3 && setOpen(true)}
@@ -468,9 +496,13 @@ function AddressAutocomplete({ icon, placeholder, value, onChange, required }: a
       </div>
 
       {open && (suggestions.length > 0 || loading) && (
-        <div className="absolute left-0 right-0 mt-2 rounded-xl border border-[#CD9A31]/20 bg-[#0e0e0e] shadow-xl z-20 overflow-hidden">
+        <div
+          id="suggestions-list"
+          role="listbox"
+          className="absolute left-0 right-0 mt-2 rounded-xl border border-[#CD9A31]/20 bg-[#0e0e0e] shadow-xl z-20 overflow-hidden"
+        >
           {loading && (
-            <div className="px-4 py-3 text-sm text-gray-400">Loading...</div>
+            <div className="px-4 py-3 text-sm text-gray-400" role="status" aria-live="polite">Loading...</div>
           )}
           {!loading && (
             <div className="max-h-56 overflow-y-auto">
@@ -478,6 +510,7 @@ function AddressAutocomplete({ icon, placeholder, value, onChange, required }: a
                 <button
                   key={`${item.place_id}`}
                   type="button"
+                  role="option"
                   onClick={() => handleSelect(item.display_name)}
                   className="w-full text-left px-4 py-3 text-sm text-gray-200 hover:bg-white/5 transition"
                 >
@@ -493,10 +526,13 @@ function AddressAutocomplete({ icon, placeholder, value, onChange, required }: a
 }
 
 function SelectPassengers({ t, value, onChange, required }: any) {
+  const labelId = "passengers-label";
   return (
     <div className="flex items-center gap-3 bg-black/20 backdrop-blur-lg md:bg-black/50 border border-[#CD9A31]/20 px-4 py-3 rounded-xl">
       <Users size={18} />
+      <label id={labelId} className="sr-only">{t("hero", "passenger_select")}</label>
       <select
+        aria-labelledby={labelId}
         className="bg-transparent outline-none text-white w-full text-base"
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -532,9 +568,12 @@ function SelectPassengers({ t, value, onChange, required }: any) {
 }
 
 function SelectVehicle({ t, value, onChange, required }: any) {
+  const labelId = "vehicle-label";
   return (
     <div className="flex items-center gap-3 bg-black/20 backdrop-blur-lg md:bg-black/50 border border-[#CD9A31]/20 px-4 py-3 rounded-xl">
+      <label id={labelId} className="sr-only">{t("hero", "vehicle_select")}</label>
       <select
+        aria-labelledby={labelId}
         className="bg-transparent outline-none text-white w-full text-base"
         value={value}
         onChange={(e) => onChange(e.target.value)}
