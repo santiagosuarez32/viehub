@@ -147,7 +147,7 @@ export default async function LocaleLayout({
               url: "https://viehub.at",
               logo: "https://viehub.at/logo.png",
               image: "https://viehub.at/og-image.png",
-              telephone: "+43 660 2202238",
+              telephone: "+43 660 8537912",
               email: "info@viehub.at",
               address: {
                 "@type": "PostalAddress",
@@ -191,7 +191,7 @@ export default async function LocaleLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "Customer Service",
-                telephone: "+43 660 2202238",
+                telephone: "+43 660 8537912",
                 email: "info@viehub.at",
                 availableLanguage: ["de", "en", "es", "fr", "it"],
               },

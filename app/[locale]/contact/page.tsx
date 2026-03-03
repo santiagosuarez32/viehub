@@ -400,7 +400,7 @@ export default function ContactPage() {
               
               <div className="space-y-4">
                 <a
-                  href="tel:+436608537912"
+                  href="tel:+43 660 8537912"
                   className="
                     flex
                     items-center
@@ -448,7 +448,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="https://wa.me/436608537912"
+                  href="https://wa.me/+436608537912"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
