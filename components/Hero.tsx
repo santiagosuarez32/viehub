@@ -12,12 +12,15 @@ import {
   Mail
 } from "lucide-react";
 
-import { motion } from "framer-motion";
+import gsap from "gsap";
 import Image from "next/image";
 import { useI18n } from "@/lib/i18n/i18n";
 import { useEffect, useRef, useState } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
+  const formRef = useRef<HTMLFormElement>(null);
   const { t } = useI18n();
 
   const [form, setForm] = useState({
@@ -36,6 +39,15 @@ export default function Hero() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!formRef.current) return;
+    gsap.fromTo(
+      formRef.current,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power2.out" }
+    );
+  }, []);
 
   const handleCloseSuccess = () => {
     setSuccess(false);
@@ -176,12 +188,11 @@ export default function Hero() {
         </div>
 
         {/* FORM (con animación suave) */}
-        <motion.form
+        <form
+          ref={formRef}
           id="booking-form"
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ opacity: 0 }}
           className="w-full max-w-lg p-6 sm:p-8 rounded-2xl shadow-2xl border border-[#CD9A31]/30 bg-black/20 md:bg-[#111] md:backdrop-blur-none scroll-mt-28"
         >
 
@@ -342,7 +353,7 @@ export default function Hero() {
             )}
 
           </div>
-        </motion.form>
+        </form>
       </div>
 
       {success && (

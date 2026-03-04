@@ -1,13 +1,17 @@
 "use client"
 
 import { destinations } from "@/data/destinations"
-import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import { useI18n } from "@/lib/i18n/i18n"
 import { destinationsTranslations } from "@/lib/i18n/destinations-translations"
 import { SupportedLocale } from "@/lib/i18n/dictionaries"
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Destinations() {
 
@@ -16,8 +20,34 @@ export default function Destinations() {
   const { t } = useI18n()
   const translations = destinationsTranslations[locale as SupportedLocale] || destinationsTranslations.en
 
+  const sectionRef = useRef<HTMLElement>(null)
+  const cardsRef = useRef<HTMLDivElement[]>([])
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardsRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.55,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            once: true,
+          }
+        }
+      )
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <section className="w-full py-32 bg-[#0a0a0a] text-white builder-">
+    <section ref={sectionRef} className="w-full py-32 bg-[#0a0a0a] text-white builder-">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -48,13 +78,11 @@ export default function Destinations() {
             const desc = translatedDest?.desc || dest.desc
 
             return (
-              <motion.div
+              <div
                 key={dest.slug}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                ref={(el) => { if (el) cardsRef.current[i] = el }}
                 className="h-full"
+                style={{ opacity: 0 }}
               >
 
                 <div className="
@@ -127,7 +155,7 @@ export default function Destinations() {
 
                 </div>
 
-              </motion.div>
+              </div>
             )
           })}
 

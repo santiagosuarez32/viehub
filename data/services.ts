@@ -1,86 +1,67 @@
 export const services = [
 
-{
-slug:"private-day-tours",
-title:"Private day tours",
-image:"/services/priv.webp",
-desc:"Private day tours from Vienna to Austria and neighboring countries.",
+    {
+        slug: "private-day-tours",
+        title: "Private day tours",
+        image: "/services/priv.webp",
+        desc: "Private day tours from Vienna to Austria and neighboring countries.",
 
-longDesc:`
+        longDesc: `
 <h1><strong>Private day tours</strong></h1>
 
 <p>
-Our private day tours from Vienna offer the perfect opportunity to discover the most beautiful destinations in Austria and neighboring countries in complete comfort and at your own pace. Whether you wish to visit alpine landscapes, charming old towns, famous lakes, or cultural landmarks – we create a personalized travel experience tailored entirely to your wishes.
+Explore Austria and its neighboring countries on a private day tour from Vienna. From alpine scenery and historic old towns to famous lakes and cultural landmarks, we craft a personalized itinerary that fits your interests and pace.
 </p>
 
 <p>
-Enjoy a relaxed journey with a 
-<a href="/services/private-chauffeur-vienna" style="color:#CD9A31;">
-private chauffeur in Vienna
-</a>, a spacious vehicle, and complete flexibility throughout the day.
+Travel with a <a href="/services/private-chauffeur-vienna" style="color:#CD9A31;">private chauffeur in Vienna</a>, in a spacious and comfortable vehicle, with full flexibility throughout the day.
 </p>
 
 <h2><strong>Discover Austria in comfort</strong></h2>
 
 <p>
-Austria offers breathtaking landscapes and world-famous destinations, ideal for private day trips. Popular destinations include Salzburg, Hallstatt, the Wachau Valley, Melk, Graz, the Austrian Alps, and day trips to Bratislava or Budapest.
-</p>
-
-<p>
-Travel comfortably in a clean, modern vehicle with plenty of space for luggage, shopping, or camera equipment. For longer journeys between cities, our 
-<a href="/services/long-distance-transfers" style="color:#CD9A31;">
-long-distance transfers
-</a> 
-are also available.
+Top destinations include Salzburg, Hallstatt, the Wachau Valley, Melk, Graz, and the Austrian Alps, as well as day trips to Bratislava or Budapest. For longer city-to-city routes, our <a href="/services/long-distance-transfers" style="color:#CD9A31;">long-distance transfers</a> are also available.
 </p>
 
 <h2><strong>Your schedule, your route</strong></h2>
 
 <p>
-On a private day tour, you decide how your day unfolds. Spend as much time as you like at each stop, add extra destinations, or flexibly adjust your route along the way. Your driver will support your plans, offer recommendations, and ensure a smooth and enjoyable experience from morning till night.
+You decide the pace and the stops. Linger as long as you like, add destinations, or adjust the route on the go. Your driver will be there every step of the way, offering local knowledge and ensuring a smooth experience from start to finish.
 </p>
 
 <h2><strong>Fixed prices & full flexibility</strong></h2>
 
 <p>
-All prices for private day tours are displayed transparently in advance – no surprises.
+Pricing is transparent and confirmed before you set off — no surprises, no hidden fees.
 </p>
 `,
 
-steps: { step1: "Book your transfer online", step2: "We assign your driver", step3: "Enjoy the ride" }
+        steps: { step1: "Book your transfer online", step2: "We assign your driver", step3: "Enjoy the ride" }
 
-},
+    },
 
-{
-slug:"hotel-transfers-vienna",
-title:"Hotel Transfers Vienna",
-image:"/services/hotel.avif",
-desc:"Comfortable and reliable hotel transfers in Vienna and across Austria.",
+    {
+        slug: "hotel-transfers-vienna",
+        title: "Hotel Transfers Vienna",
+        image: "/services/hotel.avif",
+        desc: "Comfortable and reliable hotel transfers in Vienna and across Austria.",
 
-longDesc:`
+        longDesc: `
 
 <h1><strong>Hotel Transfers Vienna</strong></h1>
 
 <p>
-Our <strong>hotel transfers in Vienna</strong> offer a seamless and comfortable way to travel between Vienna Airport, train stations, and any hotel in Vienna or throughout Austria.
+Our <strong>hotel transfers in Vienna</strong> provide a seamless connection between Vienna Airport, train stations, and any hotel in the city or elsewhere in Austria.
 </p>
 
 <p>
-Whether you're arriving after a long journey or preparing for your departure, our professional drivers ensure a punctual, stress-free, and pleasant door-to-door experience.
-</p>
-
-<p>
-Enjoy clean vehicles, reliable service, and maximum comfort on every journey – and combine your stay with our 
-<a href="/services/vienna-city-transfers" style="color:#CD9A31;"><strong>Vienna city transfers</strong></a> 
-or 
-<a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> 
-if needed.
+Our professional drivers ensure punctual, door-to-door service so you can focus on your stay. Combine hotel transfers with our <a href="/services/vienna-city-transfers" style="color:#CD9A31;"><strong>Vienna city transfers</strong></a> or <a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> if needed.
 </p>
 
 <h2><strong>Book your transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -91,95 +72,60 @@ Book online or contact us directly – we are available 24/7.
 <h2><strong>Direct pick-ups from any hotel</strong></h2>
 
 <p>
-We offer direct transfers from all major hotels in Vienna and the surrounding area. Whether you're staying in a luxury hotel in the city center, a boutique hotel near historical landmarks, or a business hotel close to the airport, your driver will be waiting for you at the hotel entrance and will assist you with your luggage.
-</p>
-
-<p>
-No waiting, no confusion – just fast and hassle-free transportation, perfectly complementing our 
-<a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport (VIE) transfers</strong></a>.
+We collect guests from all major hotels in Vienna — city center, near landmarks, or close to the airport. Your driver will be at the entrance and ready to assist with luggage. Fast, hassle-free, and perfectly timed — complementing our <a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport (VIE) transfers</strong></a>.
 </p>
 
 <h2><strong>Stress-free airport transfers</strong></h2>
 
 <p>
-Hotel transfers to Vienna Airport (VIE) are meticulously planned. We continuously monitor traffic conditions and ensure you arrive at the airport on time with ample buffer time.
-</p>
-
-<p>
-Upon landing in Vienna, your driver will be waiting for you in the arrivals hall and will take you directly to your hotel – for the smoothest possible arrival, optionally in combination with our 
-<a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport taxi service</strong></a>.
+We track traffic conditions to get you to the airport on time. On arrival, your driver waits in the arrivals hall and takes you straight to your hotel — a smooth start, optionally paired with our <a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport taxi service</strong></a>.
 </p>
 
 <h2><strong>Ideal for business and leisure travelers</strong></h2>
 
 <p>
-Whether you're in Austria for conferences, meetings, holidays, or weekend trips, our hotel transfer service adapts flexibly to your needs.
+Child seats available for families, quiet vehicles for business travelers, and local tips from drivers who know Vienna well. For a more personalized experience, you can also book a <a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private chauffeur in Vienna</strong></a>.
 </p>
 
-<p>
-Families can request child seats, business travelers enjoy quiet and comfortable vehicles, and tourists benefit from drivers who know Vienna intimately and can provide helpful local tips.
-</p>
+<h2><strong>Vehicles for any group size</strong></h2>
 
 <p>
-For an even more personalized service during your stay, you can also book a 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private chauffeur in Vienna</strong></a>.
-</p>
-
-<h2><strong>Comfortable vehicles for any group size</strong></h2>
-
-<p>
-Choose from a selection of modern sedans, minivans, and larger vehicles for groups of up to 14 people. Each vehicle offers ample luggage space, comfortable seating, and a clean, air-conditioned interior.
-</p>
-
-<p>
-Long-distance hotel transfers to other Austrian and European cities are also available through our 
-<a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfer service</strong></a>.
+Choose from sedans, minivans, or larger vehicles for up to 14 people. Every vehicle is clean, air-conditioned, and has ample luggage space. Long-distance hotel transfers to other cities in Austria and Europe are also available via our <a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfer service</strong></a>.
 </p>
 
 <h2><strong>Fixed prices & no hidden fees</strong></h2>
 
 <p>
-All hotel transfer prices are fixed and displayed transparently before booking. There are no additional charges for luggage, traffic delays, or nighttime journeys.
-</p>
-
-<p>
-You always know exactly what you're paying for – transparent, simple, and worry-free.
+All transfer prices are fixed and shown upfront — no extra charges for luggage, traffic delays, or night-time journeys. What you see is what you pay.
 </p>
 
 `,
 
-steps: { step1: "Book your hotel transfer", step2: "We confirm your pickup", step3: "Enjoy a smooth ride" }
-},
+        steps: { step1: "Book your hotel transfer", step2: "We confirm your pickup", step3: "Enjoy a smooth ride" }
+    },
 
-{
-slug:"long-distance-transfers",
-title:"Long-Distance Transfers",
-image:"/services/long.webp",
-desc:"Comfortable long-distance private transfers across Austria and Europe.",
+    {
+        slug: "long-distance-transfers",
+        title: "Long-Distance Transfers",
+        image: "/services/long.webp",
+        desc: "Comfortable long-distance private transfers across Austria and Europe.",
 
-longDesc:`
+        longDesc: `
 
 <h1><strong>Long-Distance Transfers</strong></h1>
 
 <p>
-Our <strong>long-distance transfers</strong> offer a comfortable, safe, and stress-free way to travel from Vienna to destinations throughout Austria and neighboring countries.
+Our <strong>long-distance transfers</strong> offer a reliable, comfortable way to travel from Vienna to destinations across Austria and beyond.
 </p>
 
 <p>
-Whether you're going to Salzburg, Graz, Linz, Innsbruck, Hallstatt, or to Budapest, Bratislava, Prague, Munich, Italy, or Switzerland – our professional private transfer ensures a pleasant journey with maximum comfort.
-</p>
-
-<p>
-Avoid the limitations of trains, the hassle of multiple transfers, or the unpredictability of long-distance taxis. With us, you travel directly, at your own pace, and in complete comfort – optionally combined with our 
-<a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport (VIE) transfers</strong></a> 
-or 
-<a href="/services/hotel-transfers-vienna" style="color:#CD9A31;"><strong>hotel transfers</strong></a>.
+Heading to Salzburg, Graz, Linz, Innsbruck, or abroad to Budapest, Bratislava, Prague, Munich, or Switzerland? We take you there directly, at your pace, without transfers or delays — optionally paired with <a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport (VIE) transfers</strong></a> or <a href="/services/hotel-transfers-vienna" style="color:#CD9A31;"><strong>hotel transfers</strong></a>.
 </p>
 
 <h2><strong>Book your transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or contact us — we are available 24/7.
 </p>
 
 <p>
@@ -190,89 +136,54 @@ Book online or contact us directly – we are available 24/7.
 <h2><strong>Comfortable travel beyond Vienna</strong></h2>
 
 <p>
-Long journeys require a vehicle that is spacious, clean, and comfortable. Our fleet includes sedans, minivans, and vehicles for larger groups – with ample space for passengers and luggage.
-</p>
-
-<p>
-Whether you're traveling alone, with family, or with business partners, we offer the ideal vehicle for every group size and itinerary.
+Our fleet includes sedans, minivans, and group vehicles with plenty of space for passengers and luggage. Whether alone, with family, or with colleagues, we have the right vehicle for every trip.
 </p>
 
 <h2><strong>Direct door-to-door service</strong></h2>
 
 <p>
-No transfers, no connections, no waiting. We pick you up at your desired location in Vienna and take you directly to your destination.
-</p>
-
-<p>
-This makes long-distance travel faster, easier, and significantly more comfortable than public transport. Multiple stops can be planned along the way upon request – ideal if you want to combine your route with our 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private day tours</strong></a>.
-</p>
-
-<h2><strong>Ideal for business, tourism & family trips</strong></h2>
-
-<p>
-Whether you're attending a business meeting in another city, planning a family trip to the mountains, or taking a tour of Austria or Europe – our long-distance service is the perfect choice.
-</p>
-
-<p>
-You'll save time, increase comfort, and enjoy a relaxed travel experience without stress, crowds, or delays. If you'd like additional flexibility during your stay, you can also book a 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private chauffeur in Vienna</strong></a>.
+No connections, no waiting — we pick you up in Vienna and take you straight to your destination. Additional stops can be arranged along the way, ideal for combining with our <a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private day tours</strong></a>.
 </p>
 
 <h2><strong>Fixed prices & no hidden fees</strong></h2>
 
 <p>
-All long-distance fares are confirmed in advance and remain fixed – regardless of traffic, travel time, or weather.
-</p>
-
-<p>
-You always know the exact price before your journey begins. There are no extra charges for luggage, no night surcharges, and no weekend surcharges – complete transparency from start to finish.
+All fares are confirmed upfront and stay fixed regardless of traffic or weather. No luggage surcharges, no night fees, and no weekend extras — full transparency from booking to arrival.
 </p>
 
 <h2><strong>Professional & safe drivers</strong></h2>
 
 <p>
-All long-distance transfers are carried out by licensed and experienced drivers who know the best routes in Austria and throughout Europe.
-</p>
-
-<p>
-Safety, comfort, and punctuality are always our top priorities. Your driver will ensure a smooth and pleasant journey, allowing you to relax and enjoy the trip.
+Our licensed drivers know the best routes across Austria and Europe. Safety and punctuality come first — so you can sit back and enjoy the journey.
 </p>
 
 `,
 
-steps: { step1: "Book your long-distance transfer", step2: "We confirm your route", step3: "Enjoy a relaxed journey" }
-},
+        steps: { step1: "Book your long-distance transfer", step2: "We confirm your route", step3: "Enjoy a relaxed journey" }
+    },
 
-{
-slug:"vienna-airport-taxi-fixed-price",
-title:"Vienna Airport Taxi at Fixed Price",
-image:"/services/viena-airport.webp",
-desc:"Reliable Vienna Airport taxi service at a guaranteed fixed price with no hidden fees.",
+    {
+        slug: "vienna-airport-taxi-fixed-price",
+        title: "Vienna Airport Taxi at Fixed Price",
+        image: "/services/viena-airport.webp",
+        desc: "Reliable Vienna Airport taxi service at a guaranteed fixed price with no hidden fees.",
 
-longDesc:`
+        longDesc: `
 
-<h1><strong>Long-Distance Transfers</strong></h1>
+<h1><strong>Vienna Airport Taxi at Fixed Price</strong></h1>
 
 <p>
-Our <strong>long-distance transfers</strong> offer a comfortable, safe, and stress-free way to travel from Vienna to destinations throughout Austria and neighboring countries.
+Our <strong>Vienna Airport taxi service</strong> gets you to or from VIE quickly and comfortably, with a guaranteed fixed fare — no surprises, no extras.
 </p>
 
 <p>
-Whether you're going to Salzburg, Graz, Linz, Innsbruck, Hallstatt, or to Budapest, Bratislava, Prague, Munich, Italy, or Switzerland – our professional private transfer ensures a pleasant journey with maximum comfort.
-</p>
-
-<p>
-Avoid the limitations of trains, the hassle of multiple transfers, or the unpredictability of long-distance taxis. With us, you travel directly, at your own pace, and in complete comfort – optionally combined with our 
-<a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport (VIE) transfers</strong></a> 
-or 
-<a href="/services/hotel-transfers-vienna" style="color:#CD9A31;"><strong>hotel transfers</strong></a>.
+Whether arriving or departing, our experienced drivers ensure a smooth, stress-free journey every time. Combine with our <a href="/services/hotel-transfers-vienna" style="color:#CD9A31;"><strong>hotel transfers</strong></a> or <a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> for seamless travel.
 </p>
 
 <h2><strong>Book your transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or contact us — we are available 24/7.
 </p>
 
 <p>
@@ -280,84 +191,56 @@ Book online or contact us directly – we are available 24/7.
 <strong>Send a message via WhatsApp</strong>
 </p>
 
-<h2><strong>Comfortable travel beyond Vienna</strong></h2>
+<h2><strong>Comfortable vehicles for any group</strong></h2>
 
 <p>
-Long journeys require a vehicle that is spacious, clean, and comfortable. Our fleet includes sedans, minivans, and vehicles for larger groups – with ample space for passengers and luggage.
+Choose from sedans, minivans, or larger vehicles for groups. All vehicles are clean, spacious, and air-conditioned. We assist with luggage and offer child seats on request.
 </p>
 
+<h2><strong>Direct, door-to-door service</strong></h2>
+
 <p>
-Whether you're traveling alone, with family, or with business partners, we offer the ideal vehicle for every group size and itinerary.
+No stops, no detours — we take you straight to your destination. Additional stops can be arranged. Ideal for combining with our <a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private day tours</strong></a>.
 </p>
 
-<h2><strong>Direct door-to-door service</strong></h2>
+<h2><strong>Fixed prices, no surprises</strong></h2>
 
 <p>
-No transfers, no connections, no waiting. We pick you up at your desired location in Vienna and take you directly to your destination.
+Your fare is set at booking. No luggage fees, no night surcharges, no weekend extras. Just one clear, transparent price from start to finish.
 </p>
 
-<p>
-This makes long-distance travel faster, easier, and significantly more comfortable than public transport. Multiple stops can be planned along the way upon request – ideal if you want to combine your route with our 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private day tours</strong></a>.
-</p>
-
-<h2><strong>Ideal for business, tourism & family trips</strong></h2>
+<h2><strong>Experienced, licensed drivers</strong></h2>
 
 <p>
-Whether you're attending a business meeting in another city, planning a family trip to the mountains, or taking a tour of Austria or Europe – our long-distance service is the perfect choice.
-</p>
-
-<p>
-You'll save time, increase comfort, and enjoy a relaxed travel experience without stress, crowds, or delays. If you'd like additional flexibility during your stay, you can also book a 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private chauffeur in Vienna</strong></a>.
-</p>
-
-<h2><strong>Fixed prices & no hidden fees</strong></h2>
-
-<p>
-All long-distance fares are confirmed in advance and remain fixed – regardless of traffic, travel time, or weather.
-</p>
-
-<p>
-You always know the exact price before your journey begins. There are no extra charges for luggage, no night surcharges, and no weekend surcharges – complete transparency from start to finish.
-</p>
-
-<h2><strong>Professional & safe drivers</strong></h2>
-
-<p>
-All long-distance transfers are carried out by licensed and experienced drivers who know the best routes in Austria and throughout Europe.
-</p>
-
-<p>
-Safety, comfort, and punctuality are always our top priorities. Your driver will ensure a smooth and pleasant journey, allowing you to relax and enjoy the trip.
+All transfers are handled by professional drivers familiar with the best routes in Vienna and across Austria. Punctuality and safety are always guaranteed.
 </p>
 
 `,
 
-steps: { step1: "Book your airport taxi", step2: "We confirm your pickup time", step3: "Enjoy a stress-free ride" }
-},
-{
-slug:"vienna-airport-to-city-taxi",
-title:"Taxi Service from Vienna Airport to the City Center",
-image:"/services/city-vienna.webp",
-desc:"Reliable taxi service from Vienna Airport (VIE) to the city center with transparent pricing and professional drivers.",
+        steps: { step1: "Book your airport taxi", step2: "We confirm your pickup time", step3: "Enjoy a stress-free ride" }
+    },
+    {
+        slug: "vienna-airport-to-city-taxi",
+        title: "Taxi Service from Vienna Airport to the City Center",
+        image: "/services/city-vienna.webp",
+        desc: "Reliable taxi service from Vienna Airport (VIE) to the city center with transparent pricing and professional drivers.",
 
-longDesc:`
+        longDesc: `
 
-<h1><strong>Taxi Service from Vienna Airport to the City Center with VIEtaxi.taxi</strong></h1>
+<h1><strong>Taxi from Vienna Airport to the City Center</strong></h1>
 
 <p>
-Getting from Vienna International Airport (VIE) to the city center is easy, comfortable, and reliable with <strong>VIEtaxi.taxi</strong>.
+Getting from Vienna International Airport (VIE) to the city center is easy with our professional taxi service — comfortable, punctual, and always focused on your satisfaction.
 </p>
 
 <p>
-Our professional taxi service offers you a smooth and stress-free ride directly to your destination – with a special focus on punctuality, comfort, and customer satisfaction. Whether for business or pleasure, start your stay in Vienna with a trustworthy airport taxi.
+Whether you're arriving for business or leisure, start your Vienna experience without any transport hassle.
 </p>
 
 <h2><strong>Book your transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -365,69 +248,48 @@ Book online or contact us directly – we are available 24/7.
 <strong>Send a message via WhatsApp</strong>
 </p>
 
-<h2><strong>Comfortable and efficient taxi rides</strong></h2>
+<h2><strong>Comfortable and efficient rides</strong></h2>
 
 <p>
-Avoid the stress of public transport or waiting for ride-sharing services. With VIEtaxi.taxi, you can enjoy a private door-to-door taxi ride from Vienna Airport directly to your hotel, office, or any address in the city center.
+Skip the public transport queues and ride-sharing uncertainty. Enjoy a private, door-to-door taxi directly to your hotel, office, or any city address. Our modern vehicles and skilled drivers guarantee a fast and relaxed journey.
+</p>
+
+<h2><strong>Transparent pricing</strong></h2>
+
+<p>
+We offer competitive fares with no hidden fees. Your price is confirmed upfront so you always know what to expect. Our taxis include air conditioning and available Wi-Fi for your comfort.
 </p>
 
 <p>
-Our modern and spacious vehicles and experienced drivers ensure a fast, comfortable, and relaxed journey.
-</p>
-
-<h2><strong>Fair prices and transparent taxi service</strong></h2>
-
-<p>
-We offer fair and competitive taxi fares with no hidden costs. You'll receive a clear and transparent price quote before your journey begins, so you always know what to expect.
-</p>
-
-<p>
-Our taxis are equipped with modern amenities such as air conditioning and free Wi-Fi, ensuring a pleasant and comfortable ride to Vienna.
-</p>
-
-<p>
-Book your taxi from Vienna Airport to the city center today and travel relaxed with VIEtaxi.taxi. Leave the ride to us – and focus entirely on enjoying Vienna.
-</p>
-
-<p>
-You can also combine this service with our 
-<a href="/services/hotel-transfers-vienna" style="color:#CD9A31;"><strong>hotel transfers</strong></a> 
-or 
-<a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> 
-for seamless travel throughout Austria.
+Pair this service with our <a href="/services/hotel-transfers-vienna" style="color:#CD9A31;"><strong>hotel transfers</strong></a> or <a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> for complete travel coverage.
 </p>
 
 `,
 
-steps: { step1: "Book your airport pickup", step2: "We monitor your flight", step3: "Enjoy a smooth ride to the city center" }
-}, 
-{
-slug:"vienna-airport-transfer",
-title:"Airport Transfers Vienna (VIE)",
-image:"/services/airport-transfer.webp",
-desc:"Reliable and stress-free airport transfers between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
+        steps: { step1: "Book your airport pickup", step2: "We monitor your flight", step3: "Enjoy a smooth ride to the city center" }
+    },
+    {
+        slug: "vienna-airport-transfer",
+        title: "Airport Transfers Vienna (VIE)",
+        image: "/services/airport-transfer.webp",
+        desc: "Reliable and stress-free airport transfers between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
 
-longDesc:`
+        longDesc: `
 
 <h1><strong>Airport Transfers Vienna (VIE)</strong></h1>
 
 <p>
-Our <strong>Vienna Airport (VIE) transfer service</strong> offers a comfortable, reliable, and stress-free way to travel between Vienna Airport and any destination within the city or throughout Austria.
+Our <strong>Vienna Airport (VIE) transfer service</strong> connects the airport with any address in the city or across Austria — comfortably, reliably, and without stress.
 </p>
 
 <p>
-Whether you're arriving or departing, our professional and friendly drivers ensure that every part of your journey runs smoothly, efficiently, and perfectly coordinated.
-</p>
-
-<p>
-With fixed prices, no hidden fees, and fully personalized service, this is the easiest way to begin or end your trip in Vienna – optionally combined with our 
-<a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport taxi service</strong></a>.
+From arrival to departure, our professional drivers keep everything running smoothly. Fixed prices, no hidden fees, and personalized service — the best way to start or end your trip. Optionally combined with our <a href="/services/vienna-airport-taxi-fixed-price" style="color:#CD9A31;"><strong>Vienna Airport taxi service</strong></a>.
 </p>
 
 <h2><strong>Book your transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -435,94 +297,55 @@ Book online or contact us directly – we are available 24/7.
 <strong>Send a message via WhatsApp</strong>
 </p>
 
-<h2><strong>Stress-free arrival at Vienna Airport</strong></h2>
+<h2><strong>Smooth arrivals at VIE</strong></h2>
 
 <p>
-After a long flight, you don't want to wait in a taxi queue or deal with public transport. With our airport transfer service, your driver will be waiting for you in the arrivals hall with a name sign, help you with your luggage, and escort you directly to your vehicle.
+After a long flight, the last thing you want is a taxi queue. Your driver will be waiting in the arrivals hall with a name sign, assist with luggage, and take you directly to your destination. You also get <strong>60 minutes of complimentary waiting time</strong> for full peace of mind.
 </p>
 
+<h2><strong>Reliable departures</strong></h2>
+
 <p>
-You'll receive <strong>60 minutes of complimentary waiting time</strong> – for maximum flexibility and comfort upon arrival – before continuing on to your hotel in Vienna or your chosen destination.
+We plan every route with traffic, peak hours, and weather in mind — so you always reach the airport on time. Need city stops before your flight? Our <a href="/services/hotel-transfers-vienna" style="color:#CD9A31;"><strong>city transfer service in Vienna</strong></a> has you covered.
 </p>
 
-<h2><strong>Reliable transfers for departures</strong></h2>
+<h2><strong>Vehicles for every traveler</strong></h2>
 
 <p>
-When traveling to the airport, our drivers ensure you arrive well before your flight. We carefully plan every route, taking into account traffic conditions, peak hours, and weather.
+Sedans, minivans, or larger vehicles for 9–14 people — all modern, clean, and spacious, with child seats and ample luggage space on request. For longer onward journeys, our <a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> are available too.
 </p>
 
-<p>
-Whether it's early morning or late at night, we guarantee a punctual and safe journey at all times. If you have appointments in the city before your flight, you can also use our 
-<a href="/services/hotel-transfers-vienna" style="color:#CD9A31;"><strong>city transfer service in Vienna</strong></a>.
-</p>
-
-<h2><strong>Comfortable vehicles for every traveler</strong></h2>
+<h2><strong>Flight monitoring & fixed fares</strong></h2>
 
 <p>
-We offer a selection of modern, clean, and spacious vehicles – ideal for solo travelers, families, business travelers, or larger groups.
-</p>
-
-<p>
-Whether you choose a sedan, minivan, or a larger vehicle for 9–14 people, you'll benefit from comfortable seating, ample luggage space, and child seats upon request.
-</p>
-
-<p>
-For onward travel to other cities, our 
-<a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfer service</strong></a> 
-is also available.
-</p>
-
-<h2><strong>Flight monitoring & fixed prices</strong></h2>
-
-<p>
-All flights are monitored in real time. Should your flight be delayed or arrive early, your driver will automatically adjust the pick-up time.
-</p>
-
-<p>
-Our prices are fixed and displayed before booking – with no night surcharges, weekend fees, or hidden costs. You will always know the exact fare in advance.
-</p>
-
-<h2><strong>Ideal for business and leisure travelers</strong></h2>
-
-<p>
-Whether you're coming to Vienna for meetings, conferences, holidays, or family visits, our airport transfer service guarantees reliability and comfort in every situation.
-</p>
-
-<p>
-For maximum flexibility during your stay, you can also book a 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private chauffeur in Vienna</strong></a>.
+Flights are tracked in real time. If your flight is delayed, your driver adjusts automatically. All prices are fixed upfront — no night, weekend, or hidden surcharges.
 </p>
 
 `,
 
-steps: { step1: "Book your airport transfer", step2: "We monitor your flight", step3: "Enjoy a smooth and punctual ride" }
-},  {
-slug:"vienna-city-transfers",
-title:"Vienna City Transfers",
-image:"/services/city-transfer.webp",
-desc:"Comfortable and reliable city transfers within Vienna with professional drivers and fixed pricing.",
+        steps: { step1: "Book your airport transfer", step2: "We monitor your flight", step3: "Enjoy a smooth and punctual ride" }
+    }, {
+        slug: "vienna-city-transfers",
+        title: "Vienna City Transfers",
+        image: "/services/city-transfer.webp",
+        desc: "Comfortable and reliable city transfers within Vienna with professional drivers and fixed pricing.",
 
-longDesc:`
+        longDesc: `
 
 <h1><strong>Vienna City Transfers</strong></h1>
 
 <p>
-Our <strong>city transfers in Vienna</strong> offer a fast, reliable, and comfortable way to travel between any two locations within the city.
+Our <strong>city transfers in Vienna</strong> offer a fast and comfortable way to move between any two points in the city — for business, tourism, or everyday errands.
 </p>
 
 <p>
-Whether you're in Vienna on business, attending an important meeting, or exploring the historical landmarks and modern districts, our professional transfer service guarantees a stress-free journey every time.
-</p>
-
-<p>
-Instead of dealing with public transport or finding parking, relax in a clean, modern vehicle with a licensed driver who knows Vienna inside and out. You can also seamlessly connect your ride with our 
-<a href="/services/vienna-airport-transfer" style="color:#CD9A31;"><strong>Vienna Airport (VIE) transfers</strong></a>.
+Forget about parking stress or crowded public transport. Ride in a clean, modern vehicle with a licensed driver who knows Vienna inside out. Seamlessly connect with our <a href="/services/vienna-airport-transfer" style="color:#CD9A31;"><strong>Vienna Airport (VIE) transfers</strong></a>.
 </p>
 
 <h2><strong>Book your transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -530,97 +353,49 @@ Book online or contact us directly – we are available 24/7.
 <strong>Send a message via WhatsApp</strong>
 </p>
 
-<h2><strong>Comfortable rides for every occasion</strong></h2>
+<h2><strong>Rides for every occasion</strong></h2>
 
 <p>
-Our city transfer service in Vienna is ideal for all types of journeys – hotel pick-ups, office commutes, restaurant visits, shopping trips, doctor's appointments, or cultural events.
-</p>
-
-<p>
-If you require multiple stops, we flexibly adapt to your schedule and offer a seamless door-to-door service.
-</p>
-
-<p>
-Whether you're traveling alone, with colleagues, or with family, we have the right vehicle for any group size.
+Hotel pick-ups, office trips, restaurant visits, shopping, medical appointments, or cultural events — our Vienna city transfers adapt to any schedule. Multiple stops? No problem. Right-sized vehicles for solo travelers, groups, or families.
 </p>
 
 <h2><strong>Perfect for business travelers</strong></h2>
 
 <p>
-Vienna is one of Central Europe's most important business, congress, and diplomatic centers – punctuality is therefore paramount.
+Vienna is a top business and diplomatic hub — punctuality matters. Our drivers monitor traffic in real time and always find the most efficient route. Need maximum flexibility? Our <a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private chauffeur service</strong></a> is also available.
 </p>
 
-<p>
-Our drivers select the most efficient routes, monitor traffic in real time, and ensure you always arrive on time.
-</p>
+<h2><strong>Safe, clean & transparent</strong></h2>
 
 <p>
-For even greater flexibility, our 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private chauffeur service in Vienna</strong></a> 
-is also available.
-</p>
-
-<h2><strong>Safe, clean and completely transparent</strong></h2>
-
-<p>
-All transfers are carried out by experienced, licensed, and professional drivers.
-</p>
-
-<p>
-Our vehicles are regularly cleaned and meticulously maintained to ensure you always enjoy a safe and comfortable ride.
-</p>
-
-<p>
-Prices are completely transparent, displayed before booking, and contain no hidden fees – you pay exactly what you see.
-</p>
-
-<h2><strong>Flexible service tailored to your needs</strong></h2>
-
-<p>
-Whether early in the morning, late at night, or with multiple stops – our city transfer service in Vienna is available 24/7.
-</p>
-
-<p>
-If you are traveling with luggage, children, or a larger group, we can provide suitable vehicles, child seats, and additional storage space upon request.
-</p>
-
-<p>
-You can also combine your journey with our 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private day tours</strong></a> 
-or 
-<a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a>.
+Licensed drivers, regularly maintained vehicles, and fully transparent pricing — no hidden fees, no surprises. Available 24/7, with child seats and extra luggage space on request. Combine with our <a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private day tours</strong></a> or <a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a>.
 </p>
 
 `,
 
-steps: { step1: "Book your city transfer", step2: "We assign your driver", step3: "Enjoy a smooth ride through Vienna" }
-}, {
-slug:"taxi-vienna-airport",
-title:"Taxi Vienna Airport",
-image:"/services/vienna-airport.webp",
-desc:"Fast, safe and reliable taxi service between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
+        steps: { step1: "Book your city transfer", step2: "We assign your driver", step3: "Enjoy a smooth ride through Vienna" }
+    }, {
+        slug: "taxi-vienna-airport",
+        title: "Taxi Vienna Airport",
+        image: "/services/vienna-airport.webp",
+        desc: "Fast, safe and reliable taxi service between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
 
-longDesc:`
+        longDesc: `
 
 <h1><strong>Taxi Vienna Airport</strong></h1>
 
 <p>
-Our <strong>taxi service at Vienna Airport</strong> offers a fast, safe, and reliable way to travel between Vienna Airport (VIE) and any destination within the city or throughout Austria.
+Our <strong>taxi service at Vienna Airport</strong> provides fast, safe, and reliable transport between VIE and any destination in the city or across Austria.
 </p>
 
 <p>
-Whether you're arriving after a long flight or heading to the airport for your departure, our professional drivers ensure a smooth and stress-free journey from start to finish.
-</p>
-
-<p>
-Avoid waiting for public transport or searching for a taxi – your driver will be ready exactly when you need them. Alternatively, you can also use our 
-<a href="/services/vienna-airport-transfer" style="color:#CD9A31;"><strong>pre-bookable Vienna Airport (VIE) transfers</strong></a>.
+Whether you're landing after a long flight or heading to the airport, our drivers ensure a smooth journey from start to finish. No waiting, no stress — your driver is ready when you are. Or pre-book via our <a href="/services/vienna-airport-transfer" style="color:#CD9A31;"><strong>Vienna Airport (VIE) transfers</strong></a>.
 </p>
 
 <h2><strong>Book your transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -628,83 +403,55 @@ Book online or contact us directly – we are available 24/7.
 <strong>Send a message via WhatsApp</strong>
 </p>
 
-<h2><strong>Comfortable airport transfers</strong></h2>
+<h2><strong>Comfortable airport rides</strong></h2>
 
 <p>
-With our airport taxi service, you'll enjoy direct door-to-door service in clean, modern, and comfortable vehicles.
-</p>
-
-<p>
-We assist you with your luggage, provide child seats upon request, and flexibly adapt the journey to your needs.
-</p>
-
-<p>
-Sit back and relax – we'll take care of everything to ensure your trip begins or ends pleasantly, whether you're continuing on to your hotel in Vienna or another destination.
+Door-to-door service in clean, modern vehicles. We help with luggage, provide child seats on request, and adapt the journey to your needs. Relax — we take care of the rest, whether you're heading to your hotel or another destination.
 </p>
 
 <h2><strong>Flight monitoring & waiting time</strong></h2>
 
 <p>
-Flight delays are no problem. We monitor your flight in real time and automatically adjust the pick-up time, ensuring your driver is always there precisely when you land.
+Delays are no problem. We track your flight in real time and adjust pick-up accordingly. You also receive <strong>60 minutes of complimentary waiting time</strong> — plenty of time to collect bags and reach the arrivals hall.
 </p>
 
+<h2><strong>Professional drivers</strong></h2>
+
 <p>
-You also receive <strong>60 minutes of complimentary waiting time</strong> at Vienna Airport – ample time to collect your luggage and reach the arrivals hall relaxed.
+All drivers are licensed and experienced, familiar with the fastest routes in Vienna and Austria — including <a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a>. Safe, punctual, and always professional.
 </p>
 
-<h2><strong>Reliable and professional drivers</strong></h2>
+<h2><strong>Fixed prices, no hidden fees</strong></h2>
 
 <p>
-All our drivers are licensed, experienced, and thoroughly familiar with the fastest and safest routes in Vienna and throughout Austria – including for 
-<a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> 
-to other cities.
-</p>
-
-<p>
-Their goal is to ensure your journey is always safe, comfortable, and punctual.
-</p>
-
-<h2><strong>Fixed prices with no hidden fees</strong></h2>
-
-<p>
-All airport taxi prices are displayed in advance – no surprises, no extra costs.
-</p>
-
-<p>
-The price includes airport pickup, waiting time, baggage service, and flight monitoring.
-</p>
-
-<p>
-Whether day or night, weekday or weekend – the price remains the same, ensuring complete transparency and maximum planning security.
+Prices are shown before you book — no surprises, no extras. Airport pickup, waiting time, luggage assistance, and flight tracking are all included. Same price, day or night, weekday or weekend.
 </p>
 
 `,
 
-steps: { step1: "Book your airport taxi", step2: "We monitor your flight", step3: "Enjoy a safe and punctual ride" }
-}, {
-slug:"private-chauffeur-vienna",
-title:"Private Chauffeur in Vienna",
-image:"/services/private.webp",
-desc:"Luxury private chauffeur service in Vienna with personalized, discreet and flexible transportation solutions.",
+        steps: { step1: "Book your airport taxi", step2: "We monitor your flight", step3: "Enjoy a safe and punctual ride" }
+    }, {
+        slug: "private-chauffeur-vienna",
+        title: "Private Chauffeur in Vienna",
+        image: "/services/private.webp",
+        desc: "Luxury private chauffeur service in Vienna with personalized, discreet and flexible transportation solutions.",
 
-longDesc:`
+        longDesc: `
 
 <h1><strong>Private Chauffeur in Vienna</strong></h1>
 
 <p>
-Hiring a <strong>private chauffeur in Vienna</strong> is the ideal solution for travelers who value comfort, reliability, and a fully personalized travel experience.
+A <strong>private chauffeur in Vienna</strong> is the perfect solution for travelers who value comfort, reliability, and a fully tailored journey.
 </p>
 
 <p>
-Whether you need a point-to-point ride within the city, a chauffeur for the entire day, support for business trips, or 
-<a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> 
-within Austria and neighboring countries, our professional drivers ensure smooth and stress-free journeys in and around Vienna.
+From point-to-point city rides and full-day service to business trips and <a href="/services/long-distance-transfers" style="color:#CD9A31;"><strong>long-distance transfers</strong></a> across Austria and neighboring countries — our drivers ensure every journey is smooth and stress-free.
 </p>
 
 <h2><strong>Book your transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -712,69 +459,34 @@ Book online or contact us directly – we are available 24/7.
 <strong>Send a message via WhatsApp</strong>
 </p>
 
-<h2><strong>Comfortable & stress-free travel</strong></h2>
+<h2><strong>Maximum comfort & flexibility</strong></h2>
 
 <p>
-A private chauffeur offers you maximum flexibility. No waiting, no queues, no searching for taxis, and no complicated 
-<a href="/services/vienna-city-transfers" style="color:#CD9A31;"><strong>city transfers in Vienna</strong></a>.
+No queues, no waiting, no complicated <a href="/services/vienna-city-transfers" style="color:#CD9A31;"><strong>city transfers</strong></a>. Your driver arrives precisely when and where you need them, offering door-to-door service in a modern, well-equipped vehicle — also available combined with our <a href="/services/taxi-vienna-airport" style="color:#CD9A31;"><strong>Vienna Airport taxi service</strong></a>.
 </p>
 
+<h2><strong>Ideal for business & corporate clients</strong></h2>
+
 <p>
-Your driver arrives exactly when and where you need them, providing a comfortable door-to-door service.
+Vienna is one of Central Europe's top business and conference hubs. With a private chauffeur, you move efficiently between meetings, hotels, and <a href="/services/vienna-airport-transfer" style="color:#CD9A31;"><strong>Vienna Airport (VIE)</strong></a> without losing valuable time. Our chauffeurs are discreet, punctual, and trained to serve VIP and corporate clients.
 </p>
 
-<p>
-Our vehicles are modern, well-maintained, and perfectly equipped for both short and long journeys – optionally combined with our 
-<a href="/services/taxi-vienna-airport" style="color:#CD9A31;"><strong>Vienna Airport taxi service</strong></a>.
-</p>
-
-<h2><strong>Perfect for business and corporate clients</strong></h2>
+<h2><strong>Personalized for every occasion</strong></h2>
 
 <p>
-Vienna is one of Central Europe's most important business and conference centers.
-</p>
-
-<p>
-With a private chauffeur, you can travel efficiently between meetings, conferences, hotels, and 
-<a href="/services/vienna-airport-transfer" style="color:#CD9A31;"><strong>Vienna Airport (VIE)</strong></a> 
-without wasting valuable time.
-</p>
-
-<p>
-Our chauffeurs are discreet, punctual, and specially trained to provide optimal service to VIP and business clients.
-</p>
-
-<h2><strong>Personalized service for every occasion</strong></h2>
-
-<p>
-Whether it's a family visit, a special occasion, a shopping trip, or sightseeing in and around Vienna – including as part of our 
-<a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private day tours</strong></a> – your private chauffeur will flexibly adapt to your plans.
-</p>
-
-<p>
-You set the schedule, we take care of the rest. Child seats, additional storage space, or trips with multiple stops are available upon request.
+Family visits, special events, shopping, or sightseeing — including as part of our <a href="/services/private-day-tours" style="color:#CD9A31;"><strong>private day tours</strong></a>. Child seats, extra storage, and multi-stop itineraries available on request.
 </p>
 
 <h2><strong>Safe, reliable & professional</strong></h2>
 
 <p>
-All our drivers are licensed, experienced, and thoroughly familiar with the fastest and safest routes in Vienna and throughout Austria.
-</p>
-
-<p>
-We continuously monitor road conditions, traffic, and weather to ensure you always enjoy a smooth and safe journey.
-</p>
-
-<h2><strong>Book your private chauffeur today</strong></h2>
-
-<p>
-Enjoy a first-class, comfortable, and fully personalized travel experience. Click below to book your private chauffeur in Vienna.
+All drivers are licensed and experienced, with deep knowledge of Vienna and Austria's best routes. We monitor road conditions and traffic so every journey is safe, smooth, and on time.
 </p>
 
 `,
 
-steps: { step1: "Book your chauffeur service", step2: "We assign your professional driver", step3: "Enjoy a premium travel experience" }
-}
+        steps: { step1: "Book your chauffeur service", step2: "We assign your professional driver", step3: "Enjoy a premium travel experience" }
+    }
 
 
 

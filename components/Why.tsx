@@ -1,80 +1,126 @@
 "use client"
 
 import { ShieldCheck, Clock, Star, BadgeDollarSign } from "lucide-react"
-import { motion } from "framer-motion"
 import { useI18n } from "@/lib/i18n/i18n"
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-export default function Why(){
+gsap.registerPlugin(ScrollTrigger)
 
-const { t } = useI18n()
+export default function Why() {
 
-const items = [
-{
-icon:<ShieldCheck size={26}/>,
-key:"item1"
-},
-{
-icon:<Star size={26}/>,
-key:"item2"
-},
-{
-icon:<Clock size={26}/>,
-key:"item3"
-},
-{
-icon:<BadgeDollarSign size={26}/>,
-key:"item4"
-}
-]
+    const { t } = useI18n()
+    const sectionRef = useRef<HTMLElement>(null)
+    const itemsRef = useRef<HTMLDivElement[]>([])
+    const imageRef = useRef<HTMLDivElement>(null)
 
-return(
-<section
-data-builder-block="why_section"
-className="w-full py-28 bg-black text-white overflow-hidden builder-"
->
+    const items = [
+        {
+            icon: <ShieldCheck size={26} />,
+            key: "item1"
+        },
+        {
+            icon: <Star size={26} />,
+            key: "item2"
+        },
+        {
+            icon: <Clock size={26} />,
+            key: "item3"
+        },
+        {
+            icon: <BadgeDollarSign size={26} />,
+            key: "item4"
+        }
+    ]
 
-<div
-data-builder-block="why_container"
-className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center"
->
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Stagger items fade up
+            gsap.fromTo(
+                itemsRef.current,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    stagger: 0.18,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 80%",
+                        once: true,
+                    }
+                }
+            )
+            // Image slide from right
+            gsap.fromTo(
+                imageRef.current,
+                { opacity: 0, x: 60 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.7,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 75%",
+                        once: true,
+                    }
+                }
+            )
+        }, sectionRef)
 
-{/* LEFT */}
-<div data-builder-block="why_left">
+        return () => ctx.revert()
+    }, [])
 
-<h2
-data-builder-text="why_title"
-className="text-4xl mb-6"
->
-{t("why", "title")} <span className="text-[#CD9A31]">{t("why", "subtitle")}</span>
-</h2>
+    return (
+        <section
+            ref={sectionRef}
+            data-builder-block="why_section"
+            className="w-full py-28 bg-black text-white overflow-hidden builder-"
+        >
 
-<p
-data-builder-text="why_desc"
-className="text-gray-400 mb-12 max-w-md"
->
-{t("why", "description")}
-</p>
+            <div
+                data-builder-block="why_container"
+                className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center"
+            >
 
-<div
-data-builder-block="why_grid"
-className="grid sm:grid-cols-2 gap-10"
->
+                {/* LEFT */}
+                <div data-builder-block="why_left">
 
-{items.map((item,i)=>(
+                    <h2
+                        data-builder-text="why_title"
+                        className="text-4xl mb-6"
+                    >
+                        {t("why", "title")} <span className="text-[#CD9A31]">{t("why", "subtitle")}</span>
+                    </h2>
 
-<motion.div
-key={i}
-initial={{opacity:0,y:30}}
-whileInView={{opacity:1,y:0}}
-viewport={{once:true}}
-transition={{delay:i*0.2}}
-data-builder-block={`why_item_${i}`}
-className="flex gap-4"
->
+                    <p
+                        data-builder-text="why_desc"
+                        className="text-gray-400 mb-12 max-w-md"
+                    >
+                        {t("why", "description")}
+                    </p>
 
-<div
-data-builder-block={`why_icon_${i}`}
-className="
+                    <div
+                        data-builder-block="why_grid"
+                        className="grid sm:grid-cols-2 gap-10"
+                    >
+
+                        {items.map((item, i) => (
+
+                            <div
+                                key={i}
+                                ref={(el) => { if (el) itemsRef.current[i] = el }}
+                                data-builder-block={`why_item_${i}`}
+                                className="flex gap-4"
+                                style={{ opacity: 0 }}
+                            >
+
+                                <div
+                                    data-builder-block={`why_icon_${i}`}
+                                    className="
 min-w-[48px]
 h-[48px]
 rounded-full
@@ -82,62 +128,59 @@ bg-[#111]
 border border-[#CD9A31]/30
 flex items-center justify-center
 text-[#CD9A31]
-">
-{item.icon}
-</div>
+">{item.icon}
+                                </div>
 
-<div>
+                                <div>
 
-<h4
-data-builder-text={`why_item_title_${i}`}
-className="mb-1 text-white"
->
-{t("why", `${item.key}_title`)}
-</h4>
+                                    <h4
+                                        data-builder-text={`why_item_title_${i}`}
+                                        className="mb-1 text-white"
+                                    >
+                                        {t("why", `${item.key}_title`)}
+                                    </h4>
 
-<p
-data-builder-text={`why_item_desc_${i}`}
-className="text-sm text-gray-400"
->
-{t("why", `${item.key}_desc`)}
-</p>
+                                    <p
+                                        data-builder-text={`why_item_desc_${i}`}
+                                        className="text-sm text-gray-400"
+                                    >
+                                        {t("why", `${item.key}_desc`)}
+                                    </p>
 
-</div>
+                                </div>
 
-</motion.div>
+                            </div>
 
-))}
+                        ))}
 
-</div>
+                    </div>
 
-</div>
+                </div>
 
-{/* RIGHT */}
-<motion.div
-initial={{opacity:0,x:60}}
-whileInView={{opacity:1,x:0}}
-viewport={{once:true}}
-transition={{duration:0.6}}
-data-builder-block="why_image_wrapper"
-className="relative flex justify-center"
->
+                {/* RIGHT */}
+                <div
+                    ref={imageRef}
+                    data-builder-block="why_image_wrapper"
+                    className="relative flex justify-center"
+                    style={{ opacity: 0 }}
+                >
 
-<div
-data-builder-block="why_image_container"
-className="relative rounded-3xl overflow-hidden border border-[#CD9A31]/30"
->
+                    <div
+                        data-builder-block="why_image_container"
+                        className="relative rounded-3xl overflow-hidden border border-[#CD9A31]/30"
+                    >
 
-<img
-data-builder-image="why_image"
-src="/why.webp"
-className="relative z-10 max-w-lg w-full rounded-3xl"
-/>
+                        <img
+                            data-builder-image="why_image"
+                            src="/why.webp"
+                            className="relative z-10 max-w-lg w-full rounded-3xl"
+                        />
 
-</div>
+                    </div>
 
-<div
-data-builder-block="why_glow"
-className="
+                    <div
+                        data-builder-block="why_glow"
+                        className="
 absolute
 w-[350px]
 h-[350px]
@@ -146,12 +189,12 @@ blur-[120px]
 rounded-full
 bottom-10
 "
-/>
+                    />
 
-</motion.div>
+                </div>
 
-</div>
+            </div>
 
-</section>
-)
+        </section>
+    )
 }

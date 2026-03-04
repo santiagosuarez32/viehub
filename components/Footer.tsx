@@ -23,14 +23,14 @@ export default function Footer({ locale }: { locale: string }) {
 
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img 
-              src="/logo.png" 
-              alt="VieHub Logo" 
+            <img
+              src="/logo.png"
+              alt="VieHub Logo"
               className="h-10 w-10 object-contain"
             />
           </div>
           <p className="mb-4">
-            {t("footer","tagline")}
+            {t("footer", "tagline")}
           </p>
           <div className="flex flex-col gap-2">
             <a
@@ -40,10 +40,10 @@ export default function Footer({ locale }: { locale: string }) {
               📞 +43 660 8537912
             </a>
             <a
-              href="mailto:info@viehub.com"
+              href="mailto:viehub.at@gmail.com"
               className="hover:text-[#CD9A31] transition-colors"
             >
-              📧 info@viehub.com
+              📧 viehub.at@gmail.com
             </a>
             <a
               href="https://maps.google.com/?q=Vienna%2C%20Austria"
@@ -51,16 +51,16 @@ export default function Footer({ locale }: { locale: string }) {
               rel="noopener noreferrer"
               className="hover:text-[#CD9A31] transition-colors"
             >
-              📍 {t("footer","vienna")}
+              📍 {t("footer", "vienna")}
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-3">
-          <h4 className="text-white font-semibold mb-2">{t("common","services")}</h4>
+          <h4 className="text-white font-semibold mb-2">{t("common", "services")}</h4>
           {services.slice(0, 6).map((service) => (
-            <Link 
-              key={service.slug} 
+            <Link
+              key={service.slug}
               href={`/${locale}/services/${service.slug}`}
               className="hover:text-[#CD9A31] transition-colors"
             >
@@ -70,10 +70,10 @@ export default function Footer({ locale }: { locale: string }) {
         </div>
 
         <div className="flex flex-col gap-3">
-          <h4 className="text-white font-semibold mb-2">{t("common","top_locations")}</h4>
+          <h4 className="text-white font-semibold mb-2">{t("common", "top_locations")}</h4>
           {destinations.map((destination) => (
-            <Link 
-              key={destination.slug} 
+            <Link
+              key={destination.slug}
               href={`/${locale}/destinations/${destination.slug}`}
               className="hover:text-[#CD9A31] transition-colors"
             >
@@ -83,11 +83,11 @@ export default function Footer({ locale }: { locale: string }) {
         </div>
 
         <div className="flex flex-col gap-3">
-          <h4 className="text-white font-semibold mb-2">{t("common","explore")}</h4>
-          <Link href={`/${locale}`} className="hover:text-[#CD9A31] transition-colors">{t("common","home")}</Link>
-          <Link href={`/${locale}/services`} className="hover:text-[#CD9A31] transition-colors">{t("common","services")}</Link>
-          <Link href={`/${locale}/fleet`} className="hover:text-[#CD9A31] transition-colors">{t("common","fleet")}</Link>
-          <Link href={`/${locale}/contact`} className="hover:text-[#CD9A31] transition-colors">{t("common","contact")}</Link>
+          <h4 className="text-white font-semibold mb-2">{t("common", "explore")}</h4>
+          <Link href={`/${locale}`} className="hover:text-[#CD9A31] transition-colors">{t("common", "home")}</Link>
+          <Link href={`/${locale}/services`} className="hover:text-[#CD9A31] transition-colors">{t("common", "services")}</Link>
+          <Link href={`/${locale}/fleet`} className="hover:text-[#CD9A31] transition-colors">{t("common", "fleet")}</Link>
+          <Link href={`/${locale}/contact`} className="hover:text-[#CD9A31] transition-colors">{t("common", "contact")}</Link>
           <Link href={`/${locale}/impressum`} className="hover:text-[#CD9A31] transition-colors">Impressum</Link>
         </div>
 
@@ -95,7 +95,7 @@ export default function Footer({ locale }: { locale: string }) {
 
       <div className="border-t border-[#CD9A31]/10 py-6 text-center text-xs text-gray-500">
         <p>
-          © {new Date().getFullYear()} VieHub. {t("footer","rights")} | <Link href={`/${locale}/impressum`} className="hover:text-[#CD9A31] transition-colors">Impressum</Link>
+          © {new Date().getFullYear()} VieHub. {t("footer", "rights")} | <Link href={`/${locale}/impressum`} className="hover:text-[#CD9A31] transition-colors">Impressum</Link>
         </p>
         <p className="mt-2">
           Developed by <a href="https://www.codew.com.ar" target="_blank" rel="noopener noreferrer" className="text-[#CD9A31] hover:underline">Codew</a>

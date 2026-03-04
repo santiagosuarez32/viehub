@@ -148,7 +148,7 @@ export default async function LocaleLayout({
               logo: "https://viehub.at/logo.png",
               image: "https://viehub.at/og-image.png",
               telephone: "+43 660 8537912",
-              email: "info@viehub.at",
+              email: "viehub.at@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Vienna",
@@ -192,7 +192,7 @@ export default async function LocaleLayout({
                 "@type": "ContactPoint",
                 contactType: "Customer Service",
                 telephone: "+43 660 8537912",
-                email: "info@viehub.at",
+                email: "viehub.at@gmail.com",
                 availableLanguage: ["de", "en", "es", "fr", "it"],
               },
               address: {
@@ -213,6 +213,8 @@ export default async function LocaleLayout({
         <I18nProvider locale={locale as any}>
           <LenisProvider>
             <Navbar locale={locale} />
+            {/* Spacer for fixed navbar on mobile */}
+            <div className="h-24 md:h-0" />
             {children}
             <Footer locale={locale} />
             <FloatingContactButton />

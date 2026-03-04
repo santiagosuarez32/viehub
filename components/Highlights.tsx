@@ -1,81 +1,108 @@
 "use client"
 
 import { ShieldCheck, Clock, UserCheck, Sparkles } from "lucide-react"
-import { motion } from "framer-motion"
 import { useI18n } from "@/lib/i18n/i18n"
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-export default function Highlights(){
+gsap.registerPlugin(ScrollTrigger)
 
-const { t } = useI18n()
+export default function Highlights() {
 
-const items = [
-{
-icon:<ShieldCheck size={34}/>,
-key:"item1"
-},
-{
-icon:<UserCheck size={34}/>,
-key:"item2"
-},
-{
-icon:<Clock size={34}/>,
-key:"item3"
-},
-{
-icon:<Sparkles size={34}/>,
-key:"item4"
-}
-]
+    const { t } = useI18n()
+    const sectionRef = useRef<HTMLElement>(null)
+    const cardsRef = useRef<HTMLDivElement[]>([])
 
-return(
-<section
-data-builder-block="highlights_section"
-className="w-full py-28 bg-[#0a0a0a] text-white builder-"
->
+    const items = [
+        {
+            icon: <ShieldCheck size={34} />,
+            key: "item1"
+        },
+        {
+            icon: <UserCheck size={34} />,
+            key: "item2"
+        },
+        {
+            icon: <Clock size={34} />,
+            key: "item3"
+        },
+        {
+            icon: <Sparkles size={34} />,
+            key: "item4"
+        }
+    ]
 
-<div
-data-builder-block="highlights_container"
-className="max-w-7xl mx-auto px-6"
->
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                cardsRef.current,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.55,
+                    stagger: 0.13,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 78%",
+                        once: true,
+                    }
+                }
+            )
+        }, sectionRef)
 
-{/* HEADER */}
-<div
-data-builder-block="highlights_header"
-className="text-center mb-16 max-w-2xl mx-auto"
->
+        return () => ctx.revert()
+    }, [])
 
-<h2
-data-builder-text="highlights_title"
-className="text-4xl font-light mb-4"
->
-{t("why", "title")} <span className="text-[#CD9A31]">{t("why", "subtitle")}</span>
-</h2>
+    return (
+        <section
+            ref={sectionRef}
+            data-builder-block="highlights_section"
+            className="w-full py-28 bg-[#0a0a0a] text-white builder-"
+        >
 
-<p
-data-builder-text="highlights_desc"
-className="text-gray-400"
->
-{t("why", "description")}
-</p>
+            <div
+                data-builder-block="highlights_container"
+                className="max-w-7xl mx-auto px-6"
+            >
 
-</div>
+                {/* HEADER */}
+                <div
+                    data-builder-block="highlights_header"
+                    className="text-center mb-16 max-w-2xl mx-auto"
+                >
 
-{/* CARDS */}
-<div
-data-builder-block="highlights_cards"
-className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
->
+                    <h2
+                        data-builder-text="highlights_title"
+                        className="text-4xl font-light mb-4"
+                    >
+                        {t("why", "title")} <span className="text-[#CD9A31]">{t("why", "subtitle")}</span>
+                    </h2>
 
-{items.map((item,i)=>(
+                    <p
+                        data-builder-text="highlights_desc"
+                        className="text-gray-400"
+                    >
+                        {t("why", "description")}
+                    </p>
 
-<motion.div
-key={i}
-data-builder-block={`highlight_card_${i}`}
-initial={{opacity:0,y:40}}
-whileInView={{opacity:1,y:0}}
-viewport={{once:true}}
-transition={{delay:i*0.15}}
-className="
+                </div>
+
+                {/* CARDS */}
+                <div
+                    data-builder-block="highlights_cards"
+                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+
+                    {items.map((item, i) => (
+
+                        <div
+                            key={i}
+                            ref={(el) => { if (el) cardsRef.current[i] = el }}
+                            data-builder-block={`highlight_card_${i}`}
+                            className="
 bg-[#111]
 border border-[#CD9A31]/20
 rounded-2xl
@@ -85,12 +112,13 @@ hover:border-[#CD9A31]/60
 transition
 group
 "
->
+                            style={{ opacity: 0 }}
+                        >
 
-{/* ICON */}
-<div
-data-builder-block={`highlight_icon_${i}`}
-className="
+                            {/* ICON */}
+                            <div
+                                data-builder-block={`highlight_icon_${i}`}
+                                className="
 w-[60px]
 h-[60px]
 rounded-xl
@@ -103,34 +131,34 @@ mb-5
 group-hover:scale-110
 transition
 "
->
-{item.icon}
-</div>
+                            >
+                                {item.icon}
+                            </div>
 
-{/* TITLE */}
-<h4
-data-builder-text={`highlight_title_${i}`}
-className="text-lg mb-2"
->
-{t("highlights", `${item.key}_title`)}
-</h4>
+                            {/* TITLE */}
+                            <h4
+                                data-builder-text={`highlight_title_${i}`}
+                                className="text-lg mb-2"
+                            >
+                                {t("highlights", `${item.key}_title`)}
+                            </h4>
 
-{/* DESC */}
-<p
-data-builder-text={`highlight_desc_${i}`}
-className="text-sm text-gray-400 leading-relaxed"
->
-{t("highlights", `${item.key}_desc`)}
-</p>
+                            {/* DESC */}
+                            <p
+                                data-builder-text={`highlight_desc_${i}`}
+                                className="text-sm text-gray-400 leading-relaxed"
+                            >
+                                {t("highlights", `${item.key}_desc`)}
+                            </p>
 
-</motion.div>
+                        </div>
 
-))}
+                    ))}
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</section>
-)
+        </section>
+    )
 }

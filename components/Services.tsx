@@ -1,13 +1,17 @@
 "use client"
 
 import { services } from "@/data/services"
-import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 import { useI18n } from "@/lib/i18n/i18n"
 import { servicesTranslations } from "@/lib/i18n/services-translations"
 import { SupportedLocale } from "@/lib/i18n/dictionaries"
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Services() {
 
@@ -16,9 +20,35 @@ export default function Services() {
   const { t } = useI18n()
   const translations = servicesTranslations[locale as SupportedLocale] || servicesTranslations.en
 
+  const sectionRef = useRef<HTMLElement>(null)
+  const cardsRef = useRef<HTMLDivElement[]>([])
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardsRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.55,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            once: true,
+          }
+        }
+      )
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
 
-    <section className="w-full py-32 bg-[#0a0a0a] text-white mt-32 md:mt-40 builder-">
+    <section ref={sectionRef} className="w-full py-32 bg-[#0a0a0a] text-white mt-32 md:mt-40 builder-">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -40,25 +70,23 @@ export default function Services() {
 
         </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  {services.map((service, i) => {
-    const translatedService = translations[service.slug as keyof typeof translations]
-    const title = translatedService?.title || service.title
-    const desc = translatedService?.desc || service.desc
+          {services.map((service, i) => {
+            const translatedService = translations[service.slug as keyof typeof translations]
+            const title = translatedService?.title || service.title
+            const desc = translatedService?.desc || service.desc
 
-    return (
+            return (
 
-    <motion.div
-      key={service.slug}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: i * 0.1 }}
-      className="h-full"
-    >
+              <div
+                key={service.slug}
+                ref={(el) => { if (el) cardsRef.current[i] = el }}
+                className="h-full"
+                style={{ opacity: 0 }}
+              >
 
-      <div className="
+                <div className="
         group
         bg-black
         border border-[#CD9A31]/20
@@ -70,38 +98,38 @@ export default function Services() {
         h-full
       ">
 
-        <Link
-          href={`/${locale}/services/${service.slug}`}
-          className="flex flex-col h-full"
-        >
+                  <Link
+                    href={`/${locale}/services/${service.slug}`}
+                    className="flex flex-col h-full"
+                  >
 
-          {/* IMAGE */}
-          <div className="relative h-[220px] overflow-hidden flex-shrink-0">
+                    {/* IMAGE */}
+                    <div className="relative h-[220px] overflow-hidden flex-shrink-0">
 
-            <Image
-              src={service.image}
-              alt={title}
-              fill
-              sizes="(max-width:768px) 100vw, 33vw"
-              className="object-cover group-hover:scale-110 transition duration-700"
-            />
+                      <Image
+                        src={service.image}
+                        alt={title}
+                        fill
+                        sizes="(max-width:768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition duration-700"
+                      />
 
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition" />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition" />
 
-          </div>
+                    </div>
 
-          {/* CONTENT */}
-          <div className="p-6 flex flex-col flex-1">
+                    {/* CONTENT */}
+                    <div className="p-6 flex flex-col flex-1">
 
-            <h3 className="text-lg mb-2 min-h-[56px] builder-">
-              {title}
-            </h3>
+                      <h3 className="text-lg mb-2 min-h-[56px] builder-">
+                        {title}
+                      </h3>
 
-            <p className="text-sm text-gray-400 mb-6 flex-1 builder-">
-              {desc}
-            </p>
+                      <p className="text-sm text-gray-400 mb-6 flex-1 builder-">
+                        {desc}
+                      </p>
 
-            <div className="
+                      <div className="
               w-full
               py-2.5
               text-white
@@ -115,25 +143,25 @@ export default function Services() {
               cursor-pointer
               builder-
             "
-              style={{
-                background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)'
-              }}
-            >
-              {t("common", "see_more")}
-            </div>
+                        style={{
+                          background: 'linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%)'
+                        }}
+                      >
+                        {t("common", "see_more")}
+                      </div>
 
-          </div>
+                    </div>
 
-        </Link>
+                  </Link>
 
-      </div>
+                </div>
 
-    </motion.div>
+              </div>
 
-    )
-  })}
+            )
+          })}
 
-</div>
+        </div>
 
       </div>
 

@@ -1,38 +1,34 @@
 export const destinations = [
-{
-slug:"transfer-vienna-airport-to-prague",
-title:"Transfer from Vienna Airport to Prague",
-image:"/destinations/praga-1.webp",
+  {
+    slug: "transfer-vienna-airport-to-prague",
+    title: "Transfer from Vienna Airport to Prague",
+    image: "/destinations/praga-1.webp",
 
-// 🔥 IMÁGENES PARA EL CAROUSEL
-gallery:[
-  "/destinations/praga-1.webp",
-  "/destinations/praga-2.webp",
-  "/destinations/praga-3.webp",
-],
+    // 🔥 IMÁGENES PARA EL CAROUSEL
+    gallery: [
+      "/destinations/praga-1.webp",
+      "/destinations/praga-2.webp",
+      "/destinations/praga-3.webp",
+    ],
 
-desc:"Comfortable and direct private transfer from Vienna Airport to Prague city center.",
+    desc: "Comfortable and direct private transfer from Vienna Airport to Prague city center.",
 
-longDesc:`
+    longDesc: `
 
 <h1><strong>Transfer from Vienna Airport to Prague</strong></h1>
 
 <p>
-Avoid the stress of checking bus schedules, changing trains, or navigating unfamiliar transport systems on your journey from Vienna to Prague.
+Skip the bus schedules and train connections. Our private transfer service takes you directly from Vienna International Airport to Prague city center — comfortably, safely, and without any stress.
 </p>
 
 <p>
-Our private transfer service offers a comfortable, direct, and completely stress-free ride from Vienna International Airport straight to the heart of Prague.
-</p>
-
-<p>
-With experienced professional drivers and modern vehicles, your journey from Vienna Airport to Prague city center is smooth, safe, and efficient. Sit back, relax, and enjoy a seamless travel experience while we handle everything for you.
+Experienced drivers and modern vehicles ensure a smooth, efficient ride. Sit back and relax while we handle everything.
 </p>
 
 <h2><strong>Book Your Transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -43,79 +39,55 @@ Book online or contact us directly – we are available 24/7.
 <h2><strong>Transparent Fixed Prices</strong></h2>
 
 <p>
-We offer clear and competitive fixed prices for transfers from Vienna Airport to Prague. The price is confirmed in advance, with no hidden fees and no unexpected additional charges.
+Your fare is confirmed upfront — no hidden fees, no unexpected extras. Private transfers offer great value alongside comfort, reliability, and full pricing transparency.
 </p>
 
-<p>
-Choosing our private airport transfer means comfort, reliability, and excellent value for money — with full pricing transparency from start to finish.
-</p>
-
-<h2><strong>Why Choose a Private Airport Transfer?</strong></h2>
+<h2><strong>Why Choose a Private Transfer?</strong></h2>
 
 <p>
-Public transport can be time-consuming and uncomfortable, especially after a flight. Finding a reliable taxi at the airport may also be uncertain.
-</p>
-
-<p>
-With a pre-booked private transfer, you benefit from punctual service, experienced drivers familiar with the route, and a direct door-to-door journey without delays or complications.
-</p>
-
-<p>
-Our priority is quality service, modern vehicles, and fair pricing, ensuring a relaxed and enjoyable trip to Prague.
+Public transport after a flight can be tiring and time-consuming. A pre-booked private transfer means punctual pickup, experienced drivers who know the route, and a direct door-to-door journey — no delays, no complications.
 </p>
 
 <h2><strong>Discover Prague</strong></h2>
 
 <p>
-Prague, the capital of the Czech Republic, is one of Europe’s most beautiful cities, known for its rich history, stunning architecture, and vibrant cultural life.
-</p>
-
-<p>
-Explore the charm of the Old Town, visit Prague Castle, and enjoy scenic views along the Vltava River. From historic landmarks to lively cafés and restaurants, Prague offers unforgettable experiences for every traveler.
-</p>
-
-<p>
-Book your transfer from Vienna Airport to Prague today and enjoy a comfortable, reliable, and worry-free journey to this remarkable European destination.
+Prague, capital of the Czech Republic, captivates visitors with its rich history, stunning architecture, and vibrant culture. Explore the Old Town's charm, visit Prague Castle, and stroll along the Vltava River. From iconic landmarks to cozy cafés, Prague has something for every traveler.
 </p>
 
 `,
 
-steps: { step1: "Book your Prague transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Prague" }
-}, 
-{
-slug:"transfer-vienna-airport-to-linz",
-title:"Transfer from Vienna Airport to Linz",
-image:"/destinations/linz-1.webp",
+    steps: { step1: "Book your Prague transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Prague" }
+  },
+  {
+    slug: "transfer-vienna-airport-to-linz",
+    title: "Transfer from Vienna Airport to Linz",
+    image: "/destinations/linz-1.webp",
 
-// 🔥 IMÁGENES PARA EL CAROUSEL
-gallery:[
-  "/destinations/linz-1.webp",
-  "/destinations/linz-2.webp",
-  "/destinations/linz-4.webp",
-],
+    // 🔥 IMÁGENES PARA EL CAROUSEL
+    gallery: [
+      "/destinations/linz-1.webp",
+      "/destinations/linz-2.webp",
+      "/destinations/linz-4.webp",
+    ],
 
-desc:"Reliable and comfortable private transfer from Vienna Airport to Linz with fixed pricing.",
+    desc: "Reliable and comfortable private transfer from Vienna Airport to Linz with fixed pricing.",
 
-longDesc:`
+    longDesc: `
 
 <h1><strong>Transfer from Vienna Airport to Linz</strong></h1>
 
 <p>
-Planning a trip from Vienna Airport to Linz? Our private transfer service offers a reliable, comfortable, and fully personalized travel solution tailored to your needs.
+Need a transfer from Vienna Airport to Linz? Our private service offers a reliable, comfortable, and fully personalized journey tailored to your schedule.
 </p>
 
 <p>
-Enjoy a smooth and stress-free journey from Vienna International Airport directly to Linz in a modern, well-equipped vehicle. Sit back, relax, and let our professional drivers handle every detail of your transfer.
-</p>
-
-<p>
-Whether you are traveling alone, with family, or in a group, we provide the ideal vehicle to ensure maximum comfort and efficiency throughout your journey.
+Relax in a modern vehicle while our professional drivers take care of every detail — whether you're traveling solo, with family, or as a group.
 </p>
 
 <h2><strong>Book Your Transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -126,82 +98,54 @@ Book online or contact us directly – we are available 24/7.
 <h2><strong>Transparent Fixed Prices</strong></h2>
 
 <p>
-Our fixed and transparent pricing guarantees that you always know the exact cost of your transfer in advance. There are no hidden fees, no unexpected charges, and no stress.
-</p>
-
-<p>
-Choosing a private airport transfer to Linz means comfort, reliability, and excellent value — allowing you to focus entirely on enjoying your journey.
+The exact cost is confirmed before you travel — no surprises, no hidden fees. A private transfer to Linz means comfort, reliability, and great value all in one.
 </p>
 
 <h2><strong>Why Choose a Private Transfer?</strong></h2>
 
 <p>
-Public transportation can be inconvenient and time-consuming, especially after a flight. Searching for a reliable taxi at the airport can also create uncertainty.
-</p>
-
-<p>
-With a pre-booked private transfer, you benefit from punctual service, experienced drivers familiar with the region, and a direct door-to-door journey without unnecessary stops or delays.
-</p>
-
-<p>
-We prioritize professional service, modern vehicles, and fair pricing to ensure your trip from Vienna Airport to Linz is smooth and enjoyable.
+After a flight, public transport can be inconvenient and time-consuming. A pre-booked private transfer guarantees punctual pickup, experienced drivers, and a direct door-to-door ride — no unnecessary stops or detours.
 </p>
 
 <h2><strong>Discover Linz</strong></h2>
 
 <p>
-Linz, Austria's third-largest city, is a vibrant center of culture, innovation, and business. Located along the Danube River, it combines historical charm with modern architecture and cutting-edge technology.
-</p>
-
-<p>
-The city is known for its museums, galleries, and the renowned Ars Electronica Center, highlighting Linz’s strong focus on creativity and innovation.
-</p>
-
-<p>
-Visitors can explore scenic river views, cultural landmarks, excellent restaurants, traditional Austrian cuisine, and outdoor activities such as cycling and hiking along the Danube.
-</p>
-
-<p>
-Book your transfer from Vienna Airport to Linz today and enjoy a comfortable, reliable, and efficient journey to one of Austria’s most dynamic cities.
+Linz, Austria's third-largest city, blends historic charm with modern creativity along the Danube River. Visit the Ars Electronica Center, explore scenic riverside walks, enjoy excellent local cuisine, and discover the city's thriving arts and culture scene.
 </p>
 
 `,
 
-steps: { step1: "Book your Linz transfer", step2: "We confirm your pickup time", step3: "Enjoy a comfortable journey to Linz" }
-}, {
-slug:"transfer-vienna-airport-to-bratislava",
-title:"Transfer from Vienna Airport to Bratislava",
-image:"/destinations/bra-1.webp",
+    steps: { step1: "Book your Linz transfer", step2: "We confirm your pickup time", step3: "Enjoy a comfortable journey to Linz" }
+  }, {
+    slug: "transfer-vienna-airport-to-bratislava",
+    title: "Transfer from Vienna Airport to Bratislava",
+    image: "/destinations/bra-1.webp",
 
-// 🔥 IMÁGENES PARA EL CAROUSEL
-gallery:[
-  "/destinations/bra-1.webp",
-  "/destinations/bra-2.webp",
-  "/destinations/bra-3.webp",
-],
+    // 🔥 IMÁGENES PARA EL CAROUSEL
+    gallery: [
+      "/destinations/bra-1.webp",
+      "/destinations/bra-2.webp",
+      "/destinations/bra-3.webp",
+    ],
 
-desc:"Comfortable and reliable private transfer from Vienna Airport to Bratislava city center.",
+    desc: "Comfortable and reliable private transfer from Vienna Airport to Bratislava city center.",
 
-longDesc:`
+    longDesc: `
 
 <h1><strong>Transfer from Vienna Airport to Bratislava</strong></h1>
 
 <p>
-Enjoy your journey from Vienna Airport to Bratislava without the stress of public transport schedules or navigation issues.
+Travel from Vienna Airport to Bratislava without the hassle of public transport timetables or navigation headaches. Our private transfer offers a direct, worry-free ride straight to the Slovak capital.
 </p>
 
 <p>
-Our private transfer service offers a comfortable, direct, and worry-free ride from Vienna International Airport straight to the charming capital of Slovakia.
-</p>
-
-<p>
-With experienced professional drivers and modern vehicles, your transfer from Vienna Airport to Bratislava city center is smooth, safe, and efficient. Sit back, relax, and let us handle every detail of your journey.
+Professional drivers and modern vehicles ensure your journey is smooth, safe, and efficient — every detail handled for you.
 </p>
 
 <h2><strong>Book Your Transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -212,82 +156,54 @@ Book online or contact us directly – we are available 24/7.
 <h2><strong>Transparent Fixed Prices</strong></h2>
 
 <p>
-We offer clear and affordable fixed pricing, allowing you to travel with complete peace of mind. The price is confirmed in advance — no hidden fees and no unexpected charges.
+Clear, affordable pricing confirmed in advance — no hidden fees, no extra charges. Travel with complete peace of mind from departure to arrival.
 </p>
 
-<p>
-Choosing a private transfer from Vienna Airport to Bratislava means comfort, reliability, and excellent value for money.
-</p>
-
-<h2><strong>Why Choose a Private Airport Transfer?</strong></h2>
+<h2><strong>Why Choose a Private Transfer?</strong></h2>
 
 <p>
-Public transport can be inconvenient and time-consuming, especially after a flight. Searching for a reliable taxi at the airport may also create uncertainty.
-</p>
-
-<p>
-With a pre-booked private transfer, you benefit from punctual service, experienced drivers familiar with the region, and a direct door-to-door journey without delays or complications.
-</p>
-
-<p>
-Our focus is on high-quality service, modern vehicles, and fair pricing — ensuring a relaxed and comfortable trip to Bratislava.
+A pre-booked private transfer means punctual pickup, drivers who know the region well, and a direct door-to-door journey. No delays, no complications — just comfortable travel.
 </p>
 
 <h2><strong>Discover Bratislava</strong></h2>
 
 <p>
-Bratislava, the charming capital of Slovakia, is a city rich in history, culture, and vibrant atmosphere.
-</p>
-
-<p>
-Stroll through the picturesque streets of the Old Town, visit the impressive Bratislava Castle, and enjoy the relaxed ambiance along the Danube River.
-</p>
-
-<p>
-From cozy cafés and traditional restaurants to lively nightlife and cultural attractions, Bratislava offers unforgettable experiences for every traveler.
-</p>
-
-<p>
-Book your transfer from Vienna Airport to Bratislava today and enjoy a comfortable, reliable, and stress-free journey to this fascinating European city.
+Bratislava charms visitors with its historic Old Town, impressive castle overlooking the Danube, relaxed riverside atmosphere, cozy cafés, and lively nightlife. A compact city full of character and culture — perfect for a day trip or extended stay.
 </p>
 
 `,
 
-steps: { step1: "Book your Bratislava transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Bratislava" }
-}, {
-slug:"taxi-from-vienna-airport-to-budapest",
-title:"Taxi from Vienna Airport to Budapest",
-image:"/destinations/bu-1.webp",
+    steps: { step1: "Book your Bratislava transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Bratislava" }
+  }, {
+    slug: "taxi-from-vienna-airport-to-budapest",
+    title: "Taxi from Vienna Airport to Budapest",
+    image: "/destinations/bu-1.webp",
 
-// 🔥 IMÁGENES PARA EL CAROUSEL
-gallery:[
-  "/destinations/bu-2.webp",
-  "/destinations/bu-1.webp",
-  "/destinations/bu-4.webp",
-],
+    // 🔥 IMÁGENES PARA EL CAROUSEL
+    gallery: [
+      "/destinations/bu-2.webp",
+      "/destinations/bu-1.webp",
+      "/destinations/bu-4.webp",
+    ],
 
-desc:"Comfortable and reliable private transfer from Vienna Airport to Budapest with fixed pricing.",
+    desc: "Comfortable and reliable private transfer from Vienna Airport to Budapest with fixed pricing.",
 
-longDesc:`
+    longDesc: `
 
 <h1><strong>Taxi from Vienna Airport to Budapest</strong></h1>
 
 <p>
-Travel comfortably and stress-free from Vienna Airport to Budapest with our professional private transfer service.
+Travel from Vienna Airport to Budapest in comfort and without stress. Our professional private transfer service delivers a safe, reliable, and direct ride — letting you relax while we manage every detail.
 </p>
 
 <p>
-We provide a reliable, safe, and direct journey from Vienna International Airport to your destination in Budapest. Our experienced drivers ensure a smooth and efficient ride, allowing you to relax while we handle every detail.
-</p>
-
-<p>
-Whether you are traveling for business or leisure, enjoy a seamless door-to-door transfer in a modern, comfortable vehicle.
+Whether traveling for business or leisure, enjoy seamless door-to-door service in a modern vehicle for any group size.
 </p>
 
 <h2><strong>Book Your Transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -298,78 +214,62 @@ Book online or contact us directly – we are available 24/7.
 <h2><strong>Transparent Fixed Prices</strong></h2>
 
 <p>
-Our fair and transparent pricing guarantees that you know the exact cost in advance. There are no hidden fees and no unexpected additional charges.
+Your fare is set upfront — no hidden fees, no unexpected extras. We prioritize quality service, safety, and fair pricing all the way to Budapest.
 </p>
 
-<p>
-Choosing a private transfer from Vienna Airport to Budapest ensures comfort, reliability, and excellent value for money.
-</p>
-
-<h2><strong>Why Choose a Private Airport Transfer?</strong></h2>
+<h2><strong>Why Choose a Private Transfer?</strong></h2>
 
 <p>
-Public transportation can be inconvenient, especially after a long flight. Searching for a taxi at the airport can also be uncertain.
-</p>
-
-<p>
-With a pre-booked private transfer, you benefit from punctual pickup, professional drivers familiar with the best routes, and a direct journey without unnecessary stops.
-</p>
-
-<p>
-We focus on high-quality service, modern vehicles, and maximum safety to ensure your trip to Budapest is smooth and enjoyable.
+After a long flight, public transport can be a challenge. A pre-booked private transfer means punctual pickup, professional drivers, and a direct journey — no unnecessary stops.
 </p>
 
 <h2><strong>Discover Budapest</strong></h2>
 
 <p>
-Budapest offers a unique combination of history, culture, and relaxation. During your visit, you can explore some of the city’s most iconic landmarks:
+Budapest offers a unique mix of history, culture, and relaxation. Don't miss:
 </p>
 
 <ul>
-<li><strong>The Castle District:</strong> Visit historic Buda Castle and enjoy panoramic views over the Danube.</li>
-<li><strong>The Chain Bridge:</strong> One of Budapest’s most famous landmarks connecting Buda and Pest.</li>
-<li><strong>The Parliament Building:</strong> Admire one of Europe’s most impressive architectural masterpieces.</li>
-<li><strong>Széchenyi Thermal Bath:</strong> Relax in one of Europe’s largest thermal spa complexes.</li>
-<li><strong>The Danube Promenade:</strong> Enjoy scenic walks along the river with breathtaking city views.</li>
+<li><strong>The Castle District:</strong> Historic Buda Castle with panoramic Danube views.</li>
+<li><strong>The Chain Bridge:</strong> Budapest's most iconic landmark connecting Buda and Pest.</li>
+<li><strong>The Parliament Building:</strong> One of Europe's finest architectural gems.</li>
+<li><strong>Széchenyi Thermal Bath:</strong> Europe's largest thermal spa complex.</li>
+<li><strong>The Danube Promenade:</strong> Scenic riverside walks with stunning city views.</li>
 </ul>
-
-<p>
-Book your transfer from Vienna Airport to Budapest today and enjoy a comfortable, reliable, and worry-free journey to one of Europe’s most captivating capitals.
-</p>
 
 `,
 
-steps: { step1: "Book your Budapest transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Budapest" }
-}, {
-slug:"transfer-from-vienna-airport-to-parndorf",
-title:"Transfer from Vienna Airport to Parndorf",
-image:"/destinations/par-3.webp",
+    steps: { step1: "Book your Budapest transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Budapest" }
+  }, {
+    slug: "transfer-from-vienna-airport-to-parndorf",
+    title: "Transfer from Vienna Airport to Parndorf",
+    image: "/destinations/par-3.webp",
 
-// 🔥 IMÁGENES PARA EL CAROUSEL
-gallery:[
-  "/destinations/par-3.webp",
-  "/destinations/par-2.webp",
-  "/destinations/par-1.webp",
-],
+    // 🔥 IMÁGENES PARA EL CAROUSEL
+    gallery: [
+      "/destinations/par-3.webp",
+      "/destinations/par-2.webp",
+      "/destinations/par-1.webp",
+    ],
 
-desc:"Comfortable and reliable private transfer from Vienna Airport to Parndorf Designer Outlet.",
+    desc: "Comfortable and reliable private transfer from Vienna Airport to Parndorf Designer Outlet.",
 
-longDesc:`
+    longDesc: `
 
 <h1><strong>Transfer from Vienna Airport to Parndorf</strong></h1>
 
 <p>
-Enjoy a pleasant, comfortable, and efficient journey from Vienna Airport directly to Parndorf. Our private transfer service ensures you arrive relaxed and on time — perfectly prepared for a stress-free shopping experience.
+Head from Vienna Airport directly to Parndorf in comfort and style. Our private transfer gets you there relaxed and on time — perfectly set up for a great shopping day.
 </p>
 
 <p>
-With professional drivers and modern vehicles, we provide a fast and reliable door-to-door transfer tailored to your travel plans.
+Professional drivers and modern vehicles deliver fast, reliable door-to-door service tailored to your schedule.
 </p>
 
 <h2><strong>Book Your Transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -380,78 +280,54 @@ Book online or contact us directly – we are available 24/7.
 <h2><strong>Transparent Fixed Prices</strong></h2>
 
 <p>
-Our fair and transparent pricing guarantees that you know the exact cost of your transfer in advance. There are no hidden fees or unexpected additional charges.
-</p>
-
-<p>
-A private transfer from Vienna Airport to Parndorf allows you to travel comfortably without worrying about transportation logistics or unnecessary expenses.
+Your fare is confirmed upfront — no hidden fees or surprise charges. Travel comfortably without worrying about transport costs.
 </p>
 
 <h2><strong>Why Choose a Private Transfer?</strong></h2>
 
 <p>
-Instead of navigating public transport or waiting for taxis at the airport, enjoy a direct and efficient journey to Parndorf.
-</p>
-
-<p>
-Our experienced drivers know the fastest routes and current traffic conditions, ensuring a smooth and time-efficient transfer so you can make the most of your day.
+No waiting for public transport or searching for taxis. Our experienced drivers know the fastest routes and current traffic, so you make the most of your day in Parndorf.
 </p>
 
 <h2><strong>Discover Parndorf</strong></h2>
 
 <p>
-Parndorf is internationally known for its Designer Outlet, making it a true paradise for shopping enthusiasts.
-</p>
-
-<p>
-With a wide selection of designer brands, outlet stores, fashion boutiques, accessories, and lifestyle products, Parndorf attracts visitors from all over Europe.
-</p>
-
-<p>
-Whether you're searching for luxury brands, seasonal collections, or special discounts, Parndorf offers something for every style and budget.
-</p>
-
-<p>
-Book your transfer from Vienna Airport to Parndorf today and enjoy a comfortable, reliable, and perfectly organized journey to one of Austria’s most popular shopping destinations.
+Parndorf is home to one of Austria's top Designer Outlet centers, drawing shoppers from across Europe. Explore a wide range of designer brands, fashion boutiques, accessories, and lifestyle products — with something for every taste and budget.
 </p>
 
 `,
 
-steps: { step1: "Book your Parndorf transfer", step2: "We confirm your pickup time", step3: "Enjoy a comfortable ride to Parndorf" }
-}, {
-slug:"taxi-from-vienna-airport-to-salzburg",
-title:"Taxi from Vienna Airport to Salzburg",
-image: "/destinations/sal-1.webp",
+    steps: { step1: "Book your Parndorf transfer", step2: "We confirm your pickup time", step3: "Enjoy a comfortable ride to Parndorf" }
+  }, {
+    slug: "taxi-from-vienna-airport-to-salzburg",
+    title: "Taxi from Vienna Airport to Salzburg",
+    image: "/destinations/sal-1.webp",
 
-// 🔥 IMÁGENES PARA EL CAROUSEL
-gallery:[
-  "/destinations/sal-1.webp",
-  "/destinations/sal-2.webp",
-  "/destinations/sal-4.webp",
-],
+    // 🔥 IMÁGENES PARA EL CAROUSEL
+    gallery: [
+      "/destinations/sal-1.webp",
+      "/destinations/sal-2.webp",
+      "/destinations/sal-4.webp",
+    ],
 
-desc:"Comfortable and reliable private transfer from Vienna Airport to Salzburg with fixed pricing.",
+    desc: "Comfortable and reliable private transfer from Vienna Airport to Salzburg with fixed pricing.",
 
-longDesc:`
+    longDesc: `
 
 <h1><strong>Taxi from Vienna Airport to Salzburg</strong></h1>
 
 <p>
-Looking for a comfortable and stress-free transfer from Vienna Airport to Salzburg? Our private transfer service ensures a smooth, safe, and efficient journey across Austria.
+Looking for a smooth, stress-free transfer from Vienna Airport to Salzburg? Our private service delivers a safe and comfortable ride across Austria, with comfort and satisfaction as top priorities.
 </p>
 
 <p>
-We specialize in high-quality transportation services, placing the utmost importance on comfort, safety, and customer satisfaction. Whether you are traveling for business or leisure, you can relax and enjoy every minute of your journey.
-</p>
-
-<p>
-Our professional drivers will meet you at Vienna International Airport and take you directly to your destination in Salzburg in a modern, comfortable vehicle.
+Our drivers meet you at VIE and take you straight to your Salzburg destination — no stops, no hassle.
 </p>
 
 <h2><strong>Book Your Transfer</strong></h2>
 
 <p>
-Book online or contact us directly – we are available 24/7.
+Book online or reach us directly — available 24/7.
 </p>
 
 <p>
@@ -462,47 +338,31 @@ Book online or contact us directly – we are available 24/7.
 <h2><strong>Transparent Fixed Prices</strong></h2>
 
 <p>
-Our fair and transparent pricing ensures a pleasant journey without hidden fees or unexpected extra costs.
-</p>
-
-<p>
-A private transfer from Vienna Airport to Salzburg allows you to travel comfortably while focusing entirely on enjoying your visit.
+A fair, fixed price is confirmed before your trip — no hidden fees, no extra costs. Travel comfortably while focusing entirely on the journey ahead.
 </p>
 
 <h2><strong>Why Choose a Private Transfer?</strong></h2>
 
 <p>
-Avoid the inconvenience of public transport or the uncertainty of finding a taxi at the airport.
+With a pre-booked private transfer, you get punctual pickup, experienced drivers who know the region, and a direct route to Salzburg. No inconvenient connections, no uncertainty — just quality service, modern vehicles, and full safety.
 </p>
 
-<p>
-With a pre-booked private transfer, you benefit from punctual pickup, experienced drivers, and a direct door-to-door journey. Our drivers know the region well and always select the best routes for a smooth and timely arrival.
-</p>
+<h2><strong>Discover Salzburg</strong></h2>
 
 <p>
-Combined with competitive pricing and high service standards, our transfer service guarantees quality, comfort, and safety.
-</p>
-
-<h2><strong>Discover Salzburg – A City of Culture and Beauty</strong></h2>
-
-<p>
-Salzburg is renowned for its rich history, stunning architecture, and vibrant cultural scene. As the birthplace of Wolfgang Amadeus Mozart, the city offers unforgettable experiences for visitors of all ages.
+Salzburg, birthplace of Mozart, is one of Austria's most beautiful cities — known for its Baroque architecture, rich musical heritage, and stunning surroundings. Highlights include:
 </p>
 
 <ul>
-<li><strong>The Old Town:</strong> Explore picturesque streets and admire magnificent Baroque architecture in the historic city center.</li>
-<li><strong>Hohensalzburg Fortress:</strong> Visit the impressive fortress overlooking the city and enjoy breathtaking panoramic views.</li>
-<li><strong>Mozart’s Birthplace:</strong> Discover the life and legacy of Salzburg’s most famous composer.</li>
-<li><strong>Mirabell Gardens:</strong> Relax among elegant flower arrangements, fountains, and sculptures.</li>
-<li><strong>The Salzburg Festival:</strong> Experience world-class opera, theatre, and music performances.</li>
+<li><strong>The Old Town:</strong> Picturesque streets and magnificent historic buildings.</li>
+<li><strong>Hohensalzburg Fortress:</strong> Breathtaking panoramic views over the city.</li>
+<li><strong>Mozart's Birthplace:</strong> Discover the legacy of Salzburg's most famous son.</li>
+<li><strong>Mirabell Gardens:</strong> Elegant gardens with fountains and sculptures.</li>
+<li><strong>The Salzburg Festival:</strong> World-class opera, theatre, and music.</li>
 </ul>
-
-<p>
-Book your transfer from Vienna Airport to Salzburg today and enjoy a comfortable, reliable, and unforgettable journey to one of Austria’s most beautiful cities.
-</p>
 
 `,
 
-steps: { step1: "Book your Salzburg transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Salzburg" }
-}
+    steps: { step1: "Book your Salzburg transfer", step2: "We confirm your pickup time", step3: "Enjoy a smooth journey to Salzburg" }
+  }
 ]
