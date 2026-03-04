@@ -81,7 +81,7 @@ export default function Navbar({ locale }: { locale: string }) {
       return
     }
 
-    // En cualquier otro caso, anteponer el nuevo locale conservando el resto
+    // En cualquier otro caso, anteposdfsdfdsner el nuevo locale conservando el resto
     router.push("/" + newLocale + "/" + parts.join("/"))
   }
 
