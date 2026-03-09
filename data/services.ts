@@ -3,7 +3,7 @@ export const services = [
     {
         slug: "private-day-tours",
         title: "Private day tours",
-        image: "/services/priv.webp",
+        image: "/services/private-day-tours-new.png",
         desc: "Private day tours from Vienna to Austria and neighboring countries.",
 
         longDesc: `
@@ -43,7 +43,7 @@ Pricing is transparent and confirmed before you set off — no surprises, no hid
     {
         slug: "hotel-transfers-vienna",
         title: "Hotel Transfers Vienna",
-        image: "/services/hotel.avif",
+        image: "/services/hotel-transfers-new.png",
         desc: "Comfortable and reliable hotel transfers in Vienna and across Austria.",
 
         longDesc: `
@@ -107,7 +107,7 @@ All transfer prices are fixed and shown upfront — no extra charges for luggage
     {
         slug: "long-distance-transfers",
         title: "Long-Distance Transfers",
-        image: "/services/long.webp",
+        image: "/services/long-distance-new.png",
         desc: "Comfortable long-distance private transfers across Austria and Europe.",
 
         longDesc: `
@@ -165,7 +165,7 @@ Our licensed drivers know the best routes across Austria and Europe. Safety and 
     {
         slug: "vienna-airport-taxi-fixed-price",
         title: "Vienna Airport Taxi at Fixed Price",
-        image: "/services/viena-airport.webp",
+        image: "/services/vienna-airport-new.png",
         desc: "Reliable Vienna Airport taxi service at a guaranteed fixed price with no hidden fees.",
 
         longDesc: `
@@ -222,7 +222,7 @@ All transfers are handled by professional drivers familiar with the best routes 
     {
         slug: "vienna-airport-to-city-taxi",
         title: "Taxi Service from Vienna Airport to the City Center",
-        image: "/services/city-vienna.webp",
+        image: "/services/airport-luggage-service-new.png",
         desc: "Reliable taxi service from Vienna Airport (VIE) to the city center with transparent pricing and professional drivers.",
 
         longDesc: `
@@ -271,7 +271,7 @@ Pair this service with our <a href="/services/hotel-transfers-vienna" style="col
     {
         slug: "vienna-airport-transfer",
         title: "Airport Transfers Vienna (VIE)",
-        image: "/services/airport-transfer.webp",
+        image: "/services/vienna-airport-arrivals-new.png",
         desc: "Reliable and stress-free airport transfers between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
 
         longDesc: `
@@ -327,7 +327,7 @@ Flights are tracked in real time. If your flight is delayed, your driver adjusts
     }, {
         slug: "vienna-city-transfers",
         title: "Vienna City Transfers",
-        image: "/services/city-transfer.webp",
+        image: "/services/vienna-city-new.png",
         desc: "Comfortable and reliable city transfers within Vienna with professional drivers and fixed pricing.",
 
         longDesc: `
@@ -377,7 +377,7 @@ Licensed drivers, regularly maintained vehicles, and fully transparent pricing �
     }, {
         slug: "taxi-vienna-airport",
         title: "Taxi Vienna Airport",
-        image: "/services/vienna-airport.webp",
+        image: "/services/vienna-business-district-new.png",
         desc: "Fast, safe and reliable taxi service between Vienna Airport (VIE) and any destination in Vienna or across Austria.",
 
         longDesc: `
@@ -433,7 +433,7 @@ Prices are shown before you book — no surprises, no extras. Airport pickup, wa
     }, {
         slug: "private-chauffeur-vienna",
         title: "Private Chauffeur in Vienna",
-        image: "/services/private.webp",
+        image: "/services/private-chauffeur-new.png",
         desc: "Luxury private chauffeur service in Vienna with personalized, discreet and flexible transportation solutions.",
 
         longDesc: `
