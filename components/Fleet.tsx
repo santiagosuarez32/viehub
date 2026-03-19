@@ -93,9 +93,9 @@ className="object-cover scale-[1.05]"
 {car.title}
 </h3>
 
-<p className="text-gray-400 text-sm builder-">
+{/* <p className="text-gray-400 text-sm builder-">
 {car.subtitle}
-</p>
+</p> */}
 
 <div className="flex gap-6 text-[#CD9A31] text-sm pt-1 builder-">
 
