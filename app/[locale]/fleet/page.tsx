@@ -13,7 +13,7 @@ export default function FleetPage() {
 
   const cars = [
     {
-      title: "Standard _",
+      title: "Standard",
       subtitle: "Mercedes E-Class",
       pax: 3,
       bags: 2,
