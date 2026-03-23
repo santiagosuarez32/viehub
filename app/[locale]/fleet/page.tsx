@@ -17,7 +17,7 @@ export default function FleetPage() {
       subtitle: "Mercedes E-Class",
       pax: 3,
       bags: 2,
-      price: 42,
+      price: 28,
       img: "/sta.webp",
       features: ["child_seats", "wifi", "air_conditioning", "leather_seats"],
       description: "Perfect for business trips and airport transfers with premium comfort and style."
@@ -27,7 +27,7 @@ export default function FleetPage() {
       subtitle: "Mercedes E-Class T-Model",
       pax: 4,
       bags: 3,
-      price: 46,
+      price: 33,
       img: "/wa.webp",
       popular: true,
       features: ["extra_luggage", "child_seats", "premium_comfort", "wifi"],
@@ -38,7 +38,7 @@ export default function FleetPage() {
       subtitle: "Mercedes V-Class",
       pax: 7,
       bags: 7,
-      price: 65,
+      price: 50,
       img: "/v.webp",
       features: ["group_travel", "business_teams", "family_trips", "maximum_comfort"],
       description: "Perfect for group travel, business teams or large families. Unmatched space and luxury."
