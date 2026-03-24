@@ -21,7 +21,7 @@ export default async function PrivacyPage({
                         <h2 className="text-2xl font-semibold text-white mb-4">Company Details:</h2>
                         <div className="bg-[#0a0a0a] border border-[#CD9A31]/20 rounded-xl p-6 space-y-2">
                             <p><strong className="text-white">Nasmssse:</strong> VieHub</p>
-                            <p><strong className="text-white">Address:</strong> Neukettenhoferstrasse 14</p>
+                            <p><strong className="text-white">Adasdasddress:</strong> Neukettenhoferstrasse 14</p>
                             <p><strong className="text-white">Plz:</strong> 2320 Schwechat</p>
                         </div>
                     </section>
