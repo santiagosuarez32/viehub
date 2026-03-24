@@ -89,13 +89,15 @@ export default function Footer({ locale }: { locale: string }) {
           <Link href={`/${locale}/fleet`} className="hover:text-[#CD9A31] transition-colors">{t("common", "fleet")}</Link>
           <Link href={`/${locale}/contact`} className="hover:text-[#CD9A31] transition-colors">{t("common", "contact")}</Link>
           <Link href={`/${locale}/impressum`} className="hover:text-[#CD9A31] transition-colors">Impressum</Link>
+          <Link href={`/${locale}/privacy`} className="hover:text-[#CD9A31] transition-colors">Privacy Policy</Link>
+          <Link href={`/${locale}/tos`} className="hover:text-[#CD9A31] transition-colors">Terms of Service</Link>
         </div>
 
       </div>
 
       <div className="border-t border-[#CD9A31]/10 py-6 text-center text-xs text-gray-500">
         <p>
-          © {new Date().getFullYear()} VieHub. {t("footer", "rights")} | <Link href={`/${locale}/impressum`} className="hover:text-[#CD9A31] transition-colors">Impressum</Link>
+          © {new Date().getFullYear()} VieHub. {t("footer", "rights")} | <Link href={`/${locale}/impressum`} className="hover:text-[#CD9A31] transition-colors">Impressum</Link> | <Link href={`/${locale}/privacy`} className="hover:text-[#CD9A31] transition-colors">Privacy Policy</Link> | <Link href={`/${locale}/tos`} className="hover:text-[#CD9A31] transition-colors">Terms of Service</Link>
         </p>
         <p className="mt-2">
           Developed by <a href="https://www.codew.com.ar" target="_blank" rel="noopener noreferrer" className="text-[#CD9A31] hover:underline">Codew</a>
