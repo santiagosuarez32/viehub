@@ -23,7 +23,7 @@ export default function FleetPage() {
       description: "Perfect for business trips and airport transfers with premium comfort and style."
     },
     {
-      title: "Station Wagon",
+      title: "Station Wagon1",
       subtitle: "Mercedes E-Class T-Model",
       pax: 4,
       bags: 3,
