@@ -13,7 +13,7 @@ export default function FleetPage() {
 
   const cars = [
     {
-      title: "Standard1",
+      title: "Standard",
       subtitle: "Mercedes E-Class",
       pax: 3,
       bags: 2,
@@ -23,7 +23,7 @@ export default function FleetPage() {
       description: "Perfect for business trips and airport transfers with premium comfort and style."
     },
     {
-      title: "Station Wagon1",
+      title: "Station Wagon",
       subtitle: "Mercedes E-Class T-Model",
       pax: 4,
       bags: 3,
