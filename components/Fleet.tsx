@@ -10,7 +10,7 @@ const { t } = useI18n();
 
 const cars = [
 {
-title:"Standard",
+title:"Standard1",
 subtitle:"Mercedes E-Class",
 pax:3,
 bags:2,
